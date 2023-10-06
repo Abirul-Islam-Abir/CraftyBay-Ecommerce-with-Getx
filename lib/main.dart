@@ -17,3 +17,4 @@ Future appInitialization() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
 }
+//Second way
