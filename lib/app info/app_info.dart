@@ -1,1 +1,1 @@
-//App Infoclass AppInfo {  static String developerName = 'Abir';  static String appVersion = '3.13.0';  AppInfo._();}
+class AppInfo {  static String developerName = 'Abir';  static String appVersion = '1.0.0+1';  AppInfo._();}
