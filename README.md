@@ -120,7 +120,7 @@ This screen allows users to write and submit their reviews and ratings for produ
 ## Complete Profile Screen: 
   Users can update and manage their profile information, including personal details, shipping addresses, and notification preferences on this screen.
 
-https://github.com/](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/tree/main/assets)https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/tree/main/assets
+[[https://github.com/](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/tree/main/assets)https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/tree/main/assets](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/blob/main/assets/craftybay_ui/all.png)](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/tree/main/assets/craftybay_ui)
 
 
 
@@ -142,7 +142,7 @@ https://github.com/](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/tr
   - **motion_toast: ^2.7.8**
   - **empty_widget: ^0.0.5**
 
-[Visit the Figma design](https://www.figma.com/file/drkfzS8CGQiIrhyA4s2m82/Foodpanda-UI-(Community)?type=design&node-id=3-5&mode=design&t=Zs1qAKg9dCMdWETG-0)
+[Visit the Figma design][(https://www.figma.com/file/drkfzS8CGQiIrhyA4s2m82/Foodpanda-UI-(Community)?type=design&node-id=3-5&mode=design&t=Zs1qAKg9dCMdWETG-0)](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/blob/main/assets/craftybay_ui/all.png)
  
 
 # Stacks
