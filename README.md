@@ -1,4 +1,4 @@
-![special](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/9940f879-6203-4031-aa06-4411ca123766)  # CraftyBay
+# CraftyBay
 
 ## A simple E-commerce app  UI like Daraz to implement pixel to flutter UI with full api implement 
 # Features
