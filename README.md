@@ -21,10 +21,7 @@
 
 | Splash Page                                                      | Loading Screen                                                      |  Home Page                                                     |
 |:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
-| ![splas](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/d59bf553-fa6f-40a3-b23c-cae593d728f3)
- | ![shimmer_screen](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/3fb54f2f-0bbf-452c-bcf3-32e0d5d8d109)
- | ![home_screen](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/3c30260f-35cd-4510-9fd1-715a04478569)
- |  # Flutter Ecommerce App (Getx)
+| ![splas](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/d59bf553-fa6f-40a3-b23c-cae593d728f3)| ![shimmer_screen](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/3fb54f2f-0bbf-452c-bcf3-32e0d5d8d109)| ![home_screen](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/3c30260f-35cd-4510-9fd1-715a04478569)|  # Flutter Ecommerce App (Getx)
 
 
 
