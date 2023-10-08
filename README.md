@@ -25,9 +25,9 @@
 
 
 
-| Splash Page                                                      | Home Page                                                      |  Detail Page                                                      |
+| Product Details Screen                                            | Login Screen                                                      |  Cart Screen                                                      |
 |:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
-| ![img1](https://github.com/Abirul-Islam-Abir/CraftyBay/assets/89778681/79eb77ed-e395-436d-b930-3b35634a8309)| ![img2](https://github.com/Abirul-Islam-Abir/CraftyBay/assets/89778681/45f7373a-9ef6-414f-9ea9-38998dc39f5e)| ![img3](https://github.com/Abirul-Islam-Abir/CraftyBay/assets/89778681/b0c49f39-52bc-4f8f-8584-27551a517d15)| # Flutter Ecommerce App (Getx)
+| ![details](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/a640b941-cb79-4ef5-b374-76e571b819f9)| ![verify_email](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/b526d4f1-7339-44fc-924e-c960f326b1c4)| ![cart_screen](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/38bedda8-fc4d-4dab-994d-1c5d44cf529a)| # Flutter Ecommerce App (Getx)
  
 
 
