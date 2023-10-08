@@ -50,3 +50,40 @@
 ## A simple ecommerce application where REST API is integraded to see all products info and add to cart functionality using flutter and getx. 
 
 User can see all available products and add desired products add to the cart and remove from the cart.
+
+
+
+
+# Features
+## Product Page
+  - **all products**
+  - **add to cart**
+
+## Add to Cart Page
+  - **add product to cart**
+  - **remove product from cart**
+
+https://github.com/](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/tree/main/assets)https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/tree/main/assets
+
+
+# Stacks
+
+`Dart`   `Flutter`   `Rest API`    `Getx`    `Github Action (CI/CD)`
+                                                  
+                                                       
+## Flutter version: 3.13.7
+
+
+# Libraries: 
+- **Getx**
+- **Dio** 
+
+[Visit the Figma design](https://www.figma.com/file/drkfzS8CGQiIrhyA4s2m82/Foodpanda-UI-(Community)?type=design&node-id=3-5&mode=design&t=Zs1qAKg9dCMdWETG-0)
+
+# Stacks
+
+`Dart`   `Flutter`   `UI`
+
+## Flutter version: 3.10.6
+
+
