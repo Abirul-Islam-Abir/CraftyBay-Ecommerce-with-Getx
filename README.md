@@ -151,5 +151,5 @@ https://github.com/](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/tr
                                                   
        
 ## Flutter sdk version: 3.10.6
-
+## App version: 1.0.0+1
 
