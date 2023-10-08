@@ -1,4 +1,4 @@
-  # CraftyBay
+![special](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/9940f879-6203-4031-aa06-4411ca123766)  # CraftyBay
 
 ## A simple E-commerce app  UI like Daraz to implement pixel to flutter UI with full api implement 
 # Features
@@ -17,6 +17,8 @@
 - **Wish List**
 - **Categories List**
 - **Complete Profile Screen**
+- **About Dialog**
+
 # Showcases:
 
 | Splash Page                                                      | Loading Screen                                                      |  Home Page                                                     |
@@ -39,6 +41,14 @@
 |:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
 | ![complete_profile](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/a7ad322c-b64d-413d-ab38-536457e65157)| ![verify_otp](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/152f5150-4b84-4adf-b546-c6a3f5bb1227)| ![category_list](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/4e8ba8a9-b8e1-4e88-b23e-d6b8b5d0db7c)|
 
+
+
+
+| Popular Product Screen                                          | Special Product Screen                                                     |  New Product Screen                                                     |
+|:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
+| ![popular](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/f9091d22-b67c-4d4f-bb29-3c88c448ee81)
+|  ![Uploading special.jpg…]()
+| ![new](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/60856237-c352-49f2-a963-2e6aaaa4a34e)| 
 ## A simple ecommerce application where REST API is integraded to see all products info and add to cart functionality using flutter and getx. 
 
 User can see all available products and add desired products add to the cart and remove from the cart.
