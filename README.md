@@ -74,9 +74,23 @@ https://github.com/](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/tr
 ## Flutter version: 3.13.7
 
 
-# Libraries: 
-- **Getx**
-- **Dio** 
+# Libraries:  
+  - **sizer: ^2.0.15**
+  - **get: ^4.6.5**
+  - **google_fonts: ^5.1.0**
+  - **flutter_svg: ^2.0.7**
+  - **pin_code_fields: ^8.0.1**
+  - **get_storage: ^2.1.1**
+  - **carousel_slider: ^4.1.0**
+  - **eva_icons_flutter: ^3.1.0**
+  - **http: ^1.1.0**
+  - **shimmer: ^3.0.0**
+  - **flutter_animate: ^4.2.0+1**
+  - **bottom_bar_matu: ^1.3.0**
+  - **cached_network_image: ^3.2.3**
+  - **device_preview: ^1.1.0**
+  - **motion_toast: ^2.7.8**
+  - **empty_widget: ^0.0.5**
 
 [Visit the Figma design](https://www.figma.com/file/drkfzS8CGQiIrhyA4s2m82/Foodpanda-UI-(Community)?type=design&node-id=3-5&mode=design&t=Zs1qAKg9dCMdWETG-0)
 
