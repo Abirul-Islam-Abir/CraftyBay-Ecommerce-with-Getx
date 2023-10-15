@@ -26,14 +26,14 @@ class CategoriesScreenController extends GetxController {
     _categoryList.clear(); // Clear the existing data before adding new data
     _categoryList.addAll(
       response.map(
-            (json) => CategoryListModel.fromJson(json),
+        (json) => CategoryListModel.fromJson(json),
       ),
     );
   }
 
   Future<void> fetchAndParseListProductByCategory() async {
     List<Map<String, dynamic>> response =
-    await fetchListProductByCategoryRequest();
+        await fetchListProductByCategoryRequest();
     _listProductByCategory.clear();
     _listProductByCategory.addAll(
         response.map((json) => ListProductByCategoryModel.fromJson(json)));

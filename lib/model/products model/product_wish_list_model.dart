@@ -8,11 +8,11 @@ class ProductWishListModel {
 
   ProductWishListModel(
       {this.id,
-        this.email,
-        this.productId,
-        this.createdAt,
-        this.updatedAt,
-        this.product});
+      this.email,
+      this.productId,
+      this.createdAt,
+      this.updatedAt,
+      this.product});
 
   ProductWishListModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
