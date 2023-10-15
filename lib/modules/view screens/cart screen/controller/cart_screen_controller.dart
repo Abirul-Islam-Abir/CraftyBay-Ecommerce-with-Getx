@@ -1,17 +1,20 @@
 import 'package:get/get.dart';
 
-import '../../../../api/products/cart_list.dart';
-import '../../../../api/products/delete_cart_list.dart';
 import '../../../../model/products model/cart_list_model.dart';
+import '../../../../services/products/cart_list.dart';
+import '../../../../services/products/delete_cart_list.dart';
 import '../../../../utils/snackbar.dart';
 import '../../../../utils/storage_key.dart';
 import '../../../../utils/store_data_value.dart';
 
 class CartScreenController extends GetxController {
   final List<CartListModel> _cartList = [];
+
   List<CartListModel> get cartList => _cartList;
   bool _isLoading = true;
-bool get isLoading =>_isLoading;
+
+  bool get isLoading => _isLoading;
+
 //Cart List method
   Future<void> fetchAndParseCartList() async {
     List<Map<String, dynamic>> response = await fetchCartListRequest();
@@ -42,12 +45,13 @@ bool get isLoading =>_isLoading;
       SnackToast.cartOperationFailed();
     }
   }
+
   Future<void> initializeMethod() async {
     _isLoading = true;
     update();
     try {
       await Future.wait([
-      fetchUserData(),
+        fetchUserData(),
       ]);
     } catch (e) {
       // Handle errors, e.g., show a snack-bar or an error message
@@ -58,6 +62,7 @@ bool get isLoading =>_isLoading;
       update();
     }
   }
+
   @override
   void onInit() {
     initializeMethod();

@@ -1,19 +1,25 @@
 import 'package:get/get.dart';
 
-import '../../../../api/base_url.dart';
-import '../../../../api/products/list_product_by_remark.dart';
 import '../../../../model/products model/list_product_by_remark_model.dart';
+import '../../../../services/base_url.dart';
+import '../../../../services/products/list_product_by_remark.dart';
 
 class RemarkProductScreenController extends GetxController {
   final List<ListProductByRemarkModel> _listProductByRemarkPopular = [];
-  final  List<ListProductByRemarkModel> _listProductByRemarkSpecial = [];
+  final List<ListProductByRemarkModel> _listProductByRemarkSpecial = [];
   final List<ListProductByRemarkModel> _listProductByRemarkNew = [];
   bool _isLoading = true;
+
   bool get isLoading => _isLoading;
+
   List<ListProductByRemarkModel> get listProductByRemarkPopular =>
       _listProductByRemarkPopular;
-  List<ListProductByRemarkModel>  get listProductByRemarkSpecial=>_listProductByRemarkSpecial;
-  List<ListProductByRemarkModel>  get listProductByRemarkNew=>_listProductByRemarkNew;
+
+  List<ListProductByRemarkModel> get listProductByRemarkSpecial =>
+      _listProductByRemarkSpecial;
+
+  List<ListProductByRemarkModel> get listProductByRemarkNew =>
+      _listProductByRemarkNew;
 
   // listProductByRemarkNewUrl
   Future<void> fetchAndParseListProductByRemarkPopular() async {
@@ -30,11 +36,11 @@ class RemarkProductScreenController extends GetxController {
   // listProductByRemarkSpecialUrl
   Future<void> fetchAndParseListProductByRemarkSpecial() async {
     List<Map<String, dynamic>> response =
-    await fetchListProductByRemarkRequest(listProductByRemarkSpecialUrl);
+        await fetchListProductByRemarkRequest(listProductByRemarkSpecialUrl);
     _listProductByRemarkSpecial.clear();
     _listProductByRemarkSpecial.addAll(
       response.map(
-            (json) => ListProductByRemarkModel.fromJson(json),
+        (json) => ListProductByRemarkModel.fromJson(json),
       ),
     );
   }
@@ -42,11 +48,11 @@ class RemarkProductScreenController extends GetxController {
   // listProductByRemarkNewUrl
   Future<void> fetchAndParseListProductByRemarkNew() async {
     List<Map<String, dynamic>> response =
-    await fetchListProductByRemarkRequest(listProductByRemarkNewUrl);
+        await fetchListProductByRemarkRequest(listProductByRemarkNewUrl);
     _listProductByRemarkNew.clear();
     _listProductByRemarkNew.addAll(
       response.map(
-            (json) => ListProductByRemarkModel.fromJson(json),
+        (json) => ListProductByRemarkModel.fromJson(json),
       ),
     );
   }
@@ -54,20 +60,19 @@ class RemarkProductScreenController extends GetxController {
   Future initializeMethod() async {
     _isLoading = true;
     update();
-    try{
+    try {
       await Future.wait([
         fetchAndParseListProductByRemarkPopular(),
         fetchAndParseListProductByRemarkSpecial(),
         fetchAndParseListProductByRemarkNew(),
       ]);
-    }catch(e){
+    } catch (e) {
       // Handle errors, e.g., show a snack-bar or an error message
       throw Exception('Error fetching data :$e');
-    }finally{
+    } finally {
       _isLoading = false;
       update();
     }
-
   }
 
   @override
