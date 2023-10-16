@@ -15,6 +15,7 @@ class CartScreenController extends GetxController {
 
   bool get isLoading => _isLoading;
 
+
 //Cart List method
   Future<void> fetchAndParseCartList() async {
     List<Map<String, dynamic>> response = await fetchCartListRequest();
@@ -46,6 +47,7 @@ class CartScreenController extends GetxController {
     }
   }
 
+
   Future<void> initializeMethod() async {
     _isLoading = true;
     update();
@@ -69,3 +71,4 @@ class CartScreenController extends GetxController {
     super.onInit();
   }
 }
+//HOme screen
