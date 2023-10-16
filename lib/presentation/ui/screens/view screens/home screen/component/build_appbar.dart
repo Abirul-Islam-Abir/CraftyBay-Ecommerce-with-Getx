@@ -11,9 +11,21 @@ AppBar buildAppBar(context) => AppBar(
               Get.to(() => ProfileScreen());
             },
             icon: const Icon(EvaIcons.personOutline)),
-        IconButton(onPressed: () {}, icon: const Icon(Icons.phone_outlined)),
         IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.notifications_none_rounded))
+            onPressed: () {
+              String? profileData =
+                  storageInstance.read(StorageKey.setCreateProfile);
+              print(profileData);
+            },
+            icon: const Icon(Icons.notifications_none_rounded)),
+        IconButton(
+            onPressed: () {
+              storageInstance.remove(StorageKey.setTokenKey);
+              Get.offAllNamed(RouteName.emailVerifyScreen);
+            },
+            icon: const Icon(Icons.logout_outlined)),
+        GetBuilder<HomeScreenController>(builder: (logic) {
+          return Switch(value: true, onChanged: (v) {});
+        })
       ],
     );

@@ -28,6 +28,7 @@ class CompleteProfileScreenController extends GetxController {
       });
       if (response['msg'] == 'success') {
         SnackToast.loginSuccess();
+        storageInstance.write(StorageKey.setCreateProfile, response['msg']);
         Get.offAllNamed(RouteName.bottomNavigationBar);
       } else {
         SnackToast.requestFailed();

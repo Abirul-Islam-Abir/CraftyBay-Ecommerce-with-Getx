@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
 
   final homeScreenController = Get.put(HomeScreenController());
   final remarkProductScreenController =
-      Get.put(RemarkProductScreenController());
+  Get.put(RemarkProductScreenController());
   final categoryController = Get.put(CategoriesScreenController());
   final bottomNavController = Get.put(BottomNavController());
 
@@ -46,9 +46,9 @@ class HomeScreen extends StatelessWidget {
             DotsIndicatorWidget(homeScreenController.listProductSlider),
             // CategoriesButton widget for displaying a category button (e.g., 'All Categories').
             CategoriesButton(
-                onTap: () {
-                  bottomNavController.goToCategoryScreen();
-                },
+                onTap:
+                bottomNavController.goToCategoryScreen
+                ,
                 categoryName: 'All Categories'),
             // AllCategoriesListBuilder for displaying a list of categories.
             AllCategoriesListBuilder(categoryController.categoryList),

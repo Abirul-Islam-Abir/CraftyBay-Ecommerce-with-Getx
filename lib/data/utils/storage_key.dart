@@ -7,6 +7,7 @@ class StorageKey {
   static String setIdKey = 'setId';
   static String setPasswordKey = 'setPassword';
   static String setCreatedDate = 'setCreatedDate';
+  static String setCreateProfile = 'setCreateProfile';
   static String setTokenKey = 'token';
   static String setAddressKey = 'address';
   static String setIsRemember = 'remember';

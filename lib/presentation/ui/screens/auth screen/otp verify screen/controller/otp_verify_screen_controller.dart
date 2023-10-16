@@ -7,30 +7,35 @@ class OtpVerifyScreenController extends GetxController {
   bool hasError = false;
   String currentText = "";
   final formKey = GlobalKey<FormState>();
-  final RxBool _isLoading = false.obs;
+  bool _isLoading = false;
 
-  bool get isLoading => _isLoading.value;
-  var countdown = 60.obs; // The initial countdown value
+  bool get isLoading => _isLoading;
+  var countdown = 60.obs;
   late Timer _timer;
   RxBool isTimeOut = true.obs;
 
   Future fetchAndParseUserLogin() async {
-    _isLoading.value = true;
-    try {
-      final response = await verifyLoginRequest(
-          email: UserData.userEmail, otp: otpController.text);
-      if (response['msg'] == 'success') {
-        storageInstance.write(StorageKey.setTokenKey, response['data']);
-        _isLoading.value = false;
-        Get.offAllNamed(RouteName.completeProfileScreen);
+    _isLoading = true;
+
+    final response = await verifyLoginRequest(
+        email: UserData.userEmail, otp: otpController.text);
+    if (response['msg'] == 'success') {
+      storageInstance.write(StorageKey.setTokenKey, response['data']);
+      String? profileData = storageInstance.read(StorageKey.setCreateProfile);
+
+      if (profileData != null && profileData.isNotEmpty) {
+        _isLoading = false;
+        update();
+        Get.offAllNamed(RouteName.homeScreen);
       } else {
-        SnackToast.otpVerifyFailed();
+        _isLoading = false;
+        update();
+        Get.offAllNamed(RouteName.completeProfileScreen);
       }
-    } catch (e) {
+    } else {
+      _isLoading = false;
+      update();
       SnackToast.otpVerifyFailed();
-      throw Exception('Request failed : $e');
-    } finally {
-      _isLoading.value = false;
     }
   }
 

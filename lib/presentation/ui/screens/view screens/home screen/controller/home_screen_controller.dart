@@ -77,6 +77,14 @@ class HomeScreenController extends GetxController {
     update();
   }
 
+  void isDarkModeChanger() {
+    if (Get.isDarkMode) {
+      Get.changeTheme(ThemeData.light());
+    } else {
+      Get.changeTheme(ThemeData.dark());
+    }
+  }
+
   void fetchUserData() {
     final tokenData = storageInstance.read(StorageKey.setTokenKey);
     final emailData = storageInstance.read(StorageKey.setEmailKey);

@@ -9,7 +9,7 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    controller.timerNavigate();
+    controller.decitionMaking();
     return Scaffold(
       body: Column(
         children: [

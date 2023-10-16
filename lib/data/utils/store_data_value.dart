@@ -11,6 +11,8 @@ class UserData {
   static String userAddress = '';
   static String userToken = '';
   static String userFcmToken = '';
+  static String setCreateProfile = '';
   static bool? isRemember = false;
+
   UserData._();
 }

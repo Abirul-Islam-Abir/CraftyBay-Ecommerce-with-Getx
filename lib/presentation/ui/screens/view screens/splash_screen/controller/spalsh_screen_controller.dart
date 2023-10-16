@@ -5,20 +5,15 @@ import '../../../../../../data/utils/storage_key.dart';
 import '../../../../../../data/utils/store_data_value.dart';
 
 class SplashScreenController extends GetxController {
-  Future<void> timerNavigate() async {
-    await Future.delayed(const Duration(seconds: 5));
+  Future<void> decitionMaking() async {
     fetchUserData();
-    Get.offNamed(RouteName
-        .bottomNavigationBar); /*  final tokenData = storageInstance.read(StorageKey.setTokenKey);
-    if (tokenData != null && tokenData.isNotEmpty) {
-      Get.offAllNamed(RouteName.homeScreen);
-    } else {
-      if (isRememberData == true) {
-        Get.offAllNamed(RouteName.loginScreen);
+    await Future.delayed(const Duration(seconds: 5)).then((value) {
+      if (UserData.userToken.isEmpty) {
+        Get.offNamed(RouteName.emailVerifyScreen);
       } else {
-        Get.offAllNamed(RouteName.onboardingScreen);
+        Get.offNamed(RouteName.homeScreen);
       }
-    }*/
+    });
   }
 
   void fetchUserData() {
