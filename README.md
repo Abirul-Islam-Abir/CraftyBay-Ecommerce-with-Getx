@@ -29,8 +29,7 @@
 
 
 
-| Product Details Screen                                            | Login Screen                                                      |  Cart Screen                                                      |
-|:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
+| Product Details Screen                                            | Login Screen                                                      |  Cart Screen                                                      
 | ![details](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/a640b941-cb79-4ef5-b374-76e571b819f9)| ![verify_email](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/b526d4f1-7339-44fc-924e-c960f326b1c4)| ![cart_screen](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/38bedda8-fc4d-4dab-994d-1c5d44cf529a)|
 
  
