@@ -20,16 +20,16 @@ class NewProductScreen extends StatelessWidget {
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3, mainAxisExtent: 250),
         itemBuilder: (context, index) {
-          final data = controller.listProductByRemarkNew;
-          final discount = data[index].discount ?? '';
-          final price = data[index].price ?? '';
-          final name = data[index].title ?? '';
-          final img = data[index].image ?? ImageAsset.noImageNet;
+          final data = controller.listProductByRemarkNew[index];
+          final discount = data.discount ?? '';
+          final price = data.price ?? '';
+          final name = data.title ?? '';
+          final img = data.image ?? ImageAsset.noImageNet;
           return Animate(
             effects: EffectFactory.leftToRightAnimate,
             child: ProductCard(
               onTap: () {
-                Get.toNamed(RouteName.detailsScreen, arguments: data[index].id);
+                Get.toNamed(RouteName.detailsScreen, arguments: data.id);
               },
               isFavPress: () {},
               discount: '$discount',

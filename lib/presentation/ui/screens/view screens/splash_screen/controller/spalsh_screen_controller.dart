@@ -11,7 +11,7 @@ class SplashScreenController extends GetxController {
       if (UserData.userToken.isEmpty) {
         Get.offNamed(RouteName.emailVerifyScreen);
       } else {
-        Get.offNamed(RouteName.homeScreen);
+        Get.offNamed(RouteName.bottomNavigationBar);
       }
     });
   }

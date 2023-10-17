@@ -23,8 +23,10 @@ class ProductsDetailsScreen extends StatelessWidget {
           final data = controller.productDetailsById;
           return controller.isLoading
               ? const ProductsDetailsShimmer()
-              : ListView(
-                  shrinkWrap: true,
+              : Column(
+            children: [
+              Expanded(
+                child: ListView(
                   children: AnimateList(
                     delay: const Duration(seconds: 1),
                     effects: EffectFactory.upToDownAnimate,
@@ -34,7 +36,8 @@ class ProductsDetailsScreen extends StatelessWidget {
                       ProductDetailsTitleCard(
                         count: controller.countProduct.toString(),
                         title:
-                            '${data[0].product?.title ?? "null"} ${data[0].product?.brandId ?? "null"}',
+                        '${data[0].product?.title ?? "null"} ${data[0].product
+                            ?.brandId ?? "null"}',
                         ratings: '${data[0].product?.star ?? "null"}',
                         save: '${data[0].product?.discount ?? "null"}',
                         addOnTap: controller.increment,
@@ -45,20 +48,23 @@ class ProductsDetailsScreen extends StatelessWidget {
                       ColorCircleBuilder(controller.color),
                       SizeCircleBuilder(controller.list),
                       const Padding(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: kTooSmallSize),
+                        padding: EdgeInsets.symmetric(
+                            horizontal: kTooSmallSize),
                         child: NormalText('Description'),
                       ),
                       CommonText(data[0].des ?? "null"),
                       const SizedBox(height: 10),
-                      BottomDetailsCard(
-                        name: 'Add to cart',
-                        onPressed: controller.fetchAndParseCreateCartList,
-                        price: data[0].product?.price ?? "null",
-                      ),
                     ],
                   ),
-                );
+                ),
+              ),
+              BottomDetailsCard(
+                name: 'Add to cart',
+                onPressed: controller.fetchAndParseCreateCartList,
+                price: data[0].product?.price ?? "null",
+              ),
+            ],
+          );
         },
       ),
     );

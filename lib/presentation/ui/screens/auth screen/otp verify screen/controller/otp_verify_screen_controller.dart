@@ -26,7 +26,7 @@ class OtpVerifyScreenController extends GetxController {
       if (profileData != null && profileData.isNotEmpty) {
         _isLoading = false;
         update();
-        Get.offAllNamed(RouteName.homeScreen);
+        Get.offAllNamed(RouteName.bottomNavigationBar);
       } else {
         _isLoading = false;
         update();

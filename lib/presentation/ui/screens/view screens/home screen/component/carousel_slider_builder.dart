@@ -36,7 +36,10 @@ class CarouselSliderBuilder extends GetView<HomeScreenController> {
                   child: CarouselBannerCard(
                       img: '${data.image}',
                       title: '${data.title}',
-                      onPressed: controller.isCheckLoggedIn),
+                      onPressed: () {
+                        Get.toNamed(RouteName.detailsScreen,
+                            arguments: data.id);
+                      }),
                 );
               },
             ),
