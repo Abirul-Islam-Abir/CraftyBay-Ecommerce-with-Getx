@@ -14,6 +14,7 @@ const String readProfileUrl = '$baseUrl/ReadProfile';
 const String createCartListUrl = '$baseUrl/CreateCartList';
 const String deleteCartListUrl = '$baseUrl/DeleteCartList';
 const String productWishListUrl = '$baseUrl/ProductWishList';
+const String listProductByReviewUrl = '$baseUrl/ListReviewByProduct';
 const String listProductByRemarkPopularUrl =
     '$baseUrl/ListProductByRemark/popular';
 const String listProductByRemarkSpecialUrl =

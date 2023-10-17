@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
 import '../../../../../../data/model/products model/list_product_by_remark_model.dart';
-import '../../../../../../data/services/base_url.dart';
+import '../../../../../../data/services/base_urls.dart';
 import '../../../../../../data/services/products/list_product_by_remark.dart';
 
 class RemarkProductScreenController extends GetxController {
@@ -24,11 +24,11 @@ class RemarkProductScreenController extends GetxController {
   // listProductByRemarkNewUrl
   Future<void> fetchAndParseListProductByRemarkPopular() async {
     List<Map<String, dynamic>> response =
-    await fetchListProductByRemarkRequest(listProductByRemarkPopularUrl);
+        await fetchListProductByRemarkRequest(listProductByRemarkPopularUrl);
     _listProductByRemarkPopular.clear();
     _listProductByRemarkPopular.addAll(
       response.map(
-            (json) => ListProductByRemarkModel.fromJson(json),
+        (json) => ListProductByRemarkModel.fromJson(json),
       ),
     );
   }
@@ -36,11 +36,11 @@ class RemarkProductScreenController extends GetxController {
   // listProductByRemarkSpecialUrl
   Future<void> fetchAndParseListProductByRemarkSpecial() async {
     List<Map<String, dynamic>> response =
-    await fetchListProductByRemarkRequest(listProductByRemarkSpecialUrl);
+        await fetchListProductByRemarkRequest(listProductByRemarkSpecialUrl);
     _listProductByRemarkSpecial.clear();
     _listProductByRemarkSpecial.addAll(
       response.map(
-            (json) => ListProductByRemarkModel.fromJson(json),
+        (json) => ListProductByRemarkModel.fromJson(json),
       ),
     );
   }
@@ -48,11 +48,11 @@ class RemarkProductScreenController extends GetxController {
   // listProductByRemarkNewUrl
   Future<void> fetchAndParseListProductByRemarkNew() async {
     List<Map<String, dynamic>> response =
-    await fetchListProductByRemarkRequest(listProductByRemarkNewUrl);
+        await fetchListProductByRemarkRequest(listProductByRemarkNewUrl);
     _listProductByRemarkNew.clear();
     _listProductByRemarkNew.addAll(
       response.map(
-            (json) => ListProductByRemarkModel.fromJson(json),
+        (json) => ListProductByRemarkModel.fromJson(json),
       ),
     );
   }
