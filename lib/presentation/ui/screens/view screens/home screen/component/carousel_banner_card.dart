@@ -29,16 +29,16 @@ class CarouselBannerCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Expanded(
-                flex: 2,
+                flex: 7,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
-                      horizontal: kTextSize, vertical: kTextSize),
+                      horizontal: 0, vertical: kPrimarySize),
                   child: CachedNetworkImage(
                     imageUrl: img,
                     imageBuilder: (context, imageProvider) => Container(
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                            image: imageProvider, fit: BoxFit.fitWidth),
+                            image: imageProvider, fit: BoxFit.fill),
                       ),
                     ),
                     placeholder: (context, url) =>
@@ -48,7 +48,7 @@ class CarouselBannerCard extends StatelessWidget {
                   ),
                 )),
             Expanded(
-              flex: 2,
+              flex: 5,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,

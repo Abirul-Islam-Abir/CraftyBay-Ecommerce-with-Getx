@@ -1,11 +1,8 @@
-import 'dart:convert';
-
-import 'package:crafty_bay_ecommerce/data/services/products/list_product_by_review.dart';
+import 'package:crafty_bay_ecommerce/data/services/7%20review%20list/list_product_by_review.dart';
 import 'package:crafty_bay_ecommerce/data/utils/export.dart';
-
 import '../../../../../../data/model/products model/list_product_by_review_model.dart';
-import '../../../../../../data/services/products/create_cart_list.dart';
-import '../../../../../../data/services/products/product_details_by_id.dart';
+import '../../../../../../data/services/9 cart list/create_cart_list.dart';
+import '../../../../../../data/services/3 products list/product_details_by_id.dart';
 
 class ProductDetailsScreenController extends GetxController {
   final List<ProductDetailsModel> _productDetailsById = [];
@@ -22,24 +19,26 @@ class ProductDetailsScreenController extends GetxController {
   int colorIndex = 0;
   int sizeIndex = 0;
   int imageIndex = 0;
-  int countProduct = 0;
+  int _countProduct = 0;
+
+  int get countProduct => _countProduct;
 
   void increment() {
     if (countProduct == 5) {
-      countProduct = 5;
+      _countProduct = 5;
       update();
     } else {
-      countProduct++;
+      _countProduct++;
       update();
     }
   }
 
   void decrement() {
     if (countProduct == 0) {
-      countProduct = 0;
+      _countProduct = 0;
       update();
     } else {
-      countProduct--;
+      _countProduct--;
       update();
     }
   }
@@ -62,15 +61,15 @@ class ProductDetailsScreenController extends GetxController {
   //Product Details By Id method
   Future<void> fetchAndParseProductDetailsById() async {
     List<Map<String, dynamic>> response =
-    await fetchProductDetailsByIdRequest(productId);
+        await fetchProductDetailsByIdRequest(productId);
+    print(response);
     _productDetailsById
         .addAll(response.map((json) => ProductDetailsModel.fromJson(json)));
   }
 
   Future<void> fetchAndParseListProductByReview() async {
     List<Map<String, dynamic>> response =
-    await fetchListProductByReviewRequest(productId);
-    print(response);
+        await fetchListProductByReviewRequest(productId);
     _productListByReview.addAll(
         response.map((json) => ListProductByReviewModel.fromJson(json)));
   }
@@ -116,7 +115,7 @@ class ProductDetailsScreenController extends GetxController {
 
   @override
   void onInit() {
-    handleDataCalling();
     super.onInit();
+    handleDataCalling();
   }
 }

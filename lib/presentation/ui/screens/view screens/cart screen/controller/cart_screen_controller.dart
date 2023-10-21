@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 
 import '../../../../../../data/model/products model/cart_list_model.dart';
-import '../../../../../../data/services/products/cart_list.dart';
-import '../../../../../../data/services/products/delete_cart_list.dart';
+import '../../../../../../data/services/9 cart list/cart_list.dart';
+import '../../../../../../data/services/9 cart list/delete_cart_list.dart';
 import '../../../../../../data/utils/snackbar.dart';
 import '../../../../../../data/utils/storage_key.dart';
 import '../../../../../../data/utils/store_data_value.dart';

@@ -8,11 +8,13 @@ Future fetchProductDetailsByIdRequest(sId) async {
   try {
     final url = Uri.parse('$productDetailsByIdUrl/$sId');
     final http.Response response = await http.get(url);
+    print(response);
     if (response.statusCode == 200) {
       final responseBody = jsonDecode(response.body);
       if (responseBody['msg'] == 'success') {
         final List<Map<String, dynamic>> data =
             List<Map<String, dynamic>>.from(responseBody['data']);
+
         return data;
       } else {
         throw Exception('Error has occurred: ${responseBody['msg']}');

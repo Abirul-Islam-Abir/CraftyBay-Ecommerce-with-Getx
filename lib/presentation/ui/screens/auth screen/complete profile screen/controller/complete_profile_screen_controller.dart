@@ -20,11 +20,21 @@ class CompleteProfileScreenController extends GetxController {
   Future fetchAndParseCreateProfileRequest() async {
     try {
       final response = await createProfileRequest({
-        "firstName": firstNameController.text,
-        "lastName": lastNameController.text,
-        "mobile": mobileController.text,
-        "city": addressController.text,
-        "shippingAddress": shippingAddressController.text
+        "cus_name": '${firstNameController.text} ${lastNameController.text}',
+        "cus_add": shippingAddressController.text,
+        "cus_city": addressController.text,
+        "cus_state": addressController.text,
+        "cus_postcode": "1207",
+        "cus_country": "Bangladesh",
+        "cus_phone": mobileController.text,
+        "cus_fax": mobileController.text,
+        "ship_name": '${firstNameController.text} ${lastNameController.text}',
+        "ship_add": shippingAddressController.text,
+        "ship_city": addressController.text,
+        "ship_state": addressController.text,
+        "ship_postcode": "1207",
+        "ship_country": "Bangladesh",
+        "ship_phone": mobileController.text,
       });
       if (response['msg'] == 'success') {
         SnackToast.loginSuccess();

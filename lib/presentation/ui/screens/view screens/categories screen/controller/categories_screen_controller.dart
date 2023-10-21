@@ -2,8 +2,8 @@ import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 
 import '../../../../../../data/model/category list model/category_list_model.dart';
 import '../../../../../../data/model/products model/list_product_by_category_model.dart';
-import '../../../../../../data/services/category/category_list.dart';
-import '../../../../../../data/services/products/list_product_by_category.dart';
+import '../../../../../../data/services/2 category list/category_list.dart';
+import '../../../../../../data/services/3 products list/list_product_by_category.dart';
 
 class CategoriesScreenController extends GetxController {
   final List<CategoryListModel> _categoryList = [];
@@ -26,14 +26,14 @@ class CategoriesScreenController extends GetxController {
     _categoryList.clear(); // Clear the existing data before adding new data
     _categoryList.addAll(
       response.map(
-            (json) => CategoryListModel.fromJson(json),
+        (json) => CategoryListModel.fromJson(json),
       ),
     );
   }
 
   Future<void> fetchAndParseListProductByCategory() async {
     List<Map<String, dynamic>> response =
-    await fetchListProductByCategoryRequest();
+        await fetchListProductByCategoryRequest();
     _listProductByCategory.clear();
     _listProductByCategory.addAll(
         response.map((json) => ListProductByCategoryModel.fromJson(json)));

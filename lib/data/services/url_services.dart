@@ -1,6 +1,7 @@
 import '../utils/store_data_value.dart';
 
-const String baseUrl = 'https://craftybay.teamrabbil.com/api';
+//const String baseUrl = 'https://craftybay.teamrabbil.com/api';
+const String baseUrl = 'https://ecom-api.teamrabbil.com/api';
 const String brandListUrl = '$baseUrl/BrandList';
 const String categoryListUrl = '$baseUrl/CategoryList';
 const String listProductSliderUrl = '$baseUrl/ListProductSlider';

@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 
 import '../../../../../../data/model/products model/list_product_by_remark_model.dart';
 import '../../../../../../data/services/base_urls.dart';
-import '../../../../../../data/services/products/list_product_by_remark.dart';
+import '../../../../../../data/services/3 products list/list_product_by_remark.dart';
 
 class RemarkProductScreenController extends GetxController {
   final List<ListProductByRemarkModel> _listProductByRemarkPopular = [];

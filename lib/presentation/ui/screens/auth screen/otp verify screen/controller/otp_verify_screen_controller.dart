@@ -1,4 +1,4 @@
-import '../../../../../../data/services/user/verify_login.dart';
+import '../../../../../../data/services/5 user auth/verify_login.dart';
 import '../../../../../../data/utils/export.dart';
 
 class OtpVerifyScreenController extends GetxController {
@@ -46,7 +46,7 @@ class OtpVerifyScreenController extends GetxController {
 
   void validateSubmit() {
     if (formKey.currentState!.validate()) {
-      if (currentText.length != 4 || currentText == "1234") {
+      if (currentText.length != 6 || currentText == "123456") {
         errorController!.add(ErrorAnimationType.shake);
         hasError = true;
         update();

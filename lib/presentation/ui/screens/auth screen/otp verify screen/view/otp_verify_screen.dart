@@ -31,84 +31,80 @@ class OtpVerifyScreen extends StatelessWidget {
               Form(
                 key: controller.formKey,
                 child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: kTooSmallSize, horizontal: 50),
+                    padding: EdgeInsets.symmetric(
+                        vertical: 0, horizontal: kDefaultSize),
                     child: GetBuilder<OtpVerifyScreenController>(
-                        builder: (controller) =>
-                            PinCodeTextField(
-                                appContext: context,
-                                pastedTextStyle: const TextStyle(
-                                    color: Colors.green,
-                                    fontWeight: FontWeight.bold),
-                                length: 4,
-                                obscureText: true,
-                                obscuringCharacter: '*',
-                                obscuringWidget:
+                        builder: (controller) => PinCodeTextField(
+                            appContext: context,
+                            pastedTextStyle: const TextStyle(
+                                color: Colors.green,
+                                fontWeight: FontWeight.bold),
+                            length: 6,
+                            obscureText: true,
+                            obscuringCharacter: '*',
+                            obscuringWidget:
                                 SvgPicture.asset(ImageAsset.primaryLogoSvg),
-                                blinkWhenObscuring: true,
-                                animationType: AnimationType.fade,
-                                validator: (v) {
-                                  if (v!.length < 3) {
-                                    return "Type your pin code";
-                                  } else {
-                                    return null;
-                                  }
-                                },
-                                pinTheme: PinTheme(
-                                    shape: PinCodeFieldShape.box,
-                                    borderRadius: BorderRadius.circular(5),
-                                    fieldHeight: 50,
-                                    fieldWidth: 40,
-                                    activeFillColor: AppColor.kWhiteColor),
-                                cursorColor: AppColor.kPrimaryColor,
-                                animationDuration:
+                            blinkWhenObscuring: true,
+                            animationType: AnimationType.fade,
+                            validator: (v) {
+                              if (v!.length < 5) {
+                                return "Type your pin code";
+                              } else {
+                                return null;
+                              }
+                            },
+                            pinTheme: PinTheme(
+                                shape: PinCodeFieldShape.box,
+                                borderRadius: BorderRadius.circular(5),
+                                fieldHeight: 50,
+                                fieldWidth: 40,
+                                activeFillColor: AppColor.kWhiteColor),
+                            cursorColor: AppColor.kPrimaryColor,
+                            animationDuration:
                                 const Duration(milliseconds: 300),
-                                enableActiveFill: false,
-                                errorAnimationController:
+                            enableActiveFill: false,
+                            errorAnimationController:
                                 controller.errorController,
-                                controller: controller.otpController,
-                                keyboardType: TextInputType.number,
-                                boxShadows: const [
-                                  BoxShadow(
-                                      offset: Offset(0, 1),
-                                      color: AppColor.kPrimaryColor,
-                                      blurRadius: 10)
-                                ],
-                                onCompleted: (v) {
-                                  controller.validateSubmit();
-                                },
-                                onChanged: (value) {
-                                  controller.onChangeMethod(value);
-                                },
-                                beforeTextPaste: (text) {
-                                  debugPrint("Allowing to paste $text");
-                                  return true;
-                                }))),
+                            controller: controller.otpController,
+                            keyboardType: TextInputType.number,
+                            boxShadows: const [
+                              BoxShadow(
+                                  offset: Offset(0, 1),
+                                  color: AppColor.kPrimaryColor,
+                                  blurRadius: 10)
+                            ],
+                            onCompleted: (v) {
+                              controller.validateSubmit();
+                            },
+                            onChanged: (value) {
+                              controller.onChangeMethod(value);
+                            },
+                            beforeTextPaste: (text) {
+                              debugPrint("Allowing to paste $text");
+                              return true;
+                            }))),
               ),
               GetBuilder<OtpVerifyScreenController>(
-                  builder: (_) =>
-                      Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 30.0),
-                          child: Text(
-                              controller.hasError
-                                  ? "*Please fill up all the cells properly"
-                                  : "",
-                              style: const TextStyle(
-                                  color: Colors.red,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w400)))),
+                  builder: (_) => Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                      child: Text(
+                          controller.hasError
+                              ? "*Please fill up all the cells properly"
+                              : "",
+                          style: const TextStyle(
+                              color: Colors.red,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400)))),
               GetBuilder<OtpVerifyScreenController>(
-                  builder: (controller) =>
-                      GlobalButton(
+                  builder: (controller) => GlobalButton(
                         onPress: controller.validateSubmit,
                         text: 'Verify'.toUpperCase(),
                         isLoading: controller.isLoading,
                       )),
               const SizedBox(height: 16),
-              Obx(() =>
-                  LongLineSubtitleText(
-                      text: AppString.thisCodeWillExpired,
-                      txt: '${controller.countdown}s')),
+              Obx(() => LongLineSubtitleText(
+                  text: AppString.thisCodeWillExpired,
+                  txt: '${controller.countdown}s')),
               GetBuilder<OtpVerifyScreenController>(builder: (controller) {
                 return LongLineSubtitleText(
                   text: AppString.didNotReceivedTheCode,
@@ -119,11 +115,10 @@ class OtpVerifyScreen extends StatelessWidget {
                   },
                 );
               }),
-
             ],
           ),
-        ),)
-      ,
+        ),
+      ),
     );
   }
 }
