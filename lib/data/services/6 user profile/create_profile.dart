@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import '../base_urls.dart';
+import '../url_services.dart';
 
 Future createProfileRequest(body) async {
   try {

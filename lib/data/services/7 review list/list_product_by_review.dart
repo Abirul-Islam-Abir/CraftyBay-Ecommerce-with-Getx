@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:crafty_bay_ecommerce/data/services/base_urls.dart';
+import 'package:crafty_bay_ecommerce/data/services/url_services.dart';
 import 'package:http/http.dart' as http;
 
 Future fetchListProductByReviewRequest(id) async {

@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-import '../base_urls.dart';
+import '../url_services.dart';
 
 Future fetchListProductByBrandRequest() async {
   try {
