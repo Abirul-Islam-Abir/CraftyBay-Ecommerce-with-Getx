@@ -24,7 +24,7 @@ class ColorCircleBuilder extends GetView<ProductDetailsScreenController> {
               (index) => ColorCircle(
                 selectedIndex: controller.colorIndex,
                 index: index,
-                color: color[index],
+                color: color[index]['color'],
                 onTap: () {
                   controller.colorSelect(index);
                 },

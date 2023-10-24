@@ -37,9 +37,11 @@ class CartScreenController extends GetxController {
   Future<void> deleteItems(id) async {
     final response = await postDeleteCartList(id);
     if (response['msg'] == 'success') {
+      print(response);
       await Future.wait([
         fetchAndParseCartList(),
       ]);
+      update();
       SnackToast.cartOperationSuccessful();
     } else {
       SnackToast.cartOperationFailed();
@@ -69,4 +71,3 @@ class CartScreenController extends GetxController {
     super.onInit();
   }
 }
-//HOme screen

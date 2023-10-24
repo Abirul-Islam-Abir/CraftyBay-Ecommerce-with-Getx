@@ -18,6 +18,7 @@ class CategoriesButton extends StatelessWidget {
             ? CategoryButtonShimmer(categoryName: categoryName)
             : Container(
                 width: Get.width,
+                height: 50,
                 padding: const EdgeInsets.symmetric(
                     vertical: kTooSmallSize, horizontal: kTextSize),
                 child: Row(

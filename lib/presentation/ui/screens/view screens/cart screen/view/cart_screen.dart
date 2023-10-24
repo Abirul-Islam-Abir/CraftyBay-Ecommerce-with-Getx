@@ -35,11 +35,12 @@ class CartScreen extends StatelessWidget {
                             SnackToast.showDeleteDialog(
                                 controller.cartList[index].id);
                           },
-                          count: '00',
-                          title: controller.cartList[index].product ?? 'Null',
-                          price: '00.00',
-                          colorText: controller.cartList[index].color ?? 'Red',
-                          sizeText: controller.cartList[index].size ?? 'XX'),
+                          count: '0',
+                          title:
+                              controller.cartList[index].product?.title ?? '',
+                          price: controller.cartList[index].price.toString(),
+                          colorText: controller.cartList[index].color ?? '',
+                          sizeText: controller.cartList[index].size ?? ''),
                       itemCount: controller.cartList.length)),
               BottomDetailsCard(
                 name: 'Check Out',

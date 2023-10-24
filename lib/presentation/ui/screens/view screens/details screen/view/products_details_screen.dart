@@ -36,9 +36,9 @@ class ProductsDetailsScreen extends StatelessWidget {
                             ProductDetailsTitleCard(
                               count: controller.countProduct.toString(),
                               title:
-                                  '${data[0].product?.title ?? "null"} ${data[0].product?.brandId ?? "null"}',
-                              ratings: '${data[0].product?.star ?? "null"}',
-                              save: '${data[0].product?.discount ?? "null"}',
+                                  '${data[0].product?.title ?? " "} ${data[0].product?.brandId ?? "null"}',
+                              ratings: '${data[0].product?.star ?? " "}',
+                              save: '${data[0].product?.discount ?? " "}',
                               addOnTap: controller.increment,
                               isFavPress: () {},
                               removeOnTap: controller.decrement,
@@ -51,7 +51,7 @@ class ProductsDetailsScreen extends StatelessWidget {
                                   horizontal: kTooSmallSize),
                               child: NormalText('Description'),
                             ),
-                            CommonText(data[0].des ?? "null"),
+                            CommonText(data[0].des ?? " "),
                             const SizedBox(height: 10),
                           ],
                         ),
@@ -60,7 +60,7 @@ class ProductsDetailsScreen extends StatelessWidget {
                     BottomDetailsCard(
                       name: 'Add to cart',
                       onPressed: controller.fetchAndParseCreateCartList,
-                      price: data[0].product?.price ?? "null",
+                      price: data[0].product?.price ?? " ",
                     ),
                   ],
                 );

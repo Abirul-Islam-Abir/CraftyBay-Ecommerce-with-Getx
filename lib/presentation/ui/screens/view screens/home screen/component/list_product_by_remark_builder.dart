@@ -12,36 +12,37 @@ class ListProductByRemarkBuilder extends GetView<HomeScreenController> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: GetBuilder<RemarkProductScreenController>(
-        builder: (controller) {
-          final product = products.length;
-          final length = product >= 5 ? 5 : product;
-          return Row(
-            children: List.generate(
-              controller.isLoading ? 4 : length,
-              (index) => controller.isLoading
-                  ? const ProductCardShimmer()
-                  : Animate(
-                      effects: EffectFactory.leftToRightAnimate,
-                      child: ProductCard(
-                          onTap: () {
-                            Get.toNamed(RouteName.detailsScreen,
-                                arguments: products[index].id);
-                          },
-                          isFavPress: () {},
-                          discount: '${products[index].discount}',
-                          price: '${products[index].price}',
-                          name: '${products[index].title}',
-                          isFav: true,
-                          ratings: 3.5,
-                          img: '${products[index].image}'),
-                    ),
+    return GetBuilder<RemarkProductScreenController>(
+      builder: (controller) {
+        final product = products.length;
+        final length = product >= 5 ? 5 : product;
+        return SizedBox(
+          height: 200,
+          width: Get.width,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: List.generate(
+                controller.isLoading ? 4 : length,
+                (index) => controller.isLoading
+                    ? const ProductCardShimmer()
+                    : ProductCard(
+                        onTap: () {
+                          Get.toNamed(RouteName.detailsScreen,
+                              arguments: products[index].id);
+                        },
+                        isFavPress: () {},
+                        discount: '${products[index].discount}',
+                        price: '${products[index].price}',
+                        name: '${products[index].title}',
+                        isFav: true,
+                        ratings: 3.5,
+                        img: '${products[index].image}'),
+              ),
             ),
-          );
-        },
-      ),
+          ),
+        );
+      },
     );
   }
 }

@@ -77,8 +77,9 @@ class ProductDetailsScreenController extends GetxController {
     if (UserData.userToken.isNotEmpty) {
       final response = await postCreateCartList({
         "product_id": productDetailsById[0].productId.toString(),
-        "color": productDetailsById[0].color.toString(),
-        "size": productDetailsById[0].size.toString()
+        "color": productDetailsById[0].color?[colorIndex].toString(),
+        "size": productDetailsById[0].size?[sizeIndex].toString(),
+        "qty": countProduct.toString()
       });
       if (response['msg'] == 'success') {
         Get.find<CartScreenController>().fetchAndParseCartList();
@@ -103,14 +104,31 @@ class ProductDetailsScreenController extends GetxController {
     }
   }
 
-  final List color = [
-    AppColor.kPrimaryColor,
-    AppColor.kBlueColor,
-    AppColor.kRedColor,
-    AppColor.kOrangeColor,
-    AppColor.kGreyColor
+  final List<Map<String, dynamic>> color = [
+    {
+      'color': AppColor.kGreenColor,
+      'name': 'Green',
+    },
+    {
+      'color': AppColor.kBlueColor,
+      'name': 'Blue',
+    },
+    {
+      'color': AppColor.kRedColor,
+      'name': 'Red',
+    },
+    {
+      'color': AppColor.kOrangeColor,
+      'name': 'Orange',
+    },
   ];
-  final List list = ['X', 'XL', '2L', 'XX'];
+
+  final List list = [
+    'X',
+    'XL',
+    '2L',
+    'XX',
+  ];
 
   @override
   void onInit() {

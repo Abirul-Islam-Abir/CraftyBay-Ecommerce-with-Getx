@@ -43,7 +43,7 @@ class ProductsDetailsShimmer extends GetView<ProductDetailsScreenController> {
                     (index) => ColorCircle(
                       selectedIndex: 5,
                       index: index,
-                      color: controller.color[index],
+                      color: controller.color[index]['color'],
                       onTap: () {},
                     ),
                   ),
