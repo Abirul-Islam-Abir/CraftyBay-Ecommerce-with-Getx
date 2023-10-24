@@ -21,32 +21,32 @@
 
 # Showcases:
 
-| Splash Page                                                      | Loading Screen                                                      |  Home Page                                                     |
+| Splash Page                                                      |        Login Screen                                               |       OTP Verify Screen                                                 |
 |:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
-| ![splas](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/d59bf553-fa6f-40a3-b23c-cae593d728f3)| ![shimmer_screen](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/3fb54f2f-0bbf-452c-bcf3-32e0d5d8d109)| ![home_screen](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/3c30260f-35cd-4510-9fd1-715a04478569)|
+|  ![splash](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/65081f86-ee7a-40f5-bdee-0640a3cbf50d)| ![email](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/4a1d1cac-6d37-45ee-bc73-48bcbe5f3466)|  ![otp](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/3846f20e-30f1-4b4b-ad80-832c8927b8cf)|
 
 
 
 
 
-| Product Details Screen                                            | Login Screen                                                      |  Cart Screen |
+|       Loading Screen                                     |      Home Page                                                   |   Product Details Screen  |
 |:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
-| ![splas](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/d59bf553-fa6f-40a3-b23c-cae593d728f3)| ![shimmer_screen](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/3fb54f2f-0bbf-452c-bcf3-32e0d5d8d109)| ![home_screen](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/3c30260f-35cd-4510-9fd1-715a04478569)|
+| ![loading](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/ead63223-289e-49f4-82c0-13f68338b66a)|  ![home](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/31b4fe0c-649d-481e-9780-c0176513b8cf)|   ![details](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/6d6cad9b-daff-433a-b461-a24a73762730)|
 
  
 
 
 
-| Complete Profile Screen                                           | OTP Verify Screen                                                     |  Categories List                                                     |
+| Complete Profile Screen                                           |     Cart Screen                                               |  Categories List                                                     |
 |:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
-| ![complete_profile](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/a7ad322c-b64d-413d-ab38-536457e65157)| ![verify_otp](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/152f5150-4b84-4adf-b546-c6a3f5bb1227)| ![category_list](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/4e8ba8a9-b8e1-4e88-b23e-d6b8b5d0db7c)|
+| |  ![cart](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/9fa3de3b-ec77-4971-8f17-0828541e702e)|  ![category](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/4b7790d9-9906-4b40-8433-32213d3b3a27)|
 
 
 
 
 | Popular Product Screen                                          | Special Product Screen                                                     |  New Product Screen                                                     |
 |:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
-| ![popular](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/f9091d22-b67c-4d4f-bb29-3c88c448ee81)|   ![special](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/fce6aab4-581f-4316-a5f9-ae340bb582c1)| ![new](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/60856237-c352-49f2-a963-2e6aaaa4a34e)| 
+|  ![product](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/e16d69d2-45db-4021-ab58-4b40b7989144)| ![special](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/0c93f573-0113-4868-82bd-6f199ecab871)| ![new](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/1bb2daf7-4ba0-410c-99b9-57110f6479cc)| 
 ## A simple ecommerce application where REST API is integraded to see all products info and add to cart functionality using flutter and getx. 
 
 User can see all available products and add desired products add to the cart and remove from the cart.
@@ -152,7 +152,4 @@ https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/tree/main/assets/crafty
        
 ## Flutter sdk version: 3.10.6
 ## App version: 1.0.0+1
-
-# About me
-
-## Softwer Developer | Flutter | Java | Rest Api | Getx | Firebase
+ 
