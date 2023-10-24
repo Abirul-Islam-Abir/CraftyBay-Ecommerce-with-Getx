@@ -24,23 +24,22 @@ class CategoriesScreen extends StatelessWidget {
             title: const NormalText('Category'),
           ),
           body: GetBuilder<HomeScreenController>(
-            builder: (_) => GridView.builder(
-              itemCount: controller.listProductByCategory.length,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 4, mainAxisExtent: 120),
-              itemBuilder: (context, index) {
-                final data = controller.listProductByCategory;
-                final categoryName =
-                    data[index].category?.categoryName?.toUpperCase() ??
-                        'Name : Null';
-                final categoryImage =
-                    data[index].category?.categoryImg ?? ImageAsset.noImageNet;
-                return CategoriesProductCard(
-                  img: categoryImage,
-                  categoryName: categoryName,
-                );
-              },
-            ),
+            builder: (_) =>
+                GridView.builder(
+                  itemCount: controller.categoryList.length,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 4, mainAxisExtent: 120),
+                  itemBuilder: (context, index) {
+                    final data = controller.categoryList;
+                    final categoryName = data[index].categoryName ?? '';
+                    final categoryImage =
+                        data[index].categoryImg ?? ImageAsset.noImageNet;
+                    return CategoriesProductCard(
+                      img: categoryImage,
+                      categoryName: categoryName,
+                    );
+                  },
+                ),
           ),
         ));
   }

@@ -12,9 +12,10 @@ class CartCard extends StatelessWidget {
     required this.deletePress,
     required this.addBtn,
     required this.removeBtn,
+    required this.img,
   });
 
-  final String title, colorText, sizeText, price, count;
+  final String title, colorText, sizeText, price, count, img;
   final Function() deletePress, addBtn, removeBtn;
 
   @override
@@ -30,7 +31,17 @@ class CartCard extends StatelessWidget {
             width: Get.width,
             child: Row(
               children: [
-                Expanded(flex: 3, child: Image.asset(ImageAsset.shoes)),
+                Expanded(
+                  flex: 3,
+                  child: Image.network(
+                    img,
+                    errorBuilder: (context, error, stackTrace) => Image.network(
+                      ImageAsset.noImageNet,
+                      height: 300,
+                      width: Get.width / 3,
+                    ),
+                  ),
+                ),
                 Expanded(
                     flex: 8,
                     child: Column(

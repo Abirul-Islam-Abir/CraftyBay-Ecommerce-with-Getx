@@ -52,4 +52,3 @@ export 'package:flutter_svg/flutter_svg.dart';
 export 'package:pin_code_fields/pin_code_fields.dart';
 export '../../../../../../data/model/category list model/category_list_model.dart';
 export '../services/2 category list/category_list.dart';
-export '../services/3 products list/list_product_by_category.dart';

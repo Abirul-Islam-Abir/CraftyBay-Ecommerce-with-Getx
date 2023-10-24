@@ -29,6 +29,8 @@ class CartScreen extends StatelessWidget {
                   child: ListView.builder(
                       shrinkWrap: true,
                       itemBuilder: (context, index) => CartCard(
+                          img: controller.cartList[index].product!.image
+                              .toString(),
                           removeBtn: () {},
                           addBtn: () {},
                           deletePress: () {
