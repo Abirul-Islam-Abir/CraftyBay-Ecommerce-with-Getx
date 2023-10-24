@@ -1,4 +1,4 @@
-import '../../../../../../data/model/products model/list_product_by_brand_model.dart';
+import '../../../../../../data/model/3 products list/list_product_by_brand_model.dart';
 import '../../../../../../data/utils/export.dart';
 
 class HomeScreenController extends GetxController {

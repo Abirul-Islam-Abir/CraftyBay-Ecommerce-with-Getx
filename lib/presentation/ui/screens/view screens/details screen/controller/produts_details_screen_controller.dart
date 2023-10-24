@@ -1,6 +1,6 @@
 import 'package:crafty_bay_ecommerce/data/services/7%20review%20list/list_product_by_review.dart';
 import 'package:crafty_bay_ecommerce/data/utils/export.dart';
-import '../../../../../../data/model/products model/list_product_by_review_model.dart';
+import '../../../../../../data/model/7 review list/list_product_by_review_model.dart';
 import '../../../../../../data/services/9 cart list/create_cart_list.dart';
 import '../../../../../../data/services/3 products list/product_details_by_id.dart';
 

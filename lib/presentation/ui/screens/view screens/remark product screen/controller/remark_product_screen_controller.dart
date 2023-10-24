@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-import '../../../../../../data/model/products model/list_product_by_remark_model.dart';
+import '../../../../../../data/model/3 products list/list_product_by_remark_model.dart';
 import '../../../../../../data/services/url_services.dart';
 import '../../../../../../data/services/3 products list/list_product_by_remark.dart';
 

@@ -1,3 +1,4 @@
+import '../../../../../../data/model/2 category list model/category_list_model.dart';
 import '../../../../../../data/utils/animation_effect.dart';
 import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/categories_card_shimmer.dart';

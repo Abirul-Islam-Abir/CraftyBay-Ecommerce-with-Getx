@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-import '../../../../../../data/model/products model/cart_list_model.dart';
+import '../../../../../../data/model/9 cart list/cart_list_model.dart';
 import '../../../../../../data/services/9 cart list/cart_list.dart';
 import '../../../../../../data/services/9 cart list/delete_cart_list.dart';
 import '../../../../../../data/utils/snackbar.dart';
