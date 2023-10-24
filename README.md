@@ -46,7 +46,7 @@
 
 | Popular Product Screen                                          | Special Product Screen                                                     |  New Product Screen                                                     |
 |:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
-|  ![product](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/e16d69d2-45db-4021-ab58-4b40b7989144)|  | | 
+|  ![product](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/e16d69d2-45db-4021-ab58-4b40b7989144)| ![special](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/0c93f573-0113-4868-82bd-6f199ecab871)| ![new](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/1bb2daf7-4ba0-410c-99b9-57110f6479cc)| 
 ## A simple ecommerce application where REST API is integraded to see all products info and add to cart functionality using flutter and getx. 
 
 User can see all available products and add desired products add to the cart and remove from the cart.
