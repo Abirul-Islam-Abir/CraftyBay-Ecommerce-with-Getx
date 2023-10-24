@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 
 import '../../../../../../data/model/9 cart list/cart_list_model.dart';
+import '../../../../../../data/routes/app_route_name.dart';
 import '../../../../../../data/services/9 cart list/cart_list.dart';
 import '../../../../../../data/services/9 cart list/delete_cart_list.dart';
 import '../../../../../../data/utils/snackbar.dart';
@@ -51,10 +52,17 @@ class CartScreenController extends GetxController {
     _isLoading = true;
     update();
     try {
-      await Future.wait([
-        fetchUserData(),
-      ]);
+      if (UserData.userToken.isNotEmpty) {
+        await Future.wait([
+          fetchUserData(),
+        ]);
+      }
     } catch (e) {
+      if (UserData.userToken.isEmpty) {
+        storageInstance.remove(StorageKey.setTokenKey);
+        Get.offAllNamed(RouteName.emailVerifyScreen);
+      }
+
       throw Exception('Error fetching data :$e');
     } finally {
       fetchUserData();

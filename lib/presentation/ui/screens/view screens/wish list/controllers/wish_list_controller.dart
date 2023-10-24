@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 
 import '../../../../../../data/model/8 wish list/product_wish_list_model.dart';
 import '../../../../../../data/services/8 wish list/product_wish_list.dart';
+import '../../../../../../data/utils/store_data_value.dart';
 
 class WishListScreenController extends GetxController {
   final List<ProductWishListModel> _wishList = [];
@@ -22,9 +23,11 @@ class WishListScreenController extends GetxController {
     _isLoading = true;
     update();
     try {
-      await Future.wait([
-        fetchAndParseWishList(),
-      ]);
+      if (UserData.userToken.isNotEmpty) {
+        await Future.wait([
+          fetchAndParseWishList(),
+        ]);
+      }
     } catch (e) {
       throw Exception('Error fetching data :$e');
     } finally {

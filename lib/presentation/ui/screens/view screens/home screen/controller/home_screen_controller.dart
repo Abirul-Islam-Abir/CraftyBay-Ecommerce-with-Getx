@@ -11,20 +11,18 @@ class HomeScreenController extends GetxController {
 
   List<ListProductByBrandModel> get listProductByBrand => _listProductByBrand;
 
-
   final TextEditingController searchController = TextEditingController();
 
   Future<void> fetchAndParseListProductByBrand() async {
     List<Map<String, dynamic>> response =
-    await fetchListProductByBrandRequest();
+        await fetchListProductByBrandRequest();
     _listProductByBrand.clear();
     _listProductByBrand.addAll(
       response.map(
-            (json) => ListProductByBrandModel.fromJson(json),
+        (json) => ListProductByBrandModel.fromJson(json),
       ),
     );
   } //Read profile
-
 
   Future<void> initializeMethod() async {
     _isLoading = true;
@@ -36,6 +34,7 @@ class HomeScreenController extends GetxController {
     } catch (e) {
       throw Exception('Error fetching data :$e');
     } finally {
+      fetchUserData();
       _isLoading = false;
       update();
     }
@@ -49,7 +48,6 @@ class HomeScreenController extends GetxController {
     }
   }
 
-
   void isCheckLoggedIn() {
     if (UserData.userToken.isEmpty) {
       Get.toNamed(RouteName.emailVerifyScreen);
@@ -59,6 +57,15 @@ class HomeScreenController extends GetxController {
           content: const Text('Wait some times.Its a Technical problem'),
           barrierDismissible: false,
           onCancel: () {});
+    }
+  }
+
+  void fetchUserData() {
+    final tokenData = storageInstance.read(StorageKey.setTokenKey);
+    final emailData = storageInstance.read(StorageKey.setEmailKey);
+    if (tokenData != null && emailData != null) {
+      UserData.userToken = tokenData;
+      UserData.userEmail = emailData;
     }
   }
 

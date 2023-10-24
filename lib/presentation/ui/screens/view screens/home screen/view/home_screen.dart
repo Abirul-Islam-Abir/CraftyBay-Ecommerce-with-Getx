@@ -34,7 +34,6 @@ class HomeScreen extends StatelessWidget {
           remarkProductScreenController.initializeMethod();
           categoryController.initializeMethod();
           sliderImageController.initializeMethod();
-          readProfileScreenController.initializeMethod();
         },
         child: ListView(
           shrinkWrap: true,

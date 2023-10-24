@@ -8,12 +8,13 @@ Future readProfileRequest() async {
   try {
     final url = Uri.parse(readProfileUrl);
     final http.Response response =
-        await http.get(url, headers: headerWithTokens);
+    await http.get(url, headers: headerWithTokens);
     if (response.statusCode == 200) {
       final Map<String, dynamic> responseBody = jsonDecode(response.body);
+
       if (responseBody['msg'] == 'success') {
-        final List<Map<String, dynamic>> data =
-            List<Map<String, dynamic>>.from(responseBody['data']);
+        final Map<String, dynamic> data = Map<String, dynamic>.from(
+            responseBody['data']);
         return data;
       } else {
         throw Exception('Error has occurred: ${responseBody['msg']}');

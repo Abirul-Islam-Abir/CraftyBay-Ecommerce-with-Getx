@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 
 import '../../../../../../data/model/4 slider list/list_product_slider_model.dart';
 import '../../../../../../data/services/4 slider list/list_porduct_slider.dart';
+import '../../../../../../data/utils/store_data_value.dart';
 
 class SliderImageController extends GetxController {
   final List<ListProductSliderModel> _listProductSlider = [];
@@ -28,9 +29,11 @@ class SliderImageController extends GetxController {
     _isLoading = true;
     update();
     try {
-      await Future.wait([
-        fetchAndParseListProductSlider(),
-      ]);
+      if (UserData.userToken.isNotEmpty) {
+        await Future.wait([
+          fetchAndParseListProductSlider(),
+        ]);
+      }
     } catch (e) {
       throw Exception('Error fetching data :$e');
     } finally {
