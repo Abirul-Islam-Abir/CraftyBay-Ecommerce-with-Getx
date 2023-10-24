@@ -14,13 +14,12 @@ class ProfileScreen extends StatelessWidget {
         child: ListView.builder(
           itemCount: controller.readProfile.length,
           itemBuilder: (context, index) {
-            final firstName = controller.readProfile[0].firstName ?? '';
-            final lastName = controller.readProfile[0].lastName ?? '';
-            final email = controller.readProfile[0].email ?? '';
-            final mobile = controller.readProfile[0].mobile ?? '';
-            final city = controller.readProfile[0].city ?? '';
+            final firstName = controller.readProfile[0].cusName ?? '';
+
+            final mobile = controller.readProfile[0].cusPhone ?? '';
+            final city = controller.readProfile[0].cusCity ?? '';
             final shippingAddress =
-                controller.readProfile[0].shippingAddress ?? '';
+                controller.readProfile[0].cusAdd ?? '';
             return Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -32,14 +31,14 @@ class ProfileScreen extends StatelessWidget {
                 const SizedBox(height: 20),
                 const Divider(),
                 Text(
-                  '$firstName $lastName',
+                  firstName,
                   style: const TextStyle(
                       fontSize: kPrimarySize,
                       fontWeight: FontWeight.bold,
                       color: AppColor.kTextColor),
                 ),
                 const SizedBox(height: 10),
-                Text(email,
+                Text(city,
                     style: const TextStyle(
                         fontSize: kTextSize, color: AppColor.kTextColor)),
                 const SizedBox(height: 10),

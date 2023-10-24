@@ -1,8 +1,9 @@
 import '../../../../../../data/utils/animation_effect.dart';
 import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/carousel_slider_shimmer.dart';
-import 'build_carousel_option.dart';
-import 'carousel_banner_card.dart';
+import '../../home screen/component/build_carousel_option.dart';
+import '../component/carousel_banner_card.dart';
+import '../controller/slider_controller.dart';
 
 class CarouselSliderBuilder extends GetView<HomeScreenController> {
   const CarouselSliderBuilder(this.products, {super.key});
@@ -13,7 +14,7 @@ class CarouselSliderBuilder extends GetView<HomeScreenController> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: kTextSize),
-      child: GetBuilder<HomeScreenController>(
+      child: GetBuilder<SliderImageController>(
         builder: (controller) {
           final length = products.length;
           return CarouselSlider(

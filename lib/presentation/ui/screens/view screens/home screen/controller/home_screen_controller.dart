@@ -1,30 +1,19 @@
 import '../../../../../../data/model/3 products list/list_product_by_brand_model.dart';
+import '../../../../../../data/model/6 user profile/read_profile.dart';
 import '../../../../../../data/utils/export.dart';
 
 class HomeScreenController extends GetxController {
-  final List<ListProductSliderModel> _listProductSlider = [];
   final List<ListProductByBrandModel> _listProductByBrand = [];
   final List<ReadProfileModel> _readProfile = [];
-  final List<ProductWishListModel> _wishList = []; //Get method
   bool _isLoading = true;
 
   bool get isLoading => _isLoading;
-
-  List<ListProductSliderModel> get listProductSlider => _listProductSlider;
 
   List<ListProductByBrandModel> get listProductByBrand => _listProductByBrand;
 
   List<ReadProfileModel> get readProfile => _readProfile;
 
-  List<ProductWishListModel> get wishList => _wishList;
   final TextEditingController searchController = TextEditingController();
-
-  Future<void> fetchAndParseListProductSlider() async {
-    List<Map<String, dynamic>> response = await fetchListProductSliderRequest();
-    _listProductSlider.clear();
-    _listProductSlider
-        .addAll(response.map((json) => ListProductSliderModel.fromJson(json)));
-  }
 
   Future<void> fetchAndParseListProductByBrand() async {
     List<Map<String, dynamic>> response =
@@ -47,35 +36,20 @@ class HomeScreenController extends GetxController {
     );
   } //Wish list
 
-  Future<void> fetchAndParseWishList() async {
-    List<Map<String, dynamic>> response = await fetchProductWishList();
-    _wishList.clear();
-    _wishList
-        .addAll(response.map((json) => ProductWishListModel.fromJson(json)));
-  }
-
   Future<void> initializeMethod() async {
     _isLoading = true;
     update();
     try {
       await Future.wait([
-        fetchAndParseListProductSlider(),
         fetchAndParseListProductByBrand(),
       ]);
     } catch (e) {
-      ('Error fetching data :$e');
+      throw Exception('Error fetching data :$e');
     } finally {
       fetchUserData();
       _isLoading = false;
       update();
     }
-  }
-
-  int carouselCurrentIndex = 0;
-
-  void carouselSelectedIndex(index) {
-    carouselCurrentIndex = index;
-    update();
   }
 
   void isDarkModeChanger() {
@@ -93,7 +67,6 @@ class HomeScreenController extends GetxController {
       UserData.userToken = tokenData;
       UserData.userEmail = emailData;
       fetchAndParseReadProfile();
-      fetchAndParseWishList();
     }
   }
 

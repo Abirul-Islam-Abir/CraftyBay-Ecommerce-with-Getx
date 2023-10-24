@@ -1,11 +1,12 @@
 import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/normal_text.dart';
-import '../component/categories_product_card.dart';
+import '../../home screen/component/categories_product_card.dart';
+import '../controllers/wish_list_controller.dart';
 
 class WishListScreen extends StatelessWidget {
   WishListScreen({super.key});
 
-  final controller = Get.put(HomeScreenController());
+  final controller = Get.put(WishListScreenController());
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +29,10 @@ class WishListScreen extends StatelessWidget {
                   crossAxisCount: 4, mainAxisExtent: 120),
               itemBuilder: (context, index) {
                 final data = controller.wishList;
-                final categoryName = data[index].email?.toUpperCase() ?? '';
+                final categoryName =
+                    data[index].product!.title?.toUpperCase() ?? '';
                 final categoryImage =
-                    data[index].product ?? ImageAsset.noImageNet;
+                    data[index].product!.image ?? ImageAsset.noImageNet;
                 return CategoriesProductCard(
                   img: categoryImage,
                   categoryName: categoryName,

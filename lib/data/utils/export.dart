@@ -25,8 +25,6 @@ export 'package:shimmer/shimmer.dart';
 export '../../../data/theme/app_text_style.dart';
 export '../../../data/utils/image_assets.dart';
 export '../model/4 slider list/list_product_slider_model.dart';
-export '../model/8 wish list/product_wish_list_model.dart';
-export '../model/6 user profile/read_profile.dart';
 export '../services/4 slider list/list_porduct_slider.dart';
 export '../services/3 products list/list_product_by_brand.dart';
 export '../services/8 wish list/product_wish_list.dart';

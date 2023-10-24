@@ -1,7 +1,6 @@
 import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/home%20screen/component/products_card.dart';
 
 import '../../../../../../data/model/3 products list/list_product_by_remark_model.dart';
-import '../../../../../../data/utils/animation_effect.dart';
 import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/product_card_shimmer.dart';
 

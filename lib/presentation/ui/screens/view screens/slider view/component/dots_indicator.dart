@@ -1,3 +1,5 @@
+import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/slider%20view/controller/slider_controller.dart';
+
 import '../../../../../../data/utils/export.dart';
 
 class DotsIndicatorWidget extends StatelessWidget {
@@ -10,7 +12,7 @@ class DotsIndicatorWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<HomeScreenController>(builder: (controller) {
+    return GetBuilder<SliderImageController>(builder: (controller) {
       return Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,

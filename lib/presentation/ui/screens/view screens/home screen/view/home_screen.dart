@@ -3,11 +3,12 @@ import '../../../../widgets/custom_textfield.dart';
 import '../../remark product screen/view/new_product_screen.dart';
 import '../../remark product screen/view/popular_product_screen.dart';
 import '../../remark product screen/view/special_product_screen.dart';
+import '../../slider view/controller/slider_controller.dart';
 import '../component/all_categories_list_builder.dart';
 import '../component/build_appbar.dart';
-import '../component/carousel_slider_builder.dart';
+import '../../slider view/view/carousel_slider_builder.dart';
 import '../component/categories_button.dart';
-import '../component/dots_indicator.dart';
+import '../../slider view/component/dots_indicator.dart';
 import '../component/list_product_by_remark_builder.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -15,9 +16,10 @@ class HomeScreen extends StatelessWidget {
 
   final homeScreenController = Get.put(HomeScreenController());
   final remarkProductScreenController =
-  Get.put(RemarkProductScreenController());
+      Get.put(RemarkProductScreenController());
   final categoryController = Get.put(CategoriesScreenController());
   final bottomNavController = Get.put(BottomNavController());
+  final sliderImageController = Get.put(SliderImageController());
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +29,8 @@ class HomeScreen extends StatelessWidget {
         onRefresh: () async {
           homeScreenController.initializeMethod();
           remarkProductScreenController.initializeMethod();
+          categoryController.initializeMethod();
+          sliderImageController.initializeMethod();
         },
         child: ListView(
           shrinkWrap: true,
@@ -41,14 +45,12 @@ class HomeScreen extends StatelessWidget {
               label: 'Search',
             ),
             // CarouselSliderBuilder widget for displaying product sliders.
-            CarouselSliderBuilder(homeScreenController.listProductSlider),
+            CarouselSliderBuilder(sliderImageController.listProductSlider),
             // DotsIndicatorWidget for indicating the position in the slider.
-            DotsIndicatorWidget(homeScreenController.listProductSlider),
+            DotsIndicatorWidget(sliderImageController.listProductSlider),
             // CategoriesButton widget for displaying a category button (e.g., 'All Categories').
             CategoriesButton(
-                onTap:
-                bottomNavController.goToCategoryScreen
-                ,
+                onTap: bottomNavController.goToCategoryScreen,
                 categoryName: 'All Categories'),
             // AllCategoriesListBuilder for displaying a list of categories.
             AllCategoriesListBuilder(categoryController.categoryList),

@@ -1,4 +1,5 @@
 import '../data/utils/export.dart';
+import '../presentation/ui/screens/view screens/wish list/controllers/wish_list_controller.dart';
 
 class StateHolderBinder extends Bindings {
   @override
@@ -12,5 +13,6 @@ class StateHolderBinder extends Bindings {
     Get.lazyPut(() => OtpVerifyScreenController());
     Get.lazyPut(() => RemarkProductScreenController());
     Get.lazyPut(() => CategoriesScreenController());
+    Get.lazyPut(() => WishListScreenController());
   }
 }
