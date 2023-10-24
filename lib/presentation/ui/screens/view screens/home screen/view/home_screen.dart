@@ -1,3 +1,5 @@
+import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/read%20profile%20screen/controller/read_profile_controller.dart';
+
 import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/custom_textfield.dart';
 import '../../remark product screen/view/new_product_screen.dart';
@@ -20,6 +22,7 @@ class HomeScreen extends StatelessWidget {
   final categoryController = Get.put(CategoriesScreenController());
   final bottomNavController = Get.put(BottomNavController());
   final sliderImageController = Get.put(SliderImageController());
+  final readProfileScreenController = Get.put(ReadProfileScreenController());
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +34,7 @@ class HomeScreen extends StatelessWidget {
           remarkProductScreenController.initializeMethod();
           categoryController.initializeMethod();
           sliderImageController.initializeMethod();
+          readProfileScreenController.initializeMethod();
         },
         child: ListView(
           shrinkWrap: true,

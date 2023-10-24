@@ -1,9 +1,11 @@
+import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/read%20profile%20screen/controller/read_profile_controller.dart';
+
 import '../../../../../../data/utils/export.dart';
 
 class ProfileScreen extends StatelessWidget {
   ProfileScreen({super.key});
 
-  final controller = Get.put(HomeScreenController());
+  final controller = Get.put(ReadProfileScreenController());
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +17,9 @@ class ProfileScreen extends StatelessWidget {
           itemCount: controller.readProfile.length,
           itemBuilder: (context, index) {
             final firstName = controller.readProfile[0].cusName ?? '';
-
             final mobile = controller.readProfile[0].cusPhone ?? '';
             final city = controller.readProfile[0].cusCity ?? '';
-            final shippingAddress =
-                controller.readProfile[0].cusAdd ?? '';
+            final shippingAddress = controller.readProfile[0].cusAdd ?? '';
             return Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [

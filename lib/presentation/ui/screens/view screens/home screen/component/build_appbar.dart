@@ -1,7 +1,7 @@
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 
 import '../../../../../../data/utils/export.dart';
-import '../view/profile_screen.dart';
+import '../../read profile screen/view/read_profile_screen.dart';
 
 AppBar buildAppBar(context) => AppBar(
       title: SvgPicture.asset(ImageAsset.titleLogoSvg),

@@ -55,7 +55,6 @@ class CartScreenController extends GetxController {
         fetchUserData(),
       ]);
     } catch (e) {
-      // Handle errors, e.g., show a snack-bar or an error message
       throw Exception('Error fetching data :$e');
     } finally {
       fetchUserData();

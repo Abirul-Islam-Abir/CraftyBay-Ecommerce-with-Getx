@@ -4,37 +4,27 @@ import '../../../../../../data/utils/export.dart';
 
 class HomeScreenController extends GetxController {
   final List<ListProductByBrandModel> _listProductByBrand = [];
-  final List<ReadProfileModel> _readProfile = [];
+
   bool _isLoading = true;
 
   bool get isLoading => _isLoading;
 
   List<ListProductByBrandModel> get listProductByBrand => _listProductByBrand;
 
-  List<ReadProfileModel> get readProfile => _readProfile;
 
   final TextEditingController searchController = TextEditingController();
 
   Future<void> fetchAndParseListProductByBrand() async {
     List<Map<String, dynamic>> response =
-        await fetchListProductByBrandRequest();
+    await fetchListProductByBrandRequest();
     _listProductByBrand.clear();
     _listProductByBrand.addAll(
       response.map(
-        (json) => ListProductByBrandModel.fromJson(json),
+            (json) => ListProductByBrandModel.fromJson(json),
       ),
     );
   } //Read profile
 
-  Future<void> fetchAndParseReadProfile() async {
-    List<Map<String, dynamic>> response = await readProfileRequest();
-    _readProfile.clear();
-    _readProfile.addAll(
-      response.map(
-        (json) => ReadProfileModel.fromJson(json),
-      ),
-    );
-  } //Wish list
 
   Future<void> initializeMethod() async {
     _isLoading = true;
@@ -46,7 +36,6 @@ class HomeScreenController extends GetxController {
     } catch (e) {
       throw Exception('Error fetching data :$e');
     } finally {
-      fetchUserData();
       _isLoading = false;
       update();
     }
@@ -60,15 +49,6 @@ class HomeScreenController extends GetxController {
     }
   }
 
-  void fetchUserData() {
-    final tokenData = storageInstance.read(StorageKey.setTokenKey);
-    final emailData = storageInstance.read(StorageKey.setEmailKey);
-    if (tokenData != null && emailData != null) {
-      UserData.userToken = tokenData;
-      UserData.userEmail = emailData;
-      fetchAndParseReadProfile();
-    }
-  }
 
   void isCheckLoggedIn() {
     if (UserData.userToken.isEmpty) {
