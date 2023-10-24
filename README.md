@@ -21,25 +21,25 @@
 
 # Showcases:
 
-| Splash Page                                                      | Loading Screen                                                      |  Home Page                                                     |
+| Splash Page                                                      |        Login Screen                                               |       OTP Verify Screen                                                 |
 |:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
-|  ![splash](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/65081f86-ee7a-40f5-bdee-0640a3cbf50d)| ![loading](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/ead63223-289e-49f4-82c0-13f68338b66a)| ![home](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/5447d671-086e-4094-9e8d-cb013ef10252)|
+|  ![splash](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/65081f86-ee7a-40f5-bdee-0640a3cbf50d)| |  ![otp](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/3846f20e-30f1-4b4b-ad80-832c8927b8cf)|
 
 
 
 
 
-| Product Details Screen                                            | Login Screen                                                      |  Cart Screen |
+| Product Details Screen                                            | Loading Screen                                                      |  Cart Screen |
 |:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
-|  ![details](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/6d6cad9b-daff-433a-b461-a24a73762730)| ![email](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/4a1d1cac-6d37-45ee-bc73-48bcbe5f3466)|  |
+| ![loading](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/ead63223-289e-49f4-82c0-13f68338b66a)| ![email](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/4a1d1cac-6d37-45ee-bc73-48bcbe5f3466)|  |
 
  
 
 
 
-| Complete Profile Screen                                           | OTP Verify Screen                                                     |  Categories List                                                     |
+| Complete Profile Screen                                           |      Home Page                                                 |  Categories List                                                     |
 |:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
-| |  ![otp](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/3846f20e-30f1-4b4b-ad80-832c8927b8cf)|  |
+| | ![details](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/6d6cad9b-daff-433a-b461-a24a73762730)|  |
 
 
 
