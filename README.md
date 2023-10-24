@@ -23,8 +23,7 @@
 
 | Splash Page                                                      | Loading Screen                                                      |  Home Page                                                     |
 |:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
-|  |  | ![home](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/5447d671-086e-4094-9e8d-cb013ef10252)
-|
+|  ![splash](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/65081f86-ee7a-40f5-bdee-0640a3cbf50d)| ![loading](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/ead63223-289e-49f4-82c0-13f68338b66a)| ![home](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/5447d671-086e-4094-9e8d-cb013ef10252)|
 
 
 
@@ -153,7 +152,4 @@ https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/tree/main/assets/crafty
        
 ## Flutter sdk version: 3.10.6
 ## App version: 1.0.0+1
-
-# About me
-
-## Softwer Developer | Flutter | Java | Rest Api | Getx | Firebase
+ 
