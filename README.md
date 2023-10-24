@@ -29,17 +29,17 @@
 
 
 
-|       Loading Screen                                     |  Product Details Screen                                                     |  Cart Screen |
+|       Loading Screen                                     |      Home Page                                                   |   Product Details Screen  |
 |:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
-| ![loading](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/ead63223-289e-49f4-82c0-13f68338b66a)|  ![details](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/6d6cad9b-daff-433a-b461-a24a73762730)|  ![cart](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/9fa3de3b-ec77-4971-8f17-0828541e702e)|
+| ![loading](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/ead63223-289e-49f4-82c0-13f68338b66a)|  ![home](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/31b4fe0c-649d-481e-9780-c0176513b8cf)|   ![details](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/6d6cad9b-daff-433a-b461-a24a73762730)|
 
  
 
 
 
-| Complete Profile Screen                                           |      Home Page                                                 |  Categories List                                                     |
+| Complete Profile Screen                                           |     Cart Screen                                               |  Categories List                                                     |
 |:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
-| ||  |
+| |  ![cart](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/9fa3de3b-ec77-4971-8f17-0828541e702e)|  |
 
 
 
