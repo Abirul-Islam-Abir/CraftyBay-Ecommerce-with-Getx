@@ -11,7 +11,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
   Platform.isAndroid
-      ? runApp(CraftyBay())
+      ? runApp(const CraftyBay())
       : runApp(DevicePreview(
-          enabled: !kReleaseMode, builder: (context) => CraftyBay()));
+          enabled: !kReleaseMode, builder: (context) => const CraftyBay()));
 }

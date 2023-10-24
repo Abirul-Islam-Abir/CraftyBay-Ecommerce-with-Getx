@@ -12,11 +12,7 @@ AppBar buildAppBar(context) => AppBar(
             },
             icon: const Icon(EvaIcons.personOutline)),
         IconButton(
-            onPressed: () {
-              String? profileData =
-                  storageInstance.read(StorageKey.setCreateProfile);
-              print(profileData);
-            },
+            onPressed: () {},
             icon: const Icon(Icons.notifications_none_rounded)),
         IconButton(
             onPressed: () {

@@ -25,37 +25,31 @@ class CarouselBannerCard extends StatelessWidget {
             color: AppColor.kPrimaryColor,
             borderRadius: BorderRadius.circular(kDefaultSize)),
         width: Get.width,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Stack(
           children: [
-            Expanded(
-                flex: 7,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 0, vertical: kPrimarySize),
-                  child: CachedNetworkImage(
-                    imageUrl: img,
-                    imageBuilder: (context, imageProvider) => Container(
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: imageProvider, fit: BoxFit.fill),
-                      ),
-                    ),
-                    placeholder: (context, url) =>
-                        const CircularProgressIndicator(),
-                    errorWidget: (context, url, error) =>
-                        Image.network(ImageAsset.noImageNet),
-                  ),
-                )),
-            Expanded(
-              flex: 5,
+            CachedNetworkImage(
+              imageUrl: img,
+              imageBuilder: (context, imageProvider) => Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: imageProvider, fit: BoxFit.fitHeight),
+                ),
+              ),
+              placeholder: (context, url) => const CircularProgressIndicator(),
+              errorWidget: (context, url, error) =>
+                  Image.network(ImageAsset.noImageNet),
+            ),
+            Positioned(
+              left: 10,
+              bottom: 10,
+              top: 10,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(title,
                       style: titleSmall(
-                          color: AppColor.kWhiteColor,
+                          color: AppColor.kBlackColor,
                           fontWeight: FontWeight.bold)),
                   SizedBox(
                     height: 35,

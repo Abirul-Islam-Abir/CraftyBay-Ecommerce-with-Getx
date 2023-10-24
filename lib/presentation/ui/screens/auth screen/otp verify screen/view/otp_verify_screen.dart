@@ -31,7 +31,7 @@ class OtpVerifyScreen extends StatelessWidget {
               Form(
                 key: controller.formKey,
                 child: Padding(
-                    padding: EdgeInsets.symmetric(
+                    padding: const EdgeInsets.symmetric(
                         vertical: 0, horizontal: kDefaultSize),
                     child: GetBuilder<OtpVerifyScreenController>(
                         builder: (controller) => PinCodeTextField(

@@ -62,7 +62,6 @@ class ProductDetailsScreenController extends GetxController {
   Future<void> fetchAndParseProductDetailsById() async {
     List<Map<String, dynamic>> response =
         await fetchProductDetailsByIdRequest(productId);
-    print(response);
     _productDetailsById
         .addAll(response.map((json) => ProductDetailsModel.fromJson(json)));
   }
