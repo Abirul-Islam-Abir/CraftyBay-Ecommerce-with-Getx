@@ -23,7 +23,8 @@
 
 | Splash Page                                                      | Loading Screen                                                      |  Home Page                                                     |
 |:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
-| ![splas](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/d59bf553-fa6f-40a3-b23c-cae593d728f3)| ![shimmer_screen](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/3fb54f2f-0bbf-452c-bcf3-32e0d5d8d109)| ![home_screen](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/3c30260f-35cd-4510-9fd1-715a04478569)|
+|  |  | ![home](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/5447d671-086e-4094-9e8d-cb013ef10252)
+|
 
 
 
@@ -31,7 +32,7 @@
 
 | Product Details Screen                                            | Login Screen                                                      |  Cart Screen |
 |:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
-| ![splas](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/d59bf553-fa6f-40a3-b23c-cae593d728f3)| ![shimmer_screen](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/3fb54f2f-0bbf-452c-bcf3-32e0d5d8d109)| ![home_screen](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/3c30260f-35cd-4510-9fd1-715a04478569)|
+|  ![details](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/6d6cad9b-daff-433a-b461-a24a73762730)| ![email](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/4a1d1cac-6d37-45ee-bc73-48bcbe5f3466)|  |
 
  
 
@@ -39,14 +40,14 @@
 
 | Complete Profile Screen                                           | OTP Verify Screen                                                     |  Categories List                                                     |
 |:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
-| ![complete_profile](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/a7ad322c-b64d-413d-ab38-536457e65157)| ![verify_otp](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/152f5150-4b84-4adf-b546-c6a3f5bb1227)| ![category_list](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/4e8ba8a9-b8e1-4e88-b23e-d6b8b5d0db7c)|
+| |  ![otp](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/3846f20e-30f1-4b4b-ad80-832c8927b8cf)|  |
 
 
 
 
 | Popular Product Screen                                          | Special Product Screen                                                     |  New Product Screen                                                     |
 |:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
-| ![popular](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/f9091d22-b67c-4d4f-bb29-3c88c448ee81)|   ![special](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/fce6aab4-581f-4316-a5f9-ae340bb582c1)| ![new](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/assets/89778681/60856237-c352-49f2-a963-2e6aaaa4a34e)| 
+|  ![product](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/e16d69d2-45db-4021-ab58-4b40b7989144)|  | | 
 ## A simple ecommerce application where REST API is integraded to see all products info and add to cart functionality using flutter and getx. 
 
 User can see all available products and add desired products add to the cart and remove from the cart.
