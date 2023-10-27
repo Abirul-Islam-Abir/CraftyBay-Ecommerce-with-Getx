@@ -1,14 +1,19 @@
+import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/categories%20screen/view/categories_screen.dart';
+import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/remark%20product%20screen/view/remark_product_screen.dart';
+
 import '../../../../../../data/model/2 category list model/category_list_model.dart';
+import '../../../../../../data/services/3 products list/list_product_by_category.dart';
 import '../../../../../../data/utils/animation_effect.dart';
 import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/categories_card_shimmer.dart';
+import '../view/list_product_by_categories_screen.dart';
 import 'categories_product_card.dart';
 
 class AllCategoriesListBuilder extends StatelessWidget {
-  const AllCategoriesListBuilder(this.products, {super.key});
+  AllCategoriesListBuilder(this.products, {super.key});
 
   final List<CategoryListModel> products;
-
+  final controller = Get.put(CategoriesScreenController());
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,7 +31,10 @@ class AllCategoriesListBuilder extends StatelessWidget {
                     : Animate(
                         effects: EffectFactory.zoomOut,
                         child: CategoriesProductCard(
-                          onTap: () {},
+                          onTap: () {
+                            Get.toNamed(RouteName.listProductByCategoryScreen,
+                                arguments: '${products[index].id}');
+                          },
                           img: '${products[index].categoryImg}',
                           categoryName: '${products[index].categoryName}',
                         )),

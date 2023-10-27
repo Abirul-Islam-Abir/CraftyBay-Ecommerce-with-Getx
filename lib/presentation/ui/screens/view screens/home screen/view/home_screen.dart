@@ -4,10 +4,10 @@ import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/custom_textfield.dart';
 import '../../remark product screen/view/remark_product_screen.dart';
 import '../../slider view/controller/slider_controller.dart';
-import '../component/all_categories_list_builder.dart';
+import '../../categories screen/component/all_categories_list_builder.dart';
 import '../component/build_appbar.dart';
 import '../../slider view/view/carousel_slider_builder.dart';
-import '../component/categories_button.dart';
+import '../../categories screen/component/categories_button.dart';
 import '../../slider view/component/dots_indicator.dart';
 import '../component/list_product_by_remark_builder.dart';
 
@@ -21,6 +21,7 @@ class HomeScreen extends StatelessWidget {
   final bottomNavController = Get.put(BottomNavController());
   final sliderImageController = Get.put(SliderImageController());
   final readProfileScreenController = Get.put(ReadProfileScreenController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,12 +38,11 @@ class HomeScreen extends StatelessWidget {
           children: [
             const SizedBox(height: kTextSize),
             CustomTextField(
-              controller: homeScreenController.searchController,
-              prefixIcon: const Icon(Icons.search),
-              hintText: 'Search Products',
-              onChanged: (query) {},
-              label: 'Search',
-            ),
+                controller: homeScreenController.searchController,
+                prefixIcon: const Icon(Icons.search),
+                hintText: 'Search Products',
+                onChanged: (query) {},
+                label: 'Search'),
             CarouselSliderBuilder(sliderImageController.listProductSlider),
             DotsIndicatorWidget(sliderImageController.listProductSlider),
             CategoriesButton(
@@ -52,6 +52,8 @@ class HomeScreen extends StatelessWidget {
             CategoriesButton(
                 onTap: () {
                   Get.to(() => RemarkProductScreen(
+                        products: remarkProductScreenController
+                            .listProductByRemarkPopular,
                         productName: 'Popular',
                       ));
                 },
@@ -61,6 +63,8 @@ class HomeScreen extends StatelessWidget {
             CategoriesButton(
                 onTap: () {
                   Get.to(() => RemarkProductScreen(
+                        products: remarkProductScreenController
+                            .listProductByRemarkSpecial,
                         productName: 'Special',
                       ));
                 },
@@ -70,8 +74,9 @@ class HomeScreen extends StatelessWidget {
             CategoriesButton(
                 onTap: () {
                   Get.to(() => RemarkProductScreen(
-                        productName: 'New',
-                      ));
+                      products:
+                          remarkProductScreenController.listProductByRemarkNew,
+                      productName: 'New'));
                 },
                 categoryName: 'New'),
             ListProductByRemarkBuilder(

@@ -1,6 +1,6 @@
 import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/normal_text.dart';
-import '../../home screen/component/categories_product_card.dart';
+import '../component/categories_product_card.dart';
 
 class CategoriesScreen extends StatelessWidget {
   CategoriesScreen({super.key});
@@ -23,23 +23,26 @@ class CategoriesScreen extends StatelessWidget {
                 icon: const Icon(Icons.arrow_back_ios_new_outlined)),
             title: const NormalText('Category'),
           ),
-          body: GetBuilder<HomeScreenController>(
-            builder: (_) =>
-                GridView.builder(
-                  itemCount: controller.categoryList.length,
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 4, mainAxisExtent: 120),
-                  itemBuilder: (context, index) {
-                    final data = controller.categoryList;
-                    final categoryName = data[index].categoryName ?? '';
-                    final categoryImage =
-                        data[index].categoryImg ?? ImageAsset.noImageNet;
-                    return CategoriesProductCard(
-                      img: categoryImage,
-                      categoryName: categoryName,
-                    );
-                  },
-                ),
+          body: GetBuilder<CategoriesScreenController>(
+            builder: (_) => controller.categoryList.isEmpty
+                ? Center(child: Text('Empty List'))
+                : GridView.builder(
+                    itemCount: controller.categoryList.length,
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 4, mainAxisExtent: 120),
+                    itemBuilder: (context, index) {
+                      final data = controller.categoryList;
+                      final categoryName = data[index].categoryName ?? '';
+                      final categoryImage =
+                          data[index].categoryImg ?? ImageAsset.noImageNet;
+                      return CategoriesProductCard(
+                        onTap: () {},
+                        img: categoryImage,
+                        categoryName: categoryName,
+                      );
+                    },
+                  ),
           ),
         ));
   }

@@ -1,30 +1,30 @@
 class RouteName {
-  static const splashScreen = '/Splash_Screen';
-  static const loginScreen = '/Login_Screen';
-  static const emailVerifyScreen = '/Email_Verify_Screen';
-  static const otpVerifyScreen = '/Otp_Verify_Screen';
-  static const setPasswordScreen = '/Set_Password_Screen';
-  static const createUserAccountScreen = '/Create_User_Account_Screen';
-  static const addNewTaskScreen = '/Add_New_Task_Screen';
-  static const updateProfileScreen = '/Update_Profile_Screen';
-  static const homeScreen = '/Home_Screen';
-  static const newTaskList = '/New_Task_List';
-  static const noInternetScreen = '/No_Internet_Screen';
-  static const onboardingScreen = '/On_Boarding_Screen';
-  static const completeProfileScreen = '/Complete_Profile_Screen';
-  static const loginSuccessScreen = '/Login_Success_Screen';
-  static const matchScreen = '/Match_Screen';
-  static const userAccountList = '/User_Account_List';
-  static const helpCenterScreen = '/Help_Center_Screen';
-  static const favoritesScreen = '/Favorites_Screen';
-  static const historyScreen = '/History_Screen';
-  static const settingsScreen = '/Settings_Screen';
-  static const aboutScreen = '/About_Screen';
-  static const logOutScreen = '/Log_Out_Screen';
-  static const mapScreen = '/Map_Screen';
-  static const detailsScreen = '/Details_Screen';
-  static const bottomNavigationBar = '/Bottom_Navigation_Bar';
-
+  static const splashScreen = '/SplashScreen';
+  static const loginScreen = '/LoginScreen';
+  static const emailVerifyScreen = '/EmailVerifyScreen';
+  static const otpVerifyScreen = '/OtpVerifyScreen';
+  static const setPasswordScreen = '/SetPasswordScreen';
+  static const createUserAccountScreen = '/CreateUserAccountScreen';
+  static const addNewTaskScreen = '/AddNewTaskScreen';
+  static const updateProfileScreen = '/UpdateProfileScreen';
+  static const homeScreen = '/HomeScreen';
+  static const newTaskList = '/NewTaskList';
+  static const noInternetScreen = '/NoInternetScreen';
+  static const onboardingScreen = '/OnBoardingScreen';
+  static const completeProfileScreen = '/CompleteProfileScreen';
+  static const loginSuccessScreen = '/LoginSuccessScreen';
+  static const matchScreen = '/MatchScreen';
+  static const userAccountList = '/UserAccountList';
+  static const helpCenterScreen = '/HelpCenterScreen';
+  static const favoritesScreen = '/FavoritesScreen';
+  static const historyScreen = '/HistoryScreen';
+  static const settingsScreen = '/SettingsScreen';
+  static const aboutScreen = '/AboutScreen';
+  static const logOutScreen = '/LogOutScreen';
+  static const mapScreen = '/MapScreen';
+  static const detailsScreen = '/DetailsScreen';
+  static const bottomNavigationBar = '/BottomNavigationBar';
+  static const listProductByCategoryScreen = '/ListProductByCategoryScreen';
   // Helper function to generate unique route names
   static String generateUniqueRouteName() {
     return '/${DateTime.now().millisecondsSinceEpoch}';

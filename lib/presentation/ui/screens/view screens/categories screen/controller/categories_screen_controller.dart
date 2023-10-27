@@ -1,23 +1,14 @@
-import 'package:get/get_state_manager/src/simple/get_controllers.dart';
-
 import '../../../../../../data/model/2 category list model/category_list_model.dart';
-import '../../../../../../data/services/2 category list/category_list.dart';
+import '../../../../../../data/utils/export.dart';
 
 class CategoriesScreenController extends GetxController {
   final List<CategoryListModel> _categoryList = [];
-
   List<CategoryListModel> get categoryList => _categoryList;
-
-  //Get method
   bool _isLoading = true;
-
   bool get isLoading => _isLoading;
-
-  // Category list method
   Future<void> fetchAndParseCategoryList() async {
     List<Map<String, dynamic>> response = await fetchCategoryListRequest();
-
-    _categoryList.clear(); // Clear the existing data before adding new data
+    _categoryList.clear();
     _categoryList.addAll(
       response.map(
         (json) => CategoryListModel.fromJson(json),
@@ -42,7 +33,7 @@ class CategoriesScreenController extends GetxController {
 
   @override
   void onInit() {
-    initializeMethod();
     super.onInit();
+    initializeMethod();
   }
 }

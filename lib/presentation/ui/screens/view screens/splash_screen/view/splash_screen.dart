@@ -1,5 +1,3 @@
-import 'package:crafty_bay_ecommerce/presentation/network%20connectivity/controller/network_controller.dart';
-
 import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/common_text.dart';
 import '../../../../widgets/splash_logo.dart';

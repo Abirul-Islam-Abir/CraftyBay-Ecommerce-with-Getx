@@ -1,11 +1,13 @@
+import '../../../../../../data/model/3 products list/list_product_by_remark_model.dart';
 import '../../../../../../data/utils/animation_effect.dart';
 import '../../../../../../data/utils/export.dart';
 import '../../home screen/component/products_card.dart';
 
 class RemarkProductScreen extends StatelessWidget {
-  RemarkProductScreen({super.key, required this.productName});
+  RemarkProductScreen(
+      {super.key, required this.productName, required this.products});
   final String productName;
-  final controller = Get.put(RemarkProductScreenController());
+  final List<ListProductByRemarkModel> products;
 
   @override
   Widget build(BuildContext context) {
@@ -18,21 +20,20 @@ class RemarkProductScreen extends StatelessWidget {
         ),
       ),
       body: GridView.builder(
-        itemCount: controller.listProductByRemarkPopular.length,
+        itemCount: products.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3, mainAxisExtent: 250),
         itemBuilder: (context, index) {
-          final data = controller.listProductByRemarkPopular;
-          final discount = data[index].discount ?? '';
-          final price = data[index].price ?? '';
-          final name = data[index].title ?? '';
-          final img = data[index].image ?? ImageAsset.noImageNet;
+          final discount = products[index].discount ?? '';
+          final price = products[index].price ?? '';
+          final name = products[index].title ?? '';
+          final img = products[index].image ?? ImageAsset.noImageNet;
           return Animate(
             effects: EffectFactory.leftToRightAnimate,
             child: ProductCard(
                 onTap: () {
                   Get.toNamed(RouteName.detailsScreen,
-                      arguments: data[index].id);
+                      arguments: products[index].id);
                 },
                 isFavPress: () {},
                 discount: '$discount',

@@ -1,6 +1,6 @@
 import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/normal_text.dart';
-import '../../home screen/component/categories_product_card.dart';
+import '../../categories screen/component/categories_product_card.dart';
 import '../controllers/wish_list_controller.dart';
 
 class WishListScreen extends StatelessWidget {

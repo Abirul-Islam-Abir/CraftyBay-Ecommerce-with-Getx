@@ -7,11 +7,17 @@ Future fetchListProductByCategoryRequest(id) async {
   try {
     final url = Uri.parse('$listProductByCategoryUrl/$id');
     final http.Response response = await http.get(url);
-    final responseBody = jsonDecode(response.body);
-    if (response.statusCode == 200 && responseBody['msg'] == 'success') {
-      return responseBody;
+    if (response.statusCode == 200) {
+      final Map<String, dynamic> responseBody = jsonDecode(response.body);
+      if (responseBody['msg'] == 'success') {
+        final List<Map<String, dynamic>> data =
+            List<Map<String, dynamic>>.from(responseBody['data']);
+        return data;
+      } else {
+        throw Exception('Error has occurred: ${responseBody['msg']}');
+      }
     } else {
-      return responseBody;
+      throw Exception('Error has occurred: ${response.statusCode}');
     }
   } catch (e) {
     throw Exception('Error has occurred: $e');
