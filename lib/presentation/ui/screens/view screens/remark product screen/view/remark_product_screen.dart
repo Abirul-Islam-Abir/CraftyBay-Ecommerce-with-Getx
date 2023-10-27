@@ -32,7 +32,7 @@ class RemarkProductScreen extends StatelessWidget {
             effects: EffectFactory.leftToRightAnimate,
             child: ProductCard(
                 onTap: () {
-                  Get.toNamed(RouteName.detailsScreen,
+                  Get.toNamed(RouteName.remarkProductDetails,
                       arguments: products[index].id);
                 },
                 isFavPress: () {},

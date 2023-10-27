@@ -29,8 +29,8 @@ List<GetPage<dynamic>>? appPages() => [
           transition: Transition.fade,
           transitionDuration: const Duration(microseconds: 500)),
       GetPage(
-          name: RouteName.detailsScreen,
-          page: () => ProductsDetailsScreen(),
+          name: RouteName.remarkProductDetails,
+          page: () => RemarkProductsDetailsScreen(),
           transition: Transition.fade,
           transitionDuration: const Duration(microseconds: 500)),
       GetPage(

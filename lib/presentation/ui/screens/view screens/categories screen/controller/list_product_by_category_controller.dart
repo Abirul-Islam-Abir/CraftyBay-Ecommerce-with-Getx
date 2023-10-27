@@ -3,7 +3,7 @@ import '../../../../../../data/services/3 products list/list_product_by_category
 import '../../../../../../data/utils/export.dart';
 
 class ListProductByCategoriesController extends GetxController {
-  final productId = Get.arguments;
+  final product = Get.arguments;
   final List<ListProductByCategoryModel> _listProductByCategory = [];
   List<ListProductByCategoryModel> get listProductByCategory =>
       _listProductByCategory;
@@ -12,7 +12,7 @@ class ListProductByCategoriesController extends GetxController {
 
   Future<void> fetchAndParseListProductByCategory() async {
     List<Map<String, dynamic>> response =
-        await fetchListProductByCategoryRequest(productId);
+        await fetchListProductByCategoryRequest(product['id']);
     print(response);
     _listProductByCategory
         .clear(); // Clear the existing data before adding new data

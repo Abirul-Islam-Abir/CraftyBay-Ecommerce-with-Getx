@@ -22,7 +22,9 @@ class RouteName {
   static const aboutScreen = '/AboutScreen';
   static const logOutScreen = '/LogOutScreen';
   static const mapScreen = '/MapScreen';
-  static const detailsScreen = '/DetailsScreen';
+  static const remarkProductDetails = '/RemarkProductDetails';
+  static const sliderViewDetails = '/SliderViewDetails';
+  static const listProductByCategoryDetails = '/ListProductByCategoryDetails';
   static const bottomNavigationBar = '/BottomNavigationBar';
   static const listProductByCategoryScreen = '/ListProductByCategoryScreen';
   // Helper function to generate unique route names

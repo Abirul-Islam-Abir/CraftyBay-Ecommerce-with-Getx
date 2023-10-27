@@ -38,7 +38,7 @@ class CarouselSliderBuilder extends GetView<HomeScreenController> {
                       img: '${data.image}',
                       title: '${data.title}',
                       onPressed: () {
-                        Get.toNamed(RouteName.detailsScreen,
+                        Get.toNamed(RouteName.remarkProductDetails,
                             arguments: data.id);
                       }),
                 );

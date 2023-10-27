@@ -11,7 +11,7 @@ export '../../presentation/ui/screens/auth screen/complete profile screen/view/c
 export '../../presentation/ui/screens/auth screen/email verify screen/view/email_verify_screen.dart';
 export '../../presentation/ui/screens/auth screen/otp verify screen/view/otp_verify_screen.dart';
 export '../../presentation/ui/screens/view screens/bottom nav/view/bottom_nav_bar.dart';
-export '../../presentation/ui/screens/view screens/details screen/view/products_details_screen.dart';
+export '../../presentation/ui/screens/view screens/details screen/view/remark_products_details_screen.dart';
 export '../../presentation/ui/screens/view screens/home screen/view/home_screen.dart';
 export '../../presentation/ui/screens/view screens/splash_screen/view/splash_screen.dart';
 export 'package:flutter_animate/flutter_animate.dart';

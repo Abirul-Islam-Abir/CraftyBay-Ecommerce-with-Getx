@@ -27,7 +27,7 @@ class ListProductByRemarkBuilder extends GetView<HomeScreenController> {
                     ? const ProductCardShimmer()
                     : ProductCard(
                         onTap: () {
-                          Get.toNamed(RouteName.detailsScreen,
+                          Get.toNamed(RouteName.remarkProductDetails,
                               arguments: products[index].id);
                         },
                         isFavPress: () {},

@@ -33,7 +33,10 @@ class AllCategoriesListBuilder extends StatelessWidget {
                         child: CategoriesProductCard(
                           onTap: () {
                             Get.toNamed(RouteName.listProductByCategoryScreen,
-                                arguments: '${products[index].id}');
+                                arguments: {
+                                  'id': '${products[index].id}',
+                                  'name': '${products[index].categoryName}'
+                                });
                           },
                           img: '${products[index].categoryImg}',
                           categoryName: '${products[index].categoryName}',

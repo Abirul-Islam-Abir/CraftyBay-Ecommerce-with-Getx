@@ -32,12 +32,16 @@ class CategoriesScreen extends StatelessWidget {
                         const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 4, mainAxisExtent: 120),
                     itemBuilder: (context, index) {
-                      final data = controller.categoryList;
-                      final categoryName = data[index].categoryName ?? '';
+                      final products = controller.categoryList;
+                      final categoryName = products[index].categoryName ?? '';
                       final categoryImage =
-                          data[index].categoryImg ?? ImageAsset.noImageNet;
+                          products[index].categoryImg ?? ImageAsset.noImageNet;
+
                       return CategoriesProductCard(
-                        onTap: () {},
+                        onTap: () {
+                          Get.toNamed(RouteName.remarkProductDetails,
+                              arguments: products[index].id);
+                        },
                         img: categoryImage,
                         categoryName: categoryName,
                       );

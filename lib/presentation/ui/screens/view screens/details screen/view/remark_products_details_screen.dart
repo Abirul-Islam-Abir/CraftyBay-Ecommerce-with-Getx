@@ -9,8 +9,8 @@ import '../components/image_card.dart';
 import '../components/product_details_title_card.dart';
 import '../components/size_circle_builder.dart';
 
-class ProductsDetailsScreen extends StatelessWidget {
-  ProductsDetailsScreen({Key? key}) : super(key: key);
+class RemarkProductsDetailsScreen extends StatelessWidget {
+  RemarkProductsDetailsScreen({Key? key}) : super(key: key);
   final controller = Get.put(ProductDetailsScreenController());
 
   @override
