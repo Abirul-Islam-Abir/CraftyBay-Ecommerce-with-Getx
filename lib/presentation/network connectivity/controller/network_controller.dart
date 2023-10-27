@@ -5,7 +5,7 @@ import '../../../data/utils/export.dart';
 
 class NetworkController extends GetxController {
   void showNetworkSnackBar() {
-    Get.showSnackbar(GetSnackBar(
+    Get.showSnackbar(const GetSnackBar(
       title: 'No Internet!',
       message: 'Please check your internet connection!',
       isDismissible: false,

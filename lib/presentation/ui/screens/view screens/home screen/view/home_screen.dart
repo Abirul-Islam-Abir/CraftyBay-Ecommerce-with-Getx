@@ -2,9 +2,7 @@ import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/read
 
 import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/custom_textfield.dart';
-import '../../remark product screen/view/new_product_screen.dart';
-import '../../remark product screen/view/popular_product_screen.dart';
-import '../../remark product screen/view/special_product_screen.dart';
+import '../../remark product screen/view/remark_product_screen.dart';
 import '../../slider view/controller/slider_controller.dart';
 import '../component/all_categories_list_builder.dart';
 import '../component/build_appbar.dart';
@@ -23,7 +21,6 @@ class HomeScreen extends StatelessWidget {
   final bottomNavController = Get.put(BottomNavController());
   final sliderImageController = Get.put(SliderImageController());
   final readProfileScreenController = Get.put(ReadProfileScreenController());
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +36,6 @@ class HomeScreen extends StatelessWidget {
           shrinkWrap: true,
           children: [
             const SizedBox(height: kTextSize),
-            // CustomTextField widget for searching products.
             CustomTextField(
               controller: homeScreenController.searchController,
               prefixIcon: const Icon(Icons.search),
@@ -47,41 +43,37 @@ class HomeScreen extends StatelessWidget {
               onChanged: (query) {},
               label: 'Search',
             ),
-            // CarouselSliderBuilder widget for displaying product sliders.
             CarouselSliderBuilder(sliderImageController.listProductSlider),
-            // DotsIndicatorWidget for indicating the position in the slider.
             DotsIndicatorWidget(sliderImageController.listProductSlider),
-            // CategoriesButton widget for displaying a category button (e.g., 'All Categories').
             CategoriesButton(
                 onTap: bottomNavController.goToCategoryScreen,
                 categoryName: 'All Categories'),
-            // AllCategoriesListBuilder for displaying a list of categories.
             AllCategoriesListBuilder(categoryController.categoryList),
-            // CategoriesButton for 'Popular' category.
             CategoriesButton(
                 onTap: () {
-                  Get.to(() => PopularProductScreen());
+                  Get.to(() => RemarkProductScreen(
+                        productName: 'Popular',
+                      ));
                 },
                 categoryName: 'Popular'),
-            // ListProductByRemarkBuilder for displaying products in the 'Popular' category.
             ListProductByRemarkBuilder(
                 remarkProductScreenController.listProductByRemarkPopular),
-            // CategoriesButton for 'Special' category.
             CategoriesButton(
                 onTap: () {
-                  Get.to(() => SpecialProductScreen());
+                  Get.to(() => RemarkProductScreen(
+                        productName: 'Special',
+                      ));
                 },
                 categoryName: 'Special'),
-            // ListProductByRemarkBuilder for displaying products in the 'Special' category.
             ListProductByRemarkBuilder(
                 remarkProductScreenController.listProductByRemarkSpecial),
-            // CategoriesButton for 'New' category.
             CategoriesButton(
                 onTap: () {
-                  Get.to(() => NewProductScreen());
+                  Get.to(() => RemarkProductScreen(
+                        productName: 'New',
+                      ));
                 },
                 categoryName: 'New'),
-            // ListProductByRemarkBuilder for displaying products in the 'New' category.
             ListProductByRemarkBuilder(
                 remarkProductScreenController.listProductByRemarkNew),
           ],

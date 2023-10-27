@@ -2,18 +2,18 @@ import '../../../../../../data/utils/animation_effect.dart';
 import '../../../../../../data/utils/export.dart';
 import '../../home screen/component/products_card.dart';
 
-class PopularProductScreen extends StatelessWidget {
-  PopularProductScreen({super.key});
-
+class RemarkProductScreen extends StatelessWidget {
+  RemarkProductScreen({super.key, required this.productName});
+  final String productName;
   final controller = Get.put(RemarkProductScreenController());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Row(
+        title: Row(
           children: [
-            Text('Popular'),
+            Text(productName),
           ],
         ),
       ),
