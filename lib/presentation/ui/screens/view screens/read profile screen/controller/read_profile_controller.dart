@@ -20,7 +20,6 @@ class ReadProfileScreenController extends GetxController {
 
   Future<void> fetchAndParseReadProfile() async {
     final response = await readProfileRequest();
-    //Hellow world how are you?
   }
 
   Future<void> initializeMethod() async {

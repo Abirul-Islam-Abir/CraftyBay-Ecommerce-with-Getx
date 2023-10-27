@@ -3,23 +3,18 @@
 ## A simple E-commerce app  UI  to implement pixel to flutter UI with full api implement
 
 # Features
-
-- **Splash Screen**
-- **Home Screen**
+ 
 - **Product Details Screen**
 - **Login Screen**
 - **Loading Screen**
-- **Cart Screen**
-- **OTP Verify Screen**
+- **Cart Screen** 
 - **Popular Product Screen**
 - **Special Product Screen**
 - **New Product Screen**
 - **Reviews Screen**
 - **Create Review Screen**
 - **Wish List**
-- **Categories List**
-- **Complete Profile Screen**
-- **About Dialog**
+- **Categories List** 
 
 # Showcases:
 
@@ -39,12 +34,12 @@
 |:-----------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------:|
 | ![product](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/e16d69d2-45db-4021-ab58-4b40b7989144) | ![special](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/0c93f573-0113-4868-82bd-6f199ecab871) | ![new](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce-with-Getx/assets/89778681/1bb2daf7-4ba0-410c-99b9-57110f6479cc) | 
 
-## A simple ecommerce application where REST API is integraded to see all products info and add to cart functionality using flutter and getx.
+ 
 
 User can see all available products and add desired products add to the cart and remove from the
 cart.
-
-## Product Pages
+ 
+## Features
 
 - **Splash Screen**
 - **Home Screen**
@@ -62,10 +57,9 @@ cart.
 - **Categories List**
 - **Complete Profile Screen**
 - **About Dialog**
--
+  
 
-## Introduction this app
-
+## Introduction this app 
 ## Splash Screen:
 
 The splash screen is typically the first screen that users see when they launch the app. It often
