@@ -5,17 +5,22 @@ import '../../../../../../data/services/6 user profile/read_profile.dart';
 import '../../../../../../data/utils/store_data_value.dart';
 
 class ReadProfileScreenController extends GetxController {
+  bool _isLoading = true;
   final List<ReadProfileModel> _readProfile = [];
 
-  List<ReadProfileModel> get readProfile => _readProfile;
+  @override
+  void onInit() {
+    initializeMethod();
+    super.onInit();
+  }
 
-  bool _isLoading = true;
+  List<ReadProfileModel> get readProfile => _readProfile;
 
   bool get isLoading => _isLoading;
 
   Future<void> fetchAndParseReadProfile() async {
     final response = await readProfileRequest();
-    print(response);
+    //Hellow world how are you?
   }
 
   Future<void> initializeMethod() async {
@@ -34,11 +39,5 @@ class ReadProfileScreenController extends GetxController {
       _isLoading = false;
       update();
     }
-  }
-
-  @override
-  void onInit() {
-    initializeMethod();
-    super.onInit();
   }
 }
