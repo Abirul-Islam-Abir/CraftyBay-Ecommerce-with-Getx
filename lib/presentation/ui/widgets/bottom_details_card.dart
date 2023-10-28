@@ -36,7 +36,7 @@ class BottomDetailsCard extends StatelessWidget {
             ],
           ),
           isProgress
-              ? Center(child: CircularProgressIndicator())
+              ? const Center(child: CircularProgressIndicator())
               : ElevatedButton(onPressed: onPressed, child: Text(name)),
         ],
       ),

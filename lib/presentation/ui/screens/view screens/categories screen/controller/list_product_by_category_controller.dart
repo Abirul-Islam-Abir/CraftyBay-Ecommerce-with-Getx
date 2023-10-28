@@ -13,7 +13,6 @@ class ListProductByCategoriesController extends GetxController {
   Future<void> fetchAndParseListProductByCategory() async {
     List<Map<String, dynamic>> response =
         await fetchListProductByCategoryRequest(product['id']);
-    print(response);
     _listProductByCategory
         .clear(); // Clear the existing data before adding new data
 

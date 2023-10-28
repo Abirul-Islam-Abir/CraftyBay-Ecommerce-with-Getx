@@ -25,6 +25,7 @@ dependencies:
   motion_toast: ^2.7.8
   empty_widget: ^0.0.5
   connectivity_plus: ^5.0.1
+  dio: ^5.3.3
 dev_dependencies:
   flutter_test:
     sdk: flutter

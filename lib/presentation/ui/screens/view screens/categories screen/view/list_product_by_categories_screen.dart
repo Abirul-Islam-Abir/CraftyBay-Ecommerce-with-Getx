@@ -25,9 +25,9 @@ class ListProductByCategoriesScreen extends StatelessWidget {
             title: NormalText(controller.product['name'])),
         body: GetBuilder<ListProductByCategoriesController>(
           builder: (controller) => controller.isLoading
-              ? Center(child: CircularProgressIndicator())
+              ? const Center(child: CircularProgressIndicator())
               : controller.listProductByCategory.isEmpty
-                  ? Center(
+                  ? const Center(
                       child: Text('Empty List'),
                     )
                   : GridView.builder(

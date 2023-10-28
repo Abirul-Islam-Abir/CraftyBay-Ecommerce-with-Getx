@@ -25,7 +25,7 @@ class CategoriesScreen extends StatelessWidget {
           ),
           body: GetBuilder<CategoriesScreenController>(
             builder: (_) => controller.categoryList.isEmpty
-                ? Center(child: Text('Empty List'))
+                ? const Center(child: Text('Empty List'))
                 : GridView.builder(
                     itemCount: controller.categoryList.length,
                     gridDelegate:

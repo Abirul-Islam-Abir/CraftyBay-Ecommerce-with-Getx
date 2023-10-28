@@ -4,7 +4,7 @@ import '../../../../../../data/utils/export.dart';
 import '../../home screen/component/products_card.dart';
 
 class RemarkProductScreen extends StatelessWidget {
-  RemarkProductScreen(
+  const RemarkProductScreen(
       {super.key, required this.productName, required this.products});
   final String productName;
   final List<ListProductByRemarkModel> products;
