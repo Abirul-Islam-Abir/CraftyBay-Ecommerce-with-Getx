@@ -73,23 +73,6 @@ class ProductDetailsScreenController extends GetxController {
         response.map((json) => ListProductByReviewModel.fromJson(json)));
   }
 
-  Future<void> fetchAndParseCreateCartList() async {
-    if (UserData.userToken.isNotEmpty) {
-      final response = await postCreateCartList({
-        "product_id": productDetailsById[0].productId.toString(),
-        "color": productDetailsById[0].color?[colorIndex].toString(),
-        "size": productDetailsById[0].size?[sizeIndex].toString(),
-        "qty": countProduct.toString()
-      });
-      if (response['msg'] == 'success') {
-        Get.find<CartScreenController>().fetchAndParseCartList();
-        SnackToast.requestSuccess();
-      }
-    } else {
-      SnackToast.requestFailed();
-    }
-  }
-
   Future<void> handleDataCalling() async {
     try {
       await Future.wait([
@@ -116,10 +99,6 @@ class ProductDetailsScreenController extends GetxController {
     {
       'color': AppColor.kRedColor,
       'name': 'Red',
-    },
-    {
-      'color': AppColor.kOrangeColor,
-      'name': 'Orange',
     },
   ];
 

@@ -9,15 +9,11 @@ Future postCreateCartList(body) async {
     final url = Uri.parse(createCartListUrl);
     final http.Response response =
         await http.post(url, headers: headerWithTokens, body: body);
-    if (response.statusCode == 200) {
-      final responseBody = jsonDecode(response.body);
-      if (responseBody['msg'] == 'success') {
-        return responseBody;
-      } else {
-        throw Exception('Request failed!: ${responseBody['msg']}');
-      }
+    final responseBody = jsonDecode(response.body);
+    if (response.statusCode == 200 && responseBody['msg'] == 'success') {
+      return responseBody;
     } else {
-      throw Exception('Request failed!: ${response.statusCode}');
+      return responseBody;
     }
   } catch (e) {
     throw Exception('Error an occurred : $e');

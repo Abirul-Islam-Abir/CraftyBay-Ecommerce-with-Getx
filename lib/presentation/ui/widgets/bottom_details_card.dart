@@ -7,10 +7,12 @@ class BottomDetailsCard extends StatelessWidget {
       {super.key,
       required this.price,
       required this.onPressed,
-      required this.name});
+      required this.name,
+      required this.isProgress});
 
   final String price, name;
   final GestureTapCallback onPressed;
+  final bool isProgress;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,9 @@ class BottomDetailsCard extends StatelessWidget {
               ),
             ],
           ),
-          ElevatedButton(onPressed: onPressed, child: Text(name)),
+          isProgress
+              ? Center(child: CircularProgressIndicator())
+              : ElevatedButton(onPressed: onPressed, child: Text(name)),
         ],
       ),
     );

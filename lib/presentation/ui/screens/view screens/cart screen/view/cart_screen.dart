@@ -35,9 +35,9 @@ class CartScreen extends StatelessWidget {
                           addBtn: () {},
                           deletePress: () {
                             SnackToast.showDeleteDialog(
-                                controller.cartList[index].id);
+                                controller.cartList[index].productId);
                           },
-                          count: '0',
+                          count: controller.cartList[index].qty.toString(),
                           title:
                               controller.cartList[index].product?.title ?? '',
                           price: controller.cartList[index].price.toString(),
@@ -45,6 +45,7 @@ class CartScreen extends StatelessWidget {
                           sizeText: controller.cartList[index].size ?? ''),
                       itemCount: controller.cartList.length)),
               BottomDetailsCard(
+                isProgress: controller.isLoading,
                 name: 'Check Out',
                 onPressed: () {},
                 price: '00.00',

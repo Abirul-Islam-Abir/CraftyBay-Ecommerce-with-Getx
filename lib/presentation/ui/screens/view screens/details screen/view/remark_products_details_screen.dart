@@ -12,7 +12,7 @@ import '../components/size_circle_builder.dart';
 class RemarkProductsDetailsScreen extends StatelessWidget {
   RemarkProductsDetailsScreen({Key? key}) : super(key: key);
   final controller = Get.put(ProductDetailsScreenController());
-
+  final cartController = Get.put(CartScreenController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +36,7 @@ class RemarkProductsDetailsScreen extends StatelessWidget {
                             ProductDetailsTitleCard(
                               count: controller.countProduct.toString(),
                               title:
-                                  '${data[0].product?.title ?? " "} ${data[0].product?.brandId ?? "null"}',
+                                  '${data[0].product?.title ?? " "} ${data[0].product?.brandId ?? ""}',
                               ratings: '${data[0].product?.star ?? " "}',
                               save: '${data[0].product?.discount ?? " "}',
                               addOnTap: controller.increment,
@@ -58,8 +58,15 @@ class RemarkProductsDetailsScreen extends StatelessWidget {
                       ),
                     ),
                     BottomDetailsCard(
+                      isProgress: controller.isLoading,
                       name: 'Add to cart',
-                      onPressed: controller.fetchAndParseCreateCartList,
+                      onPressed: () {
+                        cartController.fetchAndParseCreateCartList(
+                            productDetailsById: data,
+                            colorIndex: controller.colorIndex,
+                            sizeIndex: controller.sizeIndex,
+                            countProduct: controller.countProduct);
+                      },
                       price: data[0].product?.price ?? " ",
                     ),
                   ],
