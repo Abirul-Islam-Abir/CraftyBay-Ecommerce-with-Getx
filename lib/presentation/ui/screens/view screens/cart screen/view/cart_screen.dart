@@ -23,7 +23,7 @@ class CartScreen extends StatelessWidget {
           title: const NormalText('Cart'),
         ),
         body: GetBuilder<CartScreenController>(
-          builder: (controller) =>controller.isLoading?Center(child:CircularProgressIndicator()): Column(
+          builder: (controller) =>controller.isLoading?const Center(child:CircularProgressIndicator()): Column(
             children: [
               Expanded(
                   child: ListView.builder(

@@ -7,7 +7,7 @@ class ListProductByBrandModel {
   String? discountPrice;
   String? image;
   int? stock;
-  double? star;
+  int? star;
   String? remark;
   int? categoryId;
   int? brandId;
@@ -18,21 +18,21 @@ class ListProductByBrandModel {
 
   ListProductByBrandModel(
       {this.id,
-      this.title,
-      this.shortDes,
-      this.price,
-      this.discount,
-      this.discountPrice,
-      this.image,
-      this.stock,
-      this.star,
-      this.remark,
-      this.categoryId,
-      this.brandId,
-      this.createdAt,
-      this.updatedAt,
-      this.brand,
-      this.category});
+        this.title,
+        this.shortDes,
+        this.price,
+        this.discount,
+        this.discountPrice,
+        this.image,
+        this.stock,
+        this.star,
+        this.remark,
+        this.categoryId,
+        this.brandId,
+        this.createdAt,
+        this.updatedAt,
+        this.brand,
+        this.category});
 
   ListProductByBrandModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -50,8 +50,9 @@ class ListProductByBrandModel {
     createdAt = json['created_at'];
     updatedAt = json['updated_at'];
     brand = json['brand'] != null ? Brand.fromJson(json['brand']) : null;
-    category =
-        json['category'] != null ? Category.fromJson(json['category']) : null;
+    category = json['category'] != null
+        ? Category.fromJson(json['category'])
+        : null;
   }
 
   Map<String, dynamic> toJson() {
@@ -118,10 +119,10 @@ class Category {
 
   Category(
       {this.id,
-      this.categoryName,
-      this.categoryImg,
-      this.createdAt,
-      this.updatedAt});
+        this.categoryName,
+        this.categoryImg,
+        this.createdAt,
+        this.updatedAt});
 
   Category.fromJson(Map<String, dynamic> json) {
     id = json['id'];

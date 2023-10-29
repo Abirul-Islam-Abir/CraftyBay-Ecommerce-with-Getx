@@ -37,7 +37,7 @@ class ListProductByCategoriesScreen extends StatelessWidget {
                               crossAxisCount: 3, mainAxisExtent: 120),
                       itemBuilder: (context, index) {
                         final products = controller.listProductByCategory;
-                        final categoryName = products[index].remark ?? '';
+                        final categoryName = products[index].category!.categoryName ?? '';
                         final categoryImage =
                             products[index].image ?? ImageAsset.noImageNet;
 

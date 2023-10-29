@@ -57,7 +57,7 @@ class ProductCard extends StatelessWidget {
               ),
             ),
             const SizedBox(height: kTooSmallSize),
-            Text('$name\nDiscount: $discount%',
+            Text('$name\nDiscount: $discount%'.toUpperCase(),
                 style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     color: AppColor.kTextColor,

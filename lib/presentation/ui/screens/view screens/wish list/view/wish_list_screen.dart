@@ -1,6 +1,7 @@
+import '../../../../../../data/utils/animation_effect.dart';
 import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/normal_text.dart';
-import '../../categories screen/component/categories_product_card.dart';
+import '../../home screen/component/products_card.dart';
 import '../controllers/wish_list_controller.dart';
 
 class WishListScreen extends StatelessWidget {
@@ -23,19 +24,34 @@ class WishListScreen extends StatelessWidget {
             title: const NormalText('Wish List'),
           ),
           body: GetBuilder<HomeScreenController>(
-            builder: (_) => GridView.builder(
-              itemCount: controller.wishList.length,
+            builder: (controller) =>GridView.builder(
+              itemCount: controller.listProductByBrand.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 4, mainAxisExtent: 120),
+                  crossAxisCount: 3, mainAxisExtent: 250),
               itemBuilder: (context, index) {
-                final data = controller.wishList;
+                final products = controller.listProductByBrand;
                 final categoryName =
-                    data[index].product!.title?.toUpperCase() ?? '';
+                    products[index].title ?? '';
                 final categoryImage =
-                    data[index].product!.image ?? ImageAsset.noImageNet;
-                return CategoriesProductCard(
-                  img: categoryImage,
-                  categoryName: categoryName,
+                    products[index].image ?? ImageAsset.noImageNet;
+
+                final discount = products[index].discount;
+                final price = products[index].price;
+
+                return Animate(
+                  effects: EffectFactory.leftToRightAnimate,
+                  child: ProductCard(
+                      onTap: () {
+                        Get.toNamed(RouteName.remarkProductDetails,
+                            arguments: products[index].id);
+                      },
+                      isFavPress: () {},
+                      discount: '$discount',
+                      price: '$price',
+                      name: categoryName,
+                      isFav: true,
+                      ratings: 3.5,
+                      img: categoryImage),
                 );
               },
             ),

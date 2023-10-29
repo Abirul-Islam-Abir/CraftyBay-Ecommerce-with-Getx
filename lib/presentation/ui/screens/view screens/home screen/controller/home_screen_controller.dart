@@ -71,6 +71,7 @@ class HomeScreenController extends GetxController {
   @override
   void onInit() {
 
-    super.onInit();  initializeMethod();print(UserData.userToken);
+    super.onInit();  initializeMethod();
+    print(UserData.userToken);
   }
 }
