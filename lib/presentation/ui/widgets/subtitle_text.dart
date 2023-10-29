@@ -5,9 +5,9 @@ import '../../../data/theme/app_colors.dart';
 import '../../../data/utils/app_size.dart';
 
 class SubtitleText extends StatelessWidget {
-  const SubtitleText({
+  const SubtitleText( this.text,{
     super.key,
-    required this.text,
+
     this.fontWeight = FontWeight.normal,
     this.color = AppColor.kTextColor,
     this.alignment = Alignment.topLeft,

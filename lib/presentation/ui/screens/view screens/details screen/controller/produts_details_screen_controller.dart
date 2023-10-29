@@ -5,13 +5,11 @@ import '../../../../../../data/services/3 products list/product_details_by_id.da
 
 class ProductDetailsScreenController extends GetxController {
   final List<ProductDetailsModel> _productDetailsById = [];
-  final List<ListProductByReviewModel> _productListByReview = [];
   final productId = Get.arguments;
   bool _isLoading = true;
   bool get isLoading => _isLoading;
   List<ProductDetailsModel> get productDetailsById => _productDetailsById;
-  List<ListProductByReviewModel> get productListByReview =>
-      _productListByReview;
+
   int colorIndex = 0;
   int sizeIndex = 0;
   int imageIndex = 0;
@@ -58,22 +56,17 @@ class ProductDetailsScreenController extends GetxController {
   Future<void> fetchAndParseProductDetailsById() async {
     List<Map<String, dynamic>> response =
         await fetchProductDetailsByIdRequest(productId);
+    _productDetailsById.clear();
     _productDetailsById
         .addAll(response.map((json) => ProductDetailsModel.fromJson(json)));
   }
 
-  Future<void> fetchAndParseListProductByReview() async {
-    List<Map<String, dynamic>> response =
-        await fetchListProductByReviewRequest(productId);
-    _productListByReview.addAll(
-        response.map((json) => ListProductByReviewModel.fromJson(json)));
-  }
+
 
   Future<void> handleDataCalling() async {
     try {
       await Future.wait([
         fetchAndParseProductDetailsById(),
-        fetchAndParseListProductByReview(),
       ]);
     } catch (e) {
       SnackToast.requestFailed();

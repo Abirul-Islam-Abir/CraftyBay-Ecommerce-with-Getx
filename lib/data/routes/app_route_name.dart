@@ -21,6 +21,8 @@ class RouteName {
   static const settingsScreen = '/SettingsScreen';
   static const aboutScreen = '/AboutScreen';
   static const logOutScreen = '/LogOutScreen';
+  static const reviewScreen = '/ReviewScreen';
+
   static const mapScreen = '/MapScreen';
   static const remarkProductDetails = '/RemarkProductDetails';
   static const sliderViewDetails = '/SliderViewDetails';

@@ -23,7 +23,7 @@ class CompleteProfileScreen extends StatelessWidget {
             const HeadlineText(
                 text: AppString.welcomeBack, alignment: Alignment.center),
             const SubtitleText(
-                text: AppString.pleaseEnterYourEmailAddress,
+               AppString.pleaseEnterYourEmailAddress,
                 alignment: Alignment.center),
             const SizedBox(height: kSmallSize),
             CustomTextField(

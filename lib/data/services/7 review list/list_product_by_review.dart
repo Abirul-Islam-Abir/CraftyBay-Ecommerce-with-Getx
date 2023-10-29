@@ -7,18 +7,14 @@ Future fetchListProductByReviewRequest(id) async {
   try {
     final url = Uri.parse('$listProductByReviewUrl/$id');
     final http.Response response = await http.get(url);
-    if (response.statusCode == 200) {
-      final responseBody = jsonDecode(response.body);
-      if (responseBody['msg'] == 'success') {
-        final List<Map<String, dynamic>> data =
-            List<Map<String, dynamic>>.from(responseBody['data']);
-        return data;
-      } else {
-        throw Exception(
-            'Error has occurred: ${responseBody['msg'] == 'success'}');
-      }
+    final responseBody = jsonDecode(response.body);
+    if (response.statusCode == 200 && responseBody['msg'] == 'success') {
+
+      final List<Map<String, dynamic>> data =
+      List<Map<String, dynamic>>.from(responseBody['data']);
+      return data;
     } else {
-      throw Exception('Error has occurred: ${response.statusCode}');
+      return  [];
     }
   } catch (e) {
     throw Exception('Error has occurred: $e');
