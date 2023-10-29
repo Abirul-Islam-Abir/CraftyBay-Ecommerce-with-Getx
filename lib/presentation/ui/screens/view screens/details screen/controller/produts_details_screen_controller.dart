@@ -8,7 +8,6 @@ class ProductDetailsScreenController extends GetxController {
   final List<ListProductByReviewModel> _productListByReview = [];
   final productId = Get.arguments;
   bool _isLoading = true;
-
   bool get isLoading => _isLoading;
 
   List<ProductDetailsModel> get productDetailsById => _productDetailsById;
@@ -18,7 +17,7 @@ class ProductDetailsScreenController extends GetxController {
   int colorIndex = 0;
   int sizeIndex = 0;
   int imageIndex = 0;
-  int _countProduct = 0;
+  int _countProduct = 1;
 
   int get countProduct => _countProduct;
 
@@ -101,7 +100,7 @@ class ProductDetailsScreenController extends GetxController {
     },
   ];
 
-  final List list = [
+  final List size = [
     'X',
     'XL',
     '2L',

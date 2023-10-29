@@ -14,6 +14,7 @@ class WishListScreenController extends GetxController {
 
   Future<void> fetchAndParseWishList() async {
     List<Map<String, dynamic>> response = await fetchProductWishList();
+    print(response);
     _wishList.clear();
     _wishList
         .addAll(response.map((json) => ProductWishListModel.fromJson(json)));
@@ -38,7 +39,7 @@ class WishListScreenController extends GetxController {
 
   @override
   void onInit() {
-    initializeMethod();
-    super.onInit();
+
+    super.onInit();initializeMethod();
   }
 }

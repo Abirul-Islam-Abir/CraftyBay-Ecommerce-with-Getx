@@ -41,10 +41,9 @@ class OtpVerifyScreen extends StatelessWidget {
                                     color: Colors.green,
                                     fontWeight: FontWeight.bold),
                                 length: 6,
-                                obscureText: true,
+                                obscureText: false,
                                 obscuringCharacter: '*',
-                                obscuringWidget:
-                                SvgPicture.asset(ImageAsset.primaryLogoSvg),
+
                                 blinkWhenObscuring: true,
                                 animationType: AnimationType.fade,
                                 validator: (v) {

@@ -59,11 +59,11 @@ class ProductsDetailsShimmer extends GetView<ProductDetailsScreenController> {
                 padding: const EdgeInsets.symmetric(horizontal: kSmallSize),
                 child: Row(
                     children: List.generate(
-                  controller.list.length,
+                  controller.size.length,
                   (index) => SizeCircle(
                     selectedIndex: 4,
                     index: index,
-                    text: controller.list[index],
+                    text: controller.size[index],
                     onTap: () {},
                   ),
                 )),

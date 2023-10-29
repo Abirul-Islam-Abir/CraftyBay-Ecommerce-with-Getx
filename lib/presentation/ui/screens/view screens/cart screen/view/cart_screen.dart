@@ -22,19 +22,24 @@ class CartScreen extends StatelessWidget {
               icon: const Icon(Icons.arrow_back_ios_new_outlined)),
           title: const NormalText('Cart'),
         ),
-        body: GetBuilder<HomeScreenController>(
-          builder: (_) => Column(
+        body: GetBuilder<CartScreenController>(
+          builder: (controller) =>controller.isLoading?Center(child:CircularProgressIndicator()): Column(
             children: [
               Expanded(
                   child: ListView.builder(
                       shrinkWrap: true,
-                      itemBuilder: (context, index) => CartCard(
+                      itemBuilder: (context, index) {
+                        return CartCard(
+                          onTap: (){
+                            Get.toNamed(RouteName.remarkProductDetails,
+                                arguments:controller.cartList[index].productId);
+                          },
                           img: controller.cartList[index].product!.image
                               .toString(),
-                          removeBtn: () {},
-                          addBtn: () {},
+                          removeBtn: controller.decrement,
+                          addBtn:controller.increment,
                           deletePress: () {
-                            SnackToast.showDeleteDialog(
+                            controller.showDeleteDialog(
                                 controller.cartList[index].productId);
                           },
                           count: controller.cartList[index].qty.toString(),
@@ -42,14 +47,17 @@ class CartScreen extends StatelessWidget {
                               controller.cartList[index].product?.title ?? '',
                           price: controller.cartList[index].price.toString(),
                           colorText: controller.cartList[index].color ?? '',
-                          sizeText: controller.cartList[index].size ?? ''),
+                          sizeText: controller.cartList[index].size ?? '');
+                      },
                       itemCount: controller.cartList.length)),
-              BottomDetailsCard(
-                isProgress: controller.isLoading,
-                name: 'Check Out',
-                onPressed: () {},
-                price: '00.00',
-              ),
+              GetBuilder<CartScreenController>(
+                builder: (controller) => BottomDetailsCard(
+                  isProgress: controller.isCheckout,
+                  name: 'Check Out',
+                  onPressed: () {},
+                  price: '00.00',
+                ),
+              )
             ],
           ),
         ),

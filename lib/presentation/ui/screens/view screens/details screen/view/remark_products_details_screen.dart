@@ -11,17 +11,18 @@ import '../components/size_circle_builder.dart';
 
 class RemarkProductsDetailsScreen extends StatelessWidget {
   RemarkProductsDetailsScreen({Key? key}) : super(key: key);
-  final controller = Get.put(ProductDetailsScreenController());
+  final detailsController = Get.put(ProductDetailsScreenController());
   final cartController = Get.put(CartScreenController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(title: const Text('Product Details')),
       body: GetBuilder<ProductDetailsScreenController>(
-        builder: (_) {
-          final data = controller.productDetailsById;
-          return controller.isLoading
+        builder: (detailsController) {
+          final data = detailsController.productDetailsById;
+          return detailsController.isLoading
               ? const ProductsDetailsShimmer()
               : Column(
                   children: [
@@ -34,18 +35,17 @@ class RemarkProductsDetailsScreen extends StatelessWidget {
                             ImageCard(productDetails: data),
                             const SizedBox(height: 10),
                             ProductDetailsTitleCard(
-                              count: controller.countProduct.toString(),
-                              title:
-                                  '${data[0].product?.title ?? " "} ${data[0].product?.brandId ?? ""}',
-                              ratings: '${data[0].product?.star ?? " "}',
+                              count: '${detailsController.countProduct}',
+                              title: '${data[0].product?.title ?? " "} ${data[0].product?.brandId ?? ""}',
+                              ratings:  '${data[0].product?.star ?? " "}',
                               save: '${data[0].product?.discount ?? " "}',
-                              addOnTap: controller.increment,
+                              addOnTap: detailsController.increment,
                               isFavPress: () {},
-                              removeOnTap: controller.decrement,
+                              removeOnTap: detailsController.decrement,
                             ),
                             const SizedBox(height: 10),
-                            ColorCircleBuilder(controller.color),
-                            SizeCircleBuilder(controller.list),
+                            ColorCircleBuilder(detailsController.color),
+                            SizeCircleBuilder(detailsController.size),
                             const Padding(
                               padding: EdgeInsets.symmetric(
                                   horizontal: kTooSmallSize),
@@ -57,18 +57,24 @@ class RemarkProductsDetailsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    BottomDetailsCard(
-                      isProgress: controller.isLoading,
-                      name: 'Add to cart',
-                      onPressed: () {
-                        cartController.fetchAndParseCreateCartList(
-                            productDetailsById: data,
-                            colorIndex: controller.colorIndex,
-                            sizeIndex: controller.sizeIndex,
-                            countProduct: controller.countProduct);
-                      },
-                      price: data[0].product?.price ?? " ",
-                    ),
+                    GetBuilder<CartScreenController>(builder: (cartController) {
+                      final colorIndex = detailsController.colorIndex;
+                      final colorName = detailsController.color[colorIndex]['name'];
+                      final sizeIndex = detailsController.sizeIndex;
+                      final sizeName = detailsController.size[sizeIndex];
+                      return BottomDetailsCard(
+                        isProgress: cartController.isCartAdd,
+                        name: 'Add to cart',
+                        onPressed: () {
+                          cartController.fetchAndParseCreateCartList(
+                              productDetailsById: data,
+                              color: colorName,
+                              size: sizeName,
+                              countProduct: detailsController.countProduct);
+                        },
+                        price: data[0].product?.price ?? " ",
+                      );
+                    }),
                   ],
                 );
         },
