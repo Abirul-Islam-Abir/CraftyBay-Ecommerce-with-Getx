@@ -9,9 +9,7 @@ class ProductDetailsScreenController extends GetxController {
   final productId = Get.arguments;
   bool _isLoading = true;
   bool get isLoading => _isLoading;
-
   List<ProductDetailsModel> get productDetailsById => _productDetailsById;
-
   List<ListProductByReviewModel> get productListByReview =>
       _productListByReview;
   int colorIndex = 0;

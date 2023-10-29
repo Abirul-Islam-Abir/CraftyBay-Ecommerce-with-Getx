@@ -22,8 +22,8 @@ class ProductsDetailsShimmer extends GetView<ProductDetailsScreenController> {
             ),
           ),
           const SizedBox(height: 10),
-          ProductDetailsTitleCard(
-              count: '01',
+          ProductDetailsTitleCard(reviewTap: (){},
+              count: '',
               title: '',
               ratings: '',
               save: '',
@@ -34,14 +34,14 @@ class ProductsDetailsShimmer extends GetView<ProductDetailsScreenController> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('===='),
+              const Text(''),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: kSmallSize),
                 child: Row(
                   children: List.generate(
                     controller.color.length,
                     (index) => ColorCircle(
-                      selectedIndex: 5,
+                      selectedIndex: controller.color.length,
                       index: index,
                       color: controller.color[index]['color'],
                       onTap: () {},
@@ -54,14 +54,14 @@ class ProductsDetailsShimmer extends GetView<ProductDetailsScreenController> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('Size'),
+              const Text(' '),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: kSmallSize),
                 child: Row(
                     children: List.generate(
                   controller.size.length,
                   (index) => SizeCircle(
-                    selectedIndex: 4,
+                    selectedIndex: controller.size.length,
                     index: index,
                     text: controller.size[index],
                     onTap: () {},
@@ -70,9 +70,9 @@ class ProductsDetailsShimmer extends GetView<ProductDetailsScreenController> {
               ),
             ],
           ),
-          const Text('Description'),
+          const Text(' '),
           const SizedBox(height: 60),
-          const Text('=========='),
+          const Text(' '),
           const SizedBox(height: 10),
           Container(
             height: 100,
@@ -86,9 +86,9 @@ class ProductsDetailsShimmer extends GetView<ProductDetailsScreenController> {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Price'),
+                    Text(' '),
                     Text(
-                      '\$=========',
+                      ' '
                     ),
                   ],
                 ),

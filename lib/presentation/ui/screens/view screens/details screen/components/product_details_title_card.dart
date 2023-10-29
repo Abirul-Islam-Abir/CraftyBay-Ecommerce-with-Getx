@@ -16,11 +16,11 @@ class ProductDetailsTitleCard extends StatelessWidget {
     required this.ratings,
     required this.removeOnTap,
     required this.addOnTap,
-    required this.isFavPress,
+    required this.isFavPress, required this.reviewTap,
   });
 
   final String title, save, count, ratings;
-  final Function() removeOnTap, addOnTap, isFavPress;
+  final Function() removeOnTap, addOnTap, isFavPress,reviewTap;
 
   @override
   Widget build(BuildContext context) {
@@ -57,9 +57,11 @@ class ProductDetailsTitleCard extends StatelessWidget {
               ),
               CommonText(ratings),
               const SizedBox(width: 10),
-              const SubtitleText(
-                text: 'Reviews',
-                color: AppColor.kPrimaryColor,
+              OutlinedButton( onPressed: reviewTap,
+                child: const CommonText(
+                  'Review',
+                  color: AppColor.kPrimaryColor,fontWeight: FontWeight.bold,
+                ),
               ),
               const SizedBox(width: 10),
               MiniHeartButton(

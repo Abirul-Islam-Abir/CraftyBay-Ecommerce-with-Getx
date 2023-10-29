@@ -1,5 +1,4 @@
-import '../../../../../../data/utils/animation_effect.dart';
-import '../../../../../../data/utils/export.dart';
+ import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/normal_text.dart';
 import '../../home screen/component/products_card.dart';
 import '../controllers/wish_list_controller.dart';
@@ -23,36 +22,33 @@ class WishListScreen extends StatelessWidget {
                 icon: const Icon(Icons.arrow_back_ios_new_outlined)),
             title: const NormalText('Wish List'),
           ),
-          body: GetBuilder<HomeScreenController>(
+          body: GetBuilder<WishListScreenController>(
             builder: (controller) =>GridView.builder(
-              itemCount: controller.listProductByBrand.length,
+              itemCount: controller.wishList.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3, mainAxisExtent: 250),
+                  crossAxisCount: 3, mainAxisExtent: 220),
               itemBuilder: (context, index) {
-                final products = controller.listProductByBrand;
+                final products = controller.wishList;
                 final categoryName =
-                    products[index].title ?? '';
+                    products[index].product!.title ?? '';
                 final categoryImage =
-                    products[index].image ?? ImageAsset.noImageNet;
+                    products[index].product!.image ?? ImageAsset.noImageNet;
 
-                final discount = products[index].discount;
-                final price = products[index].price;
+                final discount = products[index].product!.discount;
+                final price = products[index].product!.price;
 
-                return Animate(
-                  effects: EffectFactory.leftToRightAnimate,
-                  child: ProductCard(
-                      onTap: () {
-                        Get.toNamed(RouteName.remarkProductDetails,
-                            arguments: products[index].id);
-                      },
-                      isFavPress: () {},
-                      discount: '$discount',
-                      price: '$price',
-                      name: categoryName,
-                      isFav: true,
-                      ratings: 3.5,
-                      img: categoryImage),
-                );
+                return ProductCard(
+                    onTap: () {
+                      Get.toNamed(RouteName.remarkProductDetails,
+                          arguments: products[index].productId);
+                    },
+                    isFavPress: () {},
+                    discount: '$discount',
+                    price: '$price',
+                    name: categoryName,
+                    isFav: true,
+                    ratings: 3.5,
+                    img: categoryImage);
               },
             ),
           ),
