@@ -11,7 +11,7 @@ import '../components/size_circle_builder.dart';
 
 class RemarkProductsDetailsScreen extends StatelessWidget {
   RemarkProductsDetailsScreen({Key? key}) : super(key: key);
-  final detailsController = Get.put(ProductDetailsScreenController());
+  final detailsController = Get.put(RemarkProductDetailsScreenController());
   final cartController = Get.put(CartScreenController());
 
   @override
@@ -19,7 +19,7 @@ class RemarkProductsDetailsScreen extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(title: const Text('Product Details')),
-      body: GetBuilder<ProductDetailsScreenController>(
+      body: GetBuilder<RemarkProductDetailsScreenController>(
         builder: (detailsController) {
           final data = detailsController.productDetailsById;
           return detailsController.isLoading

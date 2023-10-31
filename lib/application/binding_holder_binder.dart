@@ -11,7 +11,7 @@ class StateHolderBinder extends Bindings {
     Get.lazyPut(() => BottomNavController());
     Get.lazyPut(() => HomeScreenController());
     Get.lazyPut(() => CompleteProfileScreenController());
-    Get.lazyPut(() => ProductDetailsScreenController());
+    Get.lazyPut(() => RemarkProductDetailsScreenController());
     Get.lazyPut(() => SplashScreenController());
     Get.lazyPut(() => EmailVerifyScreenController());
     Get.lazyPut(() => OtpVerifyScreenController());

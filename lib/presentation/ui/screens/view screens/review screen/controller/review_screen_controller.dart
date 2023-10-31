@@ -2,6 +2,7 @@ import 'package:crafty_bay_ecommerce/data/services/7%20review%20list/list_produc
 import 'package:get/get.dart';
 
 import '../../../../../../data/model/7 review list/list_product_by_review_model.dart';
+import '../../../../../../data/utils/snackbar.dart';
 
 class ReviewScreenController extends GetxController {
   final productId = Get.arguments;
@@ -23,15 +24,13 @@ class ReviewScreenController extends GetxController {
         response.map((json) => ListProductByReviewModel.fromJson(json)));
   }
 
-  Future initializeMethod() async {
-    _isLoading = true;
-    update();
+  Future handleDataCalling() async {
     try {
-      Future.wait([
+     await Future.wait([
         fetchAndParseListProductByReview(),
       ]);
     } catch (e) {
-      throw Exception('Error $e');
+      SnackToast.requestFailed();
     } finally {
       _isLoading = false;
       update();
@@ -41,6 +40,6 @@ class ReviewScreenController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    initializeMethod();
+    handleDataCalling();
   }
 }

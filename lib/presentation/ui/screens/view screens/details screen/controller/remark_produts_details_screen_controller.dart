@@ -3,7 +3,7 @@ import 'package:crafty_bay_ecommerce/data/utils/export.dart';
 import '../../../../../../data/model/7 review list/list_product_by_review_model.dart';
 import '../../../../../../data/services/3 products list/product_details_by_id.dart';
 
-class ProductDetailsScreenController extends GetxController {
+class RemarkProductDetailsScreenController extends GetxController {
   final List<ProductDetailsModel> _productDetailsById = [];
   final productId = Get.arguments;
   bool _isLoading = true;

@@ -3,7 +3,7 @@ import '../screens/view screens/details screen/components/color_circle.dart';
 import '../screens/view screens/details screen/components/product_details_title_card.dart';
 import '../screens/view screens/details screen/components/size_circle.dart';
 
-class ProductsDetailsShimmer extends GetView<ProductDetailsScreenController> {
+class ProductsDetailsShimmer extends GetView<RemarkProductDetailsScreenController> {
   const ProductsDetailsShimmer({super.key});
 
   @override

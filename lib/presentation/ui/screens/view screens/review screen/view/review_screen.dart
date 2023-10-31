@@ -1,3 +1,4 @@
+import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/create%20review%20screen/view/create_review_screen.dart';
 import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/review%20screen/controller/review_screen_controller.dart';
 import 'package:crafty_bay_ecommerce/presentation/ui/widgets/bottom_details_card.dart';
 import 'package:crafty_bay_ecommerce/presentation/ui/widgets/common_text.dart';
@@ -17,35 +18,45 @@ class ReviewScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Review')),
       body:  GetBuilder<ReviewScreenController>(
-        builder: (controller) {
-          return controller.isLoading
-              ? Center(child: CircularProgressIndicator())
-              : Column(
-                  children: [
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(kSmallSize),
-                        child: Container(
-                          decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(10),topRight: Radius.circular(10)),border: Border.all(width: 01,color: AppColor.kBlackColor.withOpacity(0.2))),
-                          padding: const EdgeInsets.symmetric(horizontal: kDefaultSize,vertical: kSmallSize),
-
-                          child: ListView.separated(
-                            separatorBuilder: (context, index) => Divider(),
-                            itemCount: controller.productListByReview.length,
-                            itemBuilder: (context, index) => ReviewCard(
-                              des: '${controller.productListByReview[index].description}',
-                              name:
-                              '${controller.productListByReview[index].profile!.cusName}',
-                            ),
+        builder: (controller) => controller.isLoading
+            ? Center(child: CircularProgressIndicator())
+            : Column(
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(kSmallSize),
+                      child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(10),
+                                topRight: Radius.circular(10)),
+                            border: Border.all(
+                                width: 01,
+                                color: AppColor.kBlackColor.withOpacity(0.2))),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: kDefaultSize, vertical: kSmallSize),
+                        child: ListView.separated(
+                          separatorBuilder: (context, index) => const Divider(),
+                          itemCount: controller.productListByReview.length,
+                          itemBuilder: (context, index) => ReviewCard(
+                            des:
+                                '${controller.productListByReview[index].description}',
+                            name:
+                                '${controller.productListByReview[index].profile!.cusName}',
                           ),
                         ),
                       ),
                     ),
-                    BottomReviewDetailsCard(price: '222', onPressed:  (){}
-                        , name: '', isProgress: false)
-                  ],
-                );
-        },
+                  ),
+                  BottomReviewDetailsCard(
+                      length: '222',
+                      onPressed: () {
+                        Get.to(CreateReviewScreen());
+                      },
+                      name: '',
+                      isProgress: false)
+                ],
+              ),
       ),
 
     );
@@ -79,12 +90,12 @@ class ReviewCard extends StatelessWidget {
 class BottomReviewDetailsCard extends StatelessWidget {
   const BottomReviewDetailsCard(
       {super.key,
-        required this.price,
-        required this.onPressed,
-        required this.name,
-        required this.isProgress});
+      required this.length,
+      required this.onPressed,
+      required this.name,
+      required this.isProgress});
 
-  final String price, name;
+  final String length, name;
   final GestureTapCallback onPressed;
   final bool isProgress;
 
@@ -99,19 +110,17 @@ class BottomReviewDetailsCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+          Row(
             children: [
-              const NormalText('Price'),
-              CommonText(
-                '\$$price',
-                color: AppColor.kPrimaryColor,
+              const NormalText('Reviews'),
+              NormalText(
+                '( $length )'
               ),
             ],
           ),
           isProgress
               ? const Center(child: CircularProgressIndicator())
-              :  FloatingActionButton(onPressed: (){},child: Icon(Icons.add),),
+              :  FloatingActionButton(onPressed: onPressed,child: Icon(Icons.add),),
         ],
       ),
     );

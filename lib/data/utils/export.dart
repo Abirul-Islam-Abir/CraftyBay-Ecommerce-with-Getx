@@ -40,7 +40,7 @@ export '../../presentation/ui/screens/auth screen/email verify screen/controller
 export '../../presentation/ui/screens/auth screen/otp verify screen/controller/otp_verify_screen_controller.dart';
 export '../../presentation/ui/screens/view screens/bottom nav/controller/bottom_nav_controller.dart';
 export '../../presentation/ui/screens/view screens/categories screen/controller/categories_screen_controller.dart';
-export '../../presentation/ui/screens/view screens/details screen/controller/produts_details_screen_controller.dart';
+export '../../presentation/ui/screens/view screens/details screen/controller/remark_produts_details_screen_controller.dart';
 export '../../presentation/ui/screens/view screens/home screen/controller/home_screen_controller.dart';
 export '../../presentation/ui/screens/view screens/remark product screen/controller/remark_product_screen_controller.dart';
 export '../../presentation/ui/screens/view screens/splash_screen/controller/spalsh_screen_controller.dart';

@@ -3,7 +3,7 @@ import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/deta
 import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/normal_text.dart';
 
-class SizeCircleBuilder extends GetView<ProductDetailsScreenController> {
+class SizeCircleBuilder extends GetView<RemarkProductDetailsScreenController> {
   const SizeCircleBuilder(this.list, {super.key});
 
   final List list;

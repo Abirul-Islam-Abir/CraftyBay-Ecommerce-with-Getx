@@ -2,7 +2,7 @@ import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/normal_text.dart';
 import 'color_circle.dart';
 
-class ColorCircleBuilder extends GetView<ProductDetailsScreenController> {
+class ColorCircleBuilder extends GetView<RemarkProductDetailsScreenController> {
   const ColorCircleBuilder(this.color, {super.key});
 
   final List color;

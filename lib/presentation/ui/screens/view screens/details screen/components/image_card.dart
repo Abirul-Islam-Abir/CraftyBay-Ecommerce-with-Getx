@@ -10,7 +10,7 @@ class ImageCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<ProductDetailsScreenController>(builder: (controller) {
+    return GetBuilder<RemarkProductDetailsScreenController>(builder: (controller) {
       return Container(
         width: Get.width,
         height: Get.height / 3,
