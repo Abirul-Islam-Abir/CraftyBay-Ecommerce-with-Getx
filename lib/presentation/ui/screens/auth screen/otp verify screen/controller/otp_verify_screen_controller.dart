@@ -13,7 +13,7 @@ class OtpVerifyScreenController extends GetxController {
   var countdown = 60.obs;
   late Timer _timer;
   RxBool isTimeOut = true.obs;
-
+ 
   Future fetchAndParseUserLogin() async {
     _isLoading = true;
 
@@ -22,7 +22,7 @@ class OtpVerifyScreenController extends GetxController {
     if (response['msg'] == 'success') {
       storageInstance.write(StorageKey.setTokenKey, response['data']);
       String? profileData = storageInstance.read(StorageKey.setCreateProfile);
-
+      fetchUserData();
       if (profileData != null && profileData.isNotEmpty) {
         _isLoading = false;
         update();
@@ -43,7 +43,14 @@ class OtpVerifyScreenController extends GetxController {
     currentText = value;
     update();
   }
-
+  void fetchUserData() {
+    final tokenData = storageInstance.read(StorageKey.setTokenKey);
+    final emailData = storageInstance.read(StorageKey.setEmailKey);
+    if (tokenData != null && emailData != null) {
+      UserData.userToken = tokenData;
+      UserData.userEmail = emailData;
+    }
+  }
   void validateSubmit() {
     if (formKey.currentState!.validate()) {
       if (currentText.length != 6 || currentText == "123456") {

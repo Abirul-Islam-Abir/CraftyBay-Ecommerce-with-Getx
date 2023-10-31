@@ -17,7 +17,7 @@ class ReviewScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Review')),
       body:  GetBuilder<ReviewScreenController>(
-        builder: (_) {
+        builder: (controller) {
           return controller.isLoading
               ? Center(child: CircularProgressIndicator())
               : Column(
@@ -41,16 +41,13 @@ class ReviewScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    BottomDetailsCard(price: '222', onPressed:  (){}
-                        , name: 'Addreveiw', isProgress: false)
+                    BottomReviewDetailsCard(price: '222', onPressed:  (){}
+                        , name: '', isProgress: false)
                   ],
                 );
         },
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
-      ),
+
     );
   }
 }
@@ -63,7 +60,8 @@ class ReviewCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 90,
+
+      height: 80,
       width: Get.width,
       child: Column(
         children: [
@@ -72,6 +70,48 @@ class ReviewCard extends StatelessWidget {
             NormalText(name)
           ]),
           SubtitleText(des),
+        ],
+      ),
+    );
+  }
+}
+
+class BottomReviewDetailsCard extends StatelessWidget {
+  const BottomReviewDetailsCard(
+      {super.key,
+        required this.price,
+        required this.onPressed,
+        required this.name,
+        required this.isProgress});
+
+  final String price, name;
+  final GestureTapCallback onPressed;
+  final bool isProgress;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 100,
+      width: Get.width,
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      color: AppColor.kPrimaryColor.shade50,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const NormalText('Price'),
+              CommonText(
+                '\$$price',
+                color: AppColor.kPrimaryColor,
+              ),
+            ],
+          ),
+          isProgress
+              ? const Center(child: CircularProgressIndicator())
+              :  FloatingActionButton(onPressed: (){},child: Icon(Icons.add),),
         ],
       ),
     );

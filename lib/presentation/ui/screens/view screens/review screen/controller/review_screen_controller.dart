@@ -17,6 +17,7 @@ class ReviewScreenController extends GetxController {
   Future<void> fetchAndParseListProductByReview() async {
     List<Map<String, dynamic>> response =
         await fetchListProductByReviewRequest(productId);
+    print(response);
     _productListByReview.clear();
     _productListByReview.addAll(
         response.map((json) => ListProductByReviewModel.fromJson(json)));
