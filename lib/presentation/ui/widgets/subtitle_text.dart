@@ -11,13 +11,14 @@ class SubtitleText extends StatelessWidget {
     this.fontWeight = FontWeight.normal,
     this.color = AppColor.kTextColor,
     this.alignment = Alignment.topLeft,
+    this.maxLines = 2
   });
 
   final String text;
   final FontWeight? fontWeight;
   final Color? color;
   final Alignment alignment;
-
+final int maxLines;
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -29,7 +30,7 @@ class SubtitleText extends StatelessWidget {
             color: color,
             fontWeight: fontWeight,
             fontStyle: FontStyle.italic),
-        maxLines: 2,
+        maxLines: maxLines,
         overflow: TextOverflow.ellipsis,
       ),
     );
