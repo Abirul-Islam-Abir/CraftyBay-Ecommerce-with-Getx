@@ -27,6 +27,7 @@ class RemarkProductScreen extends StatelessWidget {
           final discount = products[index].discount ?? '';
           final price = products[index].price ?? '';
           final name = products[index].title ?? '';
+          final star = products[index].star?? '';
           final img = products[index].image ?? ImageAsset.noImageNet;
           return Animate(
             effects: EffectFactory.leftToRightAnimate,
@@ -40,7 +41,7 @@ class RemarkProductScreen extends StatelessWidget {
                 price: price,
                 name: name,
                 isFav: true,
-                ratings: 3.5,
+                ratings: int.parse('$star')/100*5,
                 img: img),
           );
         },

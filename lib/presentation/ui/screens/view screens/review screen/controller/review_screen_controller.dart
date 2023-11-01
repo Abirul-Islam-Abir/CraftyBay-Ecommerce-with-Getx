@@ -2,6 +2,7 @@ import 'package:crafty_bay_ecommerce/data/services/7%20review%20list/list_produc
 import 'package:get/get.dart';
 
 import '../../../../../../data/model/7 review list/list_product_by_review_model.dart';
+import '../../../../../../data/routes/app_route_name.dart';
 import '../../../../../../data/utils/snackbar.dart';
 
 class ReviewScreenController extends GetxController {
@@ -36,7 +37,12 @@ class ReviewScreenController extends GetxController {
       update();
     }
   }
-
+void goToCreateReviewScreen(){
+  Get.toNamed(RouteName.createReviewScreen,arguments: {
+    'productId':Get.arguments.toString(),
+    'rating':'90'
+  });
+}
   @override
   void onInit() {
     super.onInit();

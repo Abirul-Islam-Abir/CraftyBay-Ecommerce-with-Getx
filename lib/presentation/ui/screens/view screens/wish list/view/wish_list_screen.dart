@@ -36,6 +36,7 @@ class WishListScreen extends StatelessWidget {
 
                 final discount = products[index].product!.discount;
                 final price = products[index].product!.price;
+                final star = int.parse('${products[index].product?.star?? ''}')/100*5;
 
                 return ProductCard(
                     onTap: () {
@@ -47,7 +48,7 @@ class WishListScreen extends StatelessWidget {
                     price: '$price',
                     name: categoryName,
                     isFav: true,
-                    ratings: 3.5,
+                    ratings: star,
                     img: categoryImage);
               },
             ),

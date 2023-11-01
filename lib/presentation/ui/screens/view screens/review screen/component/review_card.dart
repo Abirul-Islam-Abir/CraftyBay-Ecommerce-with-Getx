@@ -11,10 +11,10 @@ class ReviewCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 100,
-      width: Get.width,
-      child: FittedBox(
+    return FittedBox(
+      child: SizedBox(
+        height: 120,
+        width: Get.width,
         child: Column(
           children: [
             Row(

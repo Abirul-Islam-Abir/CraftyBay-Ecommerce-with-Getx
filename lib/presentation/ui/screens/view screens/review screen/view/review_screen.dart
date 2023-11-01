@@ -1,5 +1,4 @@
-import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/create%20review%20screen/view/create_review_screen.dart';
-import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/review%20screen/controller/review_screen_controller.dart';
+ import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/review%20screen/controller/review_screen_controller.dart';
 import 'package:crafty_bay_ecommerce/presentation/ui/widgets/bottom_details_card.dart';
 import 'package:crafty_bay_ecommerce/presentation/ui/widgets/common_text.dart';
 import 'package:crafty_bay_ecommerce/presentation/ui/widgets/count_card.dart';
@@ -7,6 +6,7 @@ import 'package:crafty_bay_ecommerce/presentation/ui/widgets/normal_text.dart';
 import 'package:crafty_bay_ecommerce/presentation/ui/widgets/subtitle_text.dart';
 
 import '../../../../../../data/utils/export.dart';
+import '../../create product review screen/view/create_product_review_screen.dart';
 import '../component/bottom_review_details_card.dart';
 import '../component/review_card.dart';
 
@@ -52,9 +52,7 @@ class ReviewScreen extends StatelessWidget {
                   ),
                   BottomReviewDetailsCard(
                       length: '${controller.productListByReview.length}',
-                      onPressed: () {
-                        Get.to(CreateReviewScreen());
-                      },
+                      onPressed:controller.goToCreateReviewScreen,
                       name: '',
                       isProgress: false)
                 ],

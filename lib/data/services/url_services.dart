@@ -9,6 +9,7 @@ const String listProductByBrandUrl = '$_baseUrl/ListProductByBrand/1';
 const String listProductByCategoryUrl = '$_baseUrl/ListProductByCategory';
 const String userLoginUrl = '$_baseUrl/UserLogin';
 const String cartListUrl = '$_baseUrl/CartList';
+const String createProductReviewUrl = '$_baseUrl/CreateProductReview';
 const String verifyLoginUrl = '$_baseUrl/VerifyLogin';
 const String createProfileUrl = '$_baseUrl/CreateProfile';
 const String readProfileUrl = '$_baseUrl/ReadProfile';

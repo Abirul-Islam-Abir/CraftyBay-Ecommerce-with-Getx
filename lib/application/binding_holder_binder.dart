@@ -2,6 +2,7 @@ import 'package:crafty_bay_ecommerce/presentation/network%20connectivity/control
 import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/read%20profile%20screen/controller/read_profile_controller.dart';
 
 import '../data/utils/export.dart';
+import '../presentation/ui/screens/view screens/create product review screen/controller/create_review_controller.dart';
 import '../presentation/ui/screens/view screens/review screen/controller/review_screen_controller.dart';
 import '../presentation/ui/screens/view screens/wish list/controllers/wish_list_controller.dart';
 
@@ -21,5 +22,6 @@ class StateHolderBinder extends Bindings {
     Get.lazyPut(() => ReadProfileScreenController());
     Get.lazyPut(() => NetworkController());
     Get.lazyPut(() => ReviewScreenController());
+    Get.lazyPut(() => CreateReviewController());
   }
 }

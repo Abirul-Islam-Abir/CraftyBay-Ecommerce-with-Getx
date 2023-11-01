@@ -35,7 +35,7 @@ class ListProductByRemarkBuilder extends GetView<HomeScreenController> {
                         price: '${products[index].price}',
                         name: '${products[index].title}',
                         isFav: true,
-                        ratings: 3.5,
+                        ratings:int.parse('${products[index].star}') /100*5,
                         img: '${products[index].image}'),
               ),
             ),

@@ -22,6 +22,7 @@ class RemarkProductsDetailsScreen extends StatelessWidget {
       body: GetBuilder<RemarkProductDetailsScreenController>(
         builder: (detailsController) {
           final data = detailsController.productDetailsById;
+
           return detailsController.isLoading
               ? const ProductsDetailsShimmer()
               : Column(
@@ -38,7 +39,7 @@ class RemarkProductsDetailsScreen extends StatelessWidget {
                               reviewTap: (){Get.toNamed(RouteName.reviewScreen,arguments:data[0].product?.id );},
                               count: '${detailsController.countProduct}',
                               title: '${data[0].product?.title ?? " "} ${data[0].product?.brandId ?? ""}',
-                              ratings:  '${data[0].product?.star ?? " "}',
+                              ratings:  '${int.parse('${data[0].product?.star ?? ""}')/100*5}',
                               save: '${data[0].product?.discount ?? " "}',
                               addOnTap: detailsController.increment,
                               isFavPress: () {},
