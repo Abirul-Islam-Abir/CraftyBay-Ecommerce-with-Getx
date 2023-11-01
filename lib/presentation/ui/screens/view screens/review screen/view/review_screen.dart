@@ -7,6 +7,8 @@ import 'package:crafty_bay_ecommerce/presentation/ui/widgets/normal_text.dart';
 import 'package:crafty_bay_ecommerce/presentation/ui/widgets/subtitle_text.dart';
 
 import '../../../../../../data/utils/export.dart';
+import '../component/bottom_review_details_card.dart';
+import '../component/review_card.dart';
 
 class ReviewScreen extends StatelessWidget {
   ReviewScreen({super.key});
@@ -49,7 +51,7 @@ class ReviewScreen extends StatelessWidget {
                     ),
                   ),
                   BottomReviewDetailsCard(
-                      length: '222',
+                      length: '${controller.productListByReview.length}',
                       onPressed: () {
                         Get.to(CreateReviewScreen());
                       },
@@ -63,66 +65,3 @@ class ReviewScreen extends StatelessWidget {
   }
 }
 
-class ReviewCard extends StatelessWidget {
-  const ReviewCard({super.key, required this.des, required this.name});
-
-  final String des, name;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-
-      height: 80,
-      width: Get.width,
-      child: Column(
-        children: [
-          Row(children: [
-            Icon(Icons.manage_accounts_outlined),
-            NormalText(name)
-          ]),
-          SubtitleText(des),
-        ],
-      ),
-    );
-  }
-}
-
-class BottomReviewDetailsCard extends StatelessWidget {
-  const BottomReviewDetailsCard(
-      {super.key,
-      required this.length,
-      required this.onPressed,
-      required this.name,
-      required this.isProgress});
-
-  final String length, name;
-  final GestureTapCallback onPressed;
-  final bool isProgress;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 100,
-      width: Get.width,
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-      color: AppColor.kPrimaryColor.shade50,
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Row(
-            children: [
-              const NormalText('Reviews'),
-              NormalText(
-                '( $length )'
-              ),
-            ],
-          ),
-          isProgress
-              ? const Center(child: CircularProgressIndicator())
-              :  FloatingActionButton(onPressed: onPressed,child: Icon(Icons.add),),
-        ],
-      ),
-    );
-  }
-}

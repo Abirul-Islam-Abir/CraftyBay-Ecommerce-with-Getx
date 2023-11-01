@@ -3,6 +3,7 @@ class AppString {
   static const String flutterDeveloperName = 'Flutter Developer Abir';
   static const String enterYourEmail = 'Enter Your Email';
   static const String email = 'Email';
+  static const String createReview = 'Create Review';
   static const String pleaseEnterYourEmailAddress =
       'Please Enter Your Email Address';
   static const String enterYourPassword = 'Enter Your Password';
