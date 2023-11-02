@@ -44,7 +44,8 @@ class SliderImageController extends GetxController {
 
   @override
   void onInit() {
-    initializeMethod();
+
     super.onInit();
+    initializeMethod();
   }
 }

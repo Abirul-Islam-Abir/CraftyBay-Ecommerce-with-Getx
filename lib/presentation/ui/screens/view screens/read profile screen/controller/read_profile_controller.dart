@@ -10,8 +10,9 @@ class ReadProfileScreenController extends GetxController {
 
   @override
   void onInit() {
-    initializeMethod();
+
     super.onInit();
+    initializeMethod();
   }
 
   List<ReadProfileModel> get readProfile => _readProfile;

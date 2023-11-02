@@ -53,7 +53,6 @@ class ReviewScreen extends StatelessWidget {
                   BottomReviewDetailsCard(
                       length: '${controller.productListByReview.length}',
                       onPressed:controller.goToCreateReviewScreen,
-                      name: '',
                       isProgress: false)
                 ],
               ),

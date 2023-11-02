@@ -7,10 +7,9 @@ class BottomReviewDetailsCard extends StatelessWidget {
       {super.key,
         required this.length,
         required this.onPressed,
-        required this.name,
         required this.isProgress});
 
-  final String length, name;
+  final String length ;
   final GestureTapCallback onPressed;
   final bool isProgress;
 

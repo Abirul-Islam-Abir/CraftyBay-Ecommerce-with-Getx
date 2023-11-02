@@ -6,7 +6,8 @@ import '../../../../../../data/routes/app_route_name.dart';
 import '../../../../../../data/utils/snackbar.dart';
 
 class ReviewScreenController extends GetxController {
-  final productId = Get.arguments;
+  final product = Get.arguments;
+
 
   final List<ListProductByReviewModel> _productListByReview = [];
 
@@ -18,8 +19,7 @@ class ReviewScreenController extends GetxController {
 
   Future<void> fetchAndParseListProductByReview() async {
     List<Map<String, dynamic>> response =
-        await fetchListProductByReviewRequest(productId);
-    print(response);
+        await fetchListProductByReviewRequest(product['id']);
     _productListByReview.clear();
     _productListByReview.addAll(
         response.map((json) => ListProductByReviewModel.fromJson(json)));
@@ -39,7 +39,7 @@ class ReviewScreenController extends GetxController {
   }
 void goToCreateReviewScreen(){
   Get.toNamed(RouteName.createReviewScreen,arguments: {
-    'productId':Get.arguments.toString(),
+    'productId':product['product_id'] ,
     'rating':'90'
   });
 }

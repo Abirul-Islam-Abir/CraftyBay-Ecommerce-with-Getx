@@ -36,7 +36,10 @@ class RemarkProductsDetailsScreen extends StatelessWidget {
                             ImageCard(productDetails: data),
                             const SizedBox(height: 10),
                             ProductDetailsTitleCard(
-                              reviewTap: (){Get.toNamed(RouteName.reviewScreen,arguments:data[0].product?.id );},
+                              reviewTap: (){Get.toNamed(RouteName.reviewScreen,arguments:{
+                                'id':data[0].id,
+                                'product_id':data[0].productId,
+                              });},
                               count: '${detailsController.countProduct}',
                               title: '${data[0].product?.title ?? " "} ${data[0].product?.brandId ?? ""}',
                               ratings:  '${int.parse('${data[0].product?.star ?? ""}')/100*5}',

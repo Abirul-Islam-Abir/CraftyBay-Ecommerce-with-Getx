@@ -1,5 +1,6 @@
 import '../../../../../../data/services/5 user auth/verify_login.dart';
 import '../../../../../../data/utils/export.dart';
+import '../../../../../../data/utils/utils.dart';
 
 class OtpVerifyScreenController extends GetxController {
   final TextEditingController otpController = TextEditingController();
@@ -21,11 +22,13 @@ class OtpVerifyScreenController extends GetxController {
         email: UserData.userEmail, otp: otpController.text);
     if (response['msg'] == 'success') {
       storageInstance.write(StorageKey.setTokenKey, response['data']);
+
       String? profileData = storageInstance.read(StorageKey.setCreateProfile);
-      fetchUserData();
+
       if (profileData != null && profileData.isNotEmpty) {
         _isLoading = false;
         update();
+        await Utils.fetchUserData();
         Get.offAllNamed(RouteName.bottomNavigationBar);
       } else {
         _isLoading = false;
@@ -43,14 +46,7 @@ class OtpVerifyScreenController extends GetxController {
     currentText = value;
     update();
   }
-  void fetchUserData() {
-    final tokenData = storageInstance.read(StorageKey.setTokenKey);
-    final emailData = storageInstance.read(StorageKey.setEmailKey);
-    if (tokenData != null && emailData != null) {
-      UserData.userToken = tokenData;
-      UserData.userEmail = emailData;
-    }
-  }
+
   void validateSubmit() {
     if (formKey.currentState!.validate()) {
       if (currentText.length != 6 || currentText == "123456") {

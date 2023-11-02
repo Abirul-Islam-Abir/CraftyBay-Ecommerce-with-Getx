@@ -1,4 +1,5 @@
 import '../../../../../../data/utils/export.dart';
+import '../../../../../../data/utils/utils.dart';
 
 class CompleteProfileScreenController extends GetxController {
   final TextEditingController firstNameController = TextEditingController();
@@ -39,6 +40,7 @@ class CompleteProfileScreenController extends GetxController {
       if (response['msg'] == 'success') {
         SnackToast.loginSuccess();
         storageInstance.write(StorageKey.setCreateProfile, response['msg']);
+        await Utils.fetchUserData();
         Get.offAllNamed(RouteName.bottomNavigationBar);
       } else {
         SnackToast.requestFailed();

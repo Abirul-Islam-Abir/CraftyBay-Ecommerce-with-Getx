@@ -38,7 +38,7 @@ class WishListScreenController extends GetxController {
 
   @override
   void onInit() {
-
-    super.onInit();initializeMethod();
+    super.onInit();
+    initializeMethod();
   }
 }

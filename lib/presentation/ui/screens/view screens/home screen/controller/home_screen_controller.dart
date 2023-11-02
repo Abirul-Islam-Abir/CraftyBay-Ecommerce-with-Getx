@@ -33,7 +33,7 @@ class HomeScreenController extends GetxController {
     } catch (e) {
       throw Exception('Error fetching data :$e');
     } finally {
-      fetchUserData();
+
       _isLoading = false;
       update();
     }
@@ -59,18 +59,11 @@ class HomeScreenController extends GetxController {
     }
   }
 
-  void fetchUserData() {
-    final tokenData = storageInstance.read(StorageKey.setTokenKey);
-    final emailData = storageInstance.read(StorageKey.setEmailKey);
-    if (tokenData != null && emailData != null) {
-      UserData.userToken = tokenData;
-      UserData.userEmail = emailData;
-    }
-  }
 
   @override
   void onInit() {
-    super.onInit();  initializeMethod();
+    super.onInit();
+    initializeMethod();
     print(UserData.userToken);
   }
 }

@@ -24,7 +24,7 @@ const String listProductByRemarkSpecialUrl =
 const String listProductByRemarkNewUrl = '$_baseUrl/ListProductByRemark/new';
 const String productDetailsByIdUrl = '$_baseUrl/ProductDetailsById';
 Map<String, String> headerWithTokens = {
-  'token': UserData.userToken,
+  'token': UserData.userToken.toString(),
 };
 
 class BaseUrl {}
