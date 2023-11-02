@@ -34,7 +34,7 @@ class BottomReviewDetailsCard extends StatelessWidget {
           ),
           isProgress
               ? const Center(child: CircularProgressIndicator())
-              :  FloatingActionButton(onPressed: onPressed,child: Icon(Icons.add),),
+              :  FloatingActionButton(onPressed: onPressed,child: const Icon(Icons.add),),
         ],
       ),
     );

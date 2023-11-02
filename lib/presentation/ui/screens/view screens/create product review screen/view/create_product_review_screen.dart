@@ -13,7 +13,7 @@ class CreateReviewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Create Review'),
+        title: const Text('Create Review'),
       ),
       body: Form(key: controller.formKey,
         child: ListView(

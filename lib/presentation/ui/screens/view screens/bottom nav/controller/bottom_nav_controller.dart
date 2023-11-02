@@ -1,7 +1,5 @@
 import 'package:get/get.dart';
 
-import '../../../../../../data/utils/storage_key.dart';
-import '../../../../../../data/utils/store_data_value.dart';
 
 class BottomNavController extends GetxController {
   int navIndex = 0;

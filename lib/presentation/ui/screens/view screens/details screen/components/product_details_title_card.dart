@@ -5,7 +5,6 @@ import '../../../../widgets/common_text.dart';
 import '../../../../widgets/count_card.dart';
 import '../../../../widgets/mini_heart_button.dart';
 import '../../../../widgets/normal_text.dart';
-import '../../../../widgets/subtitle_text.dart';
 
 class ProductDetailsTitleCard extends StatelessWidget {
   const ProductDetailsTitleCard({

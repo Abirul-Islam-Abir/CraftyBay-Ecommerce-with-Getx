@@ -1,6 +1,5 @@
 
 import '../../../../../../data/utils/export.dart';
-import '../../../../widgets/common_text.dart';
 import '../../../../widgets/normal_text.dart';
 import '../../../../widgets/subtitle_text.dart';
 
@@ -19,7 +18,7 @@ class ReviewCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                Icon(Icons.manage_accounts_outlined),
+                const Icon(Icons.manage_accounts_outlined),
                 NormalText(name)
               ],
             ),

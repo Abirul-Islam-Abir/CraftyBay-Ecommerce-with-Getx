@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
 
 import '../../../../../../data/routes/app_route_name.dart';
-import '../../../../../../data/utils/storage_key.dart';
 import '../../../../../../data/utils/store_data_value.dart';
 import '../../../../../../data/utils/utils.dart';
 
