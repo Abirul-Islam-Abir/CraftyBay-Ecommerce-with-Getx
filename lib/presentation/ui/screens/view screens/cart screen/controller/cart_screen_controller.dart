@@ -41,44 +41,24 @@ class CartScreenController extends GetxController {
       SnackToast.cartOperationFailed();
     }
   }
-  void isLoadingFalse() {
-    _isLoading = false;
-    update();
-  }
 
-  void isLoadingTrue() {
-    _isLoading = true;
-    update();
-  }
 
-  void isCartAddFalse() {
-    _isCartAdd = false;
-    update();
-  }
-
-  void isCartAddTrue() {
-    _isCartAdd = true;
-    update();
-  }
-
-  void increment() {
+  void increment(index) {
     if (countProduct == 5) {
       _countProduct = 5;
       update();
-    } else {
-      totalPriceIncrement();
+    } else {   cartList[index].qty==
       _countProduct++;
       update();
     }
   }
 
-  void decrement() {
+  void decrement(index) {
     if (countProduct == 1) {
       _countProduct = 1;
       update();
     } else {
-      totalPriceDecrement();
-      _countProduct--;
+     cartList[index].qty== _countProduct--;
       update();
     }
   }
@@ -134,26 +114,39 @@ class CartScreenController extends GetxController {
       },
     );
   }
-
-  int total = 0;
-
-  int totalPriceIncrement() {
-    for (CartListModel item in _cartList) {
-      total += int.parse(item.price ?? "") * _countProduct;
+  double get totalPrice {
+    double total = 0.0;
+    for (final item in _cartList) {
+      total += double.parse(item.price??'') * item.numOfItems;
     }
     return total;
   }
 
-  int totalPriceDecrement() {
-    for (CartListModel item in _cartList) {
-      total += int.parse(item.price ?? "") * _countProduct;
-    }
-    return total;
-  }
+
 
   @override
   void onInit() {
     super.onInit();
     initializeMethod();
+  }
+
+  void isLoadingFalse() {
+    _isLoading = false;
+    update();
+  }
+
+  void isLoadingTrue() {
+    _isLoading = true;
+    update();
+  }
+
+  void isCartAddFalse() {
+    _isCartAdd = false;
+    update();
+  }
+
+  void isCartAddTrue() {
+    _isCartAdd = true;
+    update();
   }
 }

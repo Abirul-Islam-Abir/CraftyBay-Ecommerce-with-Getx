@@ -36,13 +36,17 @@ class CartScreen extends StatelessWidget {
                           },
                           img: controller.cartList[index].product!.image
                               .toString(),
-                          removeBtn: controller.decrement,
-                          addBtn:controller.totalPriceIncrement,
+                          removeBtn:(){
+                            controller.decrement(index );
+                          },
+                          addBtn:(){
+                            controller.increment(index );
+                          },
                           deletePress: () {
                             controller.showDeleteDialog(
                                 controller.cartList[index].productId);
                           },
-                          count: controller.countProduct.toString(),
+                          count: controller.cartList[index].qty.toString(),
                           title:
                               controller.cartList[index].product?.title ?? '',
                           price: controller.cartList[index].price.toString(),
@@ -55,7 +59,7 @@ class CartScreen extends StatelessWidget {
                   isProgress: controller.isCheckout,
                   name: 'Check Out',
                   onPressed: () {},
-                  price: '${controller.total}',
+                  price: '${controller.totalPrice}',
                 ),
               )
             ],
