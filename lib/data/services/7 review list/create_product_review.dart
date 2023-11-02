@@ -7,7 +7,7 @@ import 'package:http/http.dart' as http;
 
 Future postCreateProductByReviewRequest(body) async {
   try {
-    final url = Uri.parse(createProductReviewUrl);
+    final url = Uri.parse(APIServices.createProductReviewUrl);
     final http.Response response = await http.post(url,body: jsonEncode(body),headers: headerWithTokens);
     final responseBody = jsonDecode(response.body);
     if (response.statusCode == 200 && responseBody['msg'] == 'success') {

@@ -4,7 +4,7 @@ import '../url_services.dart';
 
 Future verifyLoginRequest({email, otp}) async {
   try {
-    final url = Uri.parse('$verifyLoginUrl/$email/$otp');
+    final url = Uri.parse('${APIServices.verifyLoginUrl}/$email/$otp');
     final http.Response response = await http.get(url);
     final responseBody = jsonDecode(response.body);
     if (response.statusCode == 200 && responseBody['msg'] == 'success') {

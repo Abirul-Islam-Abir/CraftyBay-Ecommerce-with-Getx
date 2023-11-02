@@ -6,7 +6,7 @@ import '../url_services.dart';
 
 Future fetchCartListRequest() async {
   try {
-    final url = Uri.parse(cartListUrl);
+    final url = Uri.parse(APIServices.cartListUrl);
     final http.Response response =
         await http.get(url, headers: headerWithTokens);
     if (response.statusCode == 200) {

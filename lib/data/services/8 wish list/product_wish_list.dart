@@ -6,7 +6,7 @@ import '../url_services.dart';
 
 Future fetchProductWishList() async {
   try {
-    final url = Uri.parse(productWishListUrl);
+    final url = Uri.parse(APIServices.productWishListUrl);
     final http.Response response =
         await http.get(url, headers: headerWithTokens);
     if (response.statusCode == 200) {

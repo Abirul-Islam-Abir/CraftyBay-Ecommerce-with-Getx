@@ -6,7 +6,7 @@ import '../url_services.dart';
 
 Future readProfileRequest() async {
   try {
-    final url = Uri.parse(readProfileUrl);
+    final url = Uri.parse(APIServices.readProfileUrl);
     final http.Response response =
     await http.get(url, headers: headerWithTokens);
     if (response.statusCode == 200) {

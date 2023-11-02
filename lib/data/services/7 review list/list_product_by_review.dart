@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 
 Future fetchListProductByReviewRequest(id) async {
   try {
-    final url = Uri.parse('$listProductByReviewUrl/$id');
+    final url = Uri.parse('${APIServices.listProductByReviewUrl}/$id');
     final http.Response response = await http.get(url);
     final responseBody = jsonDecode(response.body);
     if (response.statusCode == 200 && responseBody['msg'] == 'success') {

@@ -6,7 +6,7 @@ import '../url_services.dart';
 
 Future fetchProductDetailsByIdRequest(sId) async {
   try {
-    final url = Uri.parse('$productDetailsByIdUrl/$sId');
+    final url = Uri.parse('${APIServices.productDetailsByIdUrl}/$sId');
     final http.Response response = await http.get(url);
     final responseBody = jsonDecode(response.body);
     if (response.statusCode == 200 && responseBody['msg'] == 'success') {

@@ -6,7 +6,7 @@ import '../url_services.dart';
 
 Future postCreateCartList(body) async {
   try {
-    final url = Uri.parse(createCartListUrl);
+    final url = Uri.parse(APIServices.createCartListUrl);
     final http.Response response =
         await http.post(url, headers: headerWithTokens, body: body);
     final responseBody = jsonDecode(response.body);

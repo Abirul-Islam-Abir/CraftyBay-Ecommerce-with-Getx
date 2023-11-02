@@ -24,7 +24,7 @@ class RemarkProductScreenController extends GetxController {
   // listProductByRemarkNewUrl
   Future<void> fetchAndParseListProductByRemarkPopular() async {
     List<Map<String, dynamic>> response =
-        await fetchListProductByRemarkRequest(listProductByRemarkPopularUrl);
+        await fetchListProductByRemarkRequest(APIServices.listProductByRemarkPopularUrl);
     _listProductByRemarkPopular.clear();
     _listProductByRemarkPopular.addAll(
       response.map(
@@ -36,7 +36,7 @@ class RemarkProductScreenController extends GetxController {
   // listProductByRemarkSpecialUrl
   Future<void> fetchAndParseListProductByRemarkSpecial() async {
     List<Map<String, dynamic>> response =
-        await fetchListProductByRemarkRequest(listProductByRemarkSpecialUrl);
+        await fetchListProductByRemarkRequest(APIServices.listProductByRemarkSpecialUrl);
     _listProductByRemarkSpecial.clear();
     _listProductByRemarkSpecial.addAll(
       response.map(
@@ -48,7 +48,7 @@ class RemarkProductScreenController extends GetxController {
   // listProductByRemarkNewUrl
   Future<void> fetchAndParseListProductByRemarkNew() async {
     List<Map<String, dynamic>> response =
-        await fetchListProductByRemarkRequest(listProductByRemarkNewUrl);
+        await fetchListProductByRemarkRequest(APIServices.listProductByRemarkNewUrl);
     _listProductByRemarkNew.clear();
     _listProductByRemarkNew.addAll(
       response.map(

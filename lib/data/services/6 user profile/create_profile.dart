@@ -4,7 +4,7 @@ import '../url_services.dart';
 
 Future createProfileRequest(body) async {
   try {
-    final url = Uri.parse(createProfileUrl);
+    final url = Uri.parse(APIServices.createProfileUrl);
     final http.Response response = await http.post(
       url,
       headers: headerWithTokens,

@@ -6,7 +6,7 @@ import '../url_services.dart';
 
 Future fetchListProductSliderRequest() async {
   try {
-    Uri url = Uri.parse(listProductSliderUrl);
+    Uri url = Uri.parse(APIServices.listProductSliderUrl);
     final http.Response response = await http.get(url);
     if (response.statusCode == 200) {
       final Map<String, dynamic> responseBody = jsonDecode(response.body);

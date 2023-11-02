@@ -6,7 +6,7 @@ import '../url_services.dart';
 
 Future fetchBrandProductRequest() async {
   try {
-    final Uri uri = Uri.parse(brandListUrl);
+    final Uri uri = Uri.parse(APIServices.brandListUrl);
     final http.Response response = await http.get(uri);
 
     if (response.statusCode == 200) {

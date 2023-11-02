@@ -6,7 +6,7 @@ import '../url_services.dart';
 
 Future fetchCategoryListRequest() async {
   try {
-    final Uri uri = Uri.parse(categoryListUrl);
+    final Uri uri = Uri.parse(APIServices.categoryListUrl);
     final http.Response response = await http.get(uri);
     if (response.statusCode == 200) {
       final Map<String, dynamic> responseBody = jsonDecode(response.body);

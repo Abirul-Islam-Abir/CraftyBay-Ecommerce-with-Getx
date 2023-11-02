@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 
 Future fetchListProductByCategoryRequest(id) async {
   try {
-    final url = Uri.parse('$listProductByCategoryUrl/$id');
+    final url = Uri.parse('${APIServices.listProductByCategoryUrl}/$id');
     final http.Response response = await http.get(url);
     if (response.statusCode == 200) {
       final Map<String, dynamic> responseBody = jsonDecode(response.body);

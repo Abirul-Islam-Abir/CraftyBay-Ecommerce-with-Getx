@@ -4,7 +4,7 @@ import '../url_services.dart';
 
 Future userLoginRequest(email) async {
   try {
-    final url = Uri.parse('$userLoginUrl/$email');
+    final url = Uri.parse('${APIServices.userLoginUrl}/$email');
     final http.Response response = await http.get(url);
     final responseBody = jsonDecode(response.body);
     if (response.statusCode == 200 && responseBody['msg'] == 'success') {
