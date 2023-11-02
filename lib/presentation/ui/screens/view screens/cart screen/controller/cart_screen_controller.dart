@@ -26,12 +26,13 @@ class CartScreenController extends GetxController {
   Future<void> fetchAndParseCreateCartList(
       {productDetailsById, color, size, countProduct}) async {
     isCartAddTrue();
-    final response = await postCreateCartList({
+    final Map<String, String> body = {
       "product_id": productDetailsById[0].productId.toString(),
       "color": color.toString(),
       "size": size.toString(),
       "qty": countProduct.toString()
-    });
+    };
+    final response = await postCreateCartList(body);
     if (response['msg'] == 'success') {
       initializeMethod();
       SnackToast.requestSuccess();
