@@ -41,24 +41,43 @@ class CartScreenController extends GetxController {
       SnackToast.cartOperationFailed();
     }
   }
+  void isLoadingFalse() {
+    _isLoading = false;
+    update();
+  }
 
+  void isLoadingTrue() {
+    _isLoading = true;
+    update();
+  }
 
-  void increment(index) {
+  void isCartAddFalse() {
+    _isCartAdd = false;
+    update();
+  }
+
+  void isCartAddTrue() {
+    _isCartAdd = true;
+    update();
+  }
+
+  void increment() {
     if (countProduct == 5) {
       _countProduct = 5;
       update();
-    } else {   cartList[index].qty==
+    } else {
       _countProduct++;
       update();
     }
   }
 
-  void decrement(index) {
+  void decrement() {
     if (countProduct == 1) {
       _countProduct = 1;
+
       update();
     } else {
-     cartList[index].qty== _countProduct--;
+      _countProduct--;
       update();
     }
   }
@@ -128,25 +147,5 @@ class CartScreenController extends GetxController {
   void onInit() {
     super.onInit();
     initializeMethod();
-  }
-
-  void isLoadingFalse() {
-    _isLoading = false;
-    update();
-  }
-
-  void isLoadingTrue() {
-    _isLoading = true;
-    update();
-  }
-
-  void isCartAddFalse() {
-    _isCartAdd = false;
-    update();
-  }
-
-  void isCartAddTrue() {
-    _isCartAdd = true;
-    update();
   }
 }
