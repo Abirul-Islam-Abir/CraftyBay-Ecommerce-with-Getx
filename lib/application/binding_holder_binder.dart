@@ -9,19 +9,19 @@ import '../presentation/ui/screens/view screens/wish list/controllers/wish_list_
 class StateHolderBinder extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut(() => BottomNavController());
-    Get.lazyPut(() => HomeScreenController());
-    Get.lazyPut(() => CompleteProfileScreenController());
-    Get.lazyPut(() => RemarkProductDetailsScreenController());
-    Get.lazyPut(() => SplashScreenController());
-    Get.lazyPut(() => EmailVerifyScreenController());
-    Get.lazyPut(() => OtpVerifyScreenController());
-    Get.lazyPut(() => RemarkProductScreenController());
-    Get.lazyPut(() => CategoriesScreenController());
-    Get.lazyPut(() => WishListScreenController());
-    Get.lazyPut(() => ReadProfileScreenController());
-    Get.lazyPut(() => NetworkController());
-    Get.lazyPut(() => ReviewScreenController());
-    Get.lazyPut(() => CreateReviewController());
+    Get.lazyPut<BottomNavController>(() => BottomNavController());
+    Get.lazyPut<HomeScreenController>(() => HomeScreenController());
+    Get.lazyPut<CompleteProfileScreenController>(() => CompleteProfileScreenController());
+    Get.lazyPut<RemarkProductDetailsScreenController>(() => RemarkProductDetailsScreenController());
+    Get.lazyPut<SplashScreenController>(() => SplashScreenController());
+    Get.lazyPut<EmailVerifyScreenController>(() => EmailVerifyScreenController());
+    Get.lazyPut<OtpVerifyScreenController>(() => OtpVerifyScreenController());
+    Get.lazyPut<RemarkProductScreenController>(() => RemarkProductScreenController());
+    Get.lazyPut<CategoriesScreenController>(() => CategoriesScreenController());
+    Get.lazyPut<WishListScreenController>(() => WishListScreenController());
+    Get.lazyPut<ReadProfileScreenController>(() => ReadProfileScreenController());
+    Get.lazyPut<NetworkController>(() => NetworkController());
+    Get.lazyPut<ReviewScreenController>(() => ReviewScreenController());
+    Get.lazyPut<CreateReviewController>(() => CreateReviewController());
   }
 }
