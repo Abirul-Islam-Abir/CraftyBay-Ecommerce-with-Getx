@@ -41,7 +41,6 @@ class CartScreenController extends GetxController {
       SnackToast.cartOperationFailed();
     }
   }
-
   void isLoadingFalse() {
     _isLoading = false;
     update();
@@ -67,16 +66,18 @@ class CartScreenController extends GetxController {
       _countProduct = 5;
       update();
     } else {
+      totalPriceIncrement();
       _countProduct++;
       update();
     }
   }
 
   void decrement() {
-    if (countProduct == 0) {
-      _countProduct = 0;
+    if (countProduct == 1) {
+      _countProduct = 1;
       update();
     } else {
+      totalPriceDecrement();
       _countProduct--;
       update();
     }
@@ -132,6 +133,22 @@ class CartScreenController extends GetxController {
         Get.back();
       },
     );
+  }
+
+  int total = 0;
+
+  int totalPriceIncrement() {
+    for (CartListModel item in _cartList) {
+      total += int.parse(item.price ?? "") * _countProduct;
+    }
+    return total;
+  }
+
+  int totalPriceDecrement() {
+    for (CartListModel item in _cartList) {
+      total += int.parse(item.price ?? "") * _countProduct;
+    }
+    return total;
   }
 
   @override

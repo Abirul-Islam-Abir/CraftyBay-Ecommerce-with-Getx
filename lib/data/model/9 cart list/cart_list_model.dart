@@ -9,6 +9,7 @@ class CartListModel {
   String? createdAt;
   String? updatedAt;
   Product? product;
+  int numOfItems = 1;
 
   CartListModel(
       {this.id,
