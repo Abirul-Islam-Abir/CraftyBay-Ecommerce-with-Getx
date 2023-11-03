@@ -1,6 +1,5 @@
 import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/common_text.dart';
-import '../../../../widgets/count_card.dart';
 
 class CartCard extends StatelessWidget {
   const CartCard({

@@ -1,5 +1,4 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:crafty_bay_ecommerce/data/model/10%20invoice/create_invoice_model.dart';
 import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/create%20invoice%20screen/controller/create_invoice_controller.dart';
 import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/payment%20screen/view/payment_screen.dart';
 

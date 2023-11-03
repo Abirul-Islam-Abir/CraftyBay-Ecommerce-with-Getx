@@ -10,7 +10,7 @@ class CreateInvoiceModel {
     if (json['paymentMethod'] != null) {
       paymentMethod = <PaymentMethod>[];
       json['paymentMethod'].forEach((v) {
-        paymentMethod!.add(new PaymentMethod.fromJson(v));
+        paymentMethod!.add(PaymentMethod.fromJson(v));
       });
     }
     payable = json['payable'];
@@ -19,14 +19,14 @@ class CreateInvoiceModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.paymentMethod != null) {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (paymentMethod != null) {
       data['paymentMethod'] =
-          this.paymentMethod!.map((v) => v.toJson()).toList();
+          paymentMethod!.map((v) => v.toJson()).toList();
     }
-    data['payable'] = this.payable;
-    data['vat'] = this.vat;
-    data['total'] = this.total;
+    data['payable'] = payable;
+    data['vat'] = vat;
+    data['total'] = total;
     return data;
   }
 }
@@ -57,13 +57,13 @@ class PaymentMethod {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['name'] = this.name;
-    data['type'] = this.type;
-    data['logo'] = this.logo;
-    data['gw'] = this.gw;
-    data['r_flag'] = this.rFlag;
-    data['redirectGatewayURL'] = this.redirectGatewayURL;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['name'] = name;
+    data['type'] = type;
+    data['logo'] = logo;
+    data['gw'] = gw;
+    data['r_flag'] = rFlag;
+    data['redirectGatewayURL'] = redirectGatewayURL;
     return data;
   }
 }
