@@ -1,4 +1,4 @@
-import 'package:crafty_bay_ecommerce/presentation/network%20connectivity/controller/network_controller.dart';
+import 'package:crafty_bay_ecommerce/presentation/state%20holder%20controller/network_controller.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:sizer/sizer.dart';
 import '../data/utils/export.dart';

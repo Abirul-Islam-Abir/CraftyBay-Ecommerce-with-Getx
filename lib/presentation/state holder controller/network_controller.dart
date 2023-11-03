@@ -1,7 +1,7 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/services.dart';
 
-import '../../../data/utils/export.dart';
+import '../../data/utils/export.dart';
 
 class NetworkController extends GetxController {
   void showNetworkSnackBar() {

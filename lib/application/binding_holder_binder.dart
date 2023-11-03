@@ -1,4 +1,4 @@
-import 'package:crafty_bay_ecommerce/presentation/network%20connectivity/controller/network_controller.dart';
+import 'package:crafty_bay_ecommerce/presentation/state%20holder%20controller/network_controller.dart';
 import 'package:crafty_bay_ecommerce/presentation/state%20holder%20controller/create_invoice_controller.dart';
 import 'package:crafty_bay_ecommerce/presentation/state%20holder%20controller/read_profile_controller.dart';
 
