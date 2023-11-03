@@ -1,4 +1,6 @@
 
+import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/create%20invoice%20screen/controller/create_invoice_controller.dart';
+
 import '../../../../../../data/model/9 cart list/cart_list_model.dart';
 import '../../../../../../data/services/9 cart list/cart_list.dart';
 import '../../../../../../data/services/9 cart list/create_cart_list.dart';
@@ -16,6 +18,8 @@ class CartScreenController extends GetxController {
   bool get isCartAdd => _isCartAdd;
   int get countProduct => _countProduct;
   int _countProduct = 1;
+
+  int _totalPrice = 0;
 //Cart List method
   Future<void> fetchAndParseCartList() async {
     List<Map<String, dynamic>> response = await fetchCartListRequest();
@@ -61,9 +65,9 @@ class CartScreenController extends GetxController {
     update();
   }
 
-  void increment() {
+  void increment(index) {
     if (countProduct == 5) {
-      _countProduct = 5;
+      _countProduct == 5;
       update();
     } else {
       _countProduct++;
@@ -71,10 +75,9 @@ class CartScreenController extends GetxController {
     }
   }
 
-  void decrement() {
+  void decrement(index) {
     if (countProduct == 1) {
-      _countProduct = 1;
-
+      _countProduct == 1;
       update();
     } else {
       _countProduct--;
@@ -99,6 +102,7 @@ class CartScreenController extends GetxController {
     try {
       await Future.wait([
         fetchAndParseCartList(),
+        Get.find<CreateInvoiceController>().fetchAndParseCreateInvoice(),
       ]);
     } catch (e) {
       /* if (UserData.userToken.isNotEmpty) {
@@ -121,9 +125,9 @@ class CartScreenController extends GetxController {
       textCancel: "Cancel",
       buttonColor: AppColor.kRedColor,
       confirmTextColor: Colors.white,
-      // Change the color for the "Delete" button
+
       cancelTextColor: Colors.blue,
-      // Change the color for the "Cancel" button
+
       onConfirm: () {
         deleteItems(id);
         Get.back();
@@ -133,19 +137,14 @@ class CartScreenController extends GetxController {
       },
     );
   }
-  double get totalPrice {
-    double total = 0.0;
-    for (final item in _cartList) {
-      total += double.parse(item.price??'') * item.numOfItems;
-    }
-    return total;
-  }
+
 
 
 
   @override
   void onInit() {
     super.onInit();
+   // Timer.periodic(Duration(seconds: 1), (timer) {update() ;});
     initializeMethod();
   }
 }

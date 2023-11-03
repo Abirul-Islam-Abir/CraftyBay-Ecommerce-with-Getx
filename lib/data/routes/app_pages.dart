@@ -1,4 +1,5 @@
 import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/categories%20screen/view/list_product_by_categories_screen.dart';
+import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/create%20invoice%20screen/view/create_invoice_screen.dart';
 import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/review%20screen/view/review_screen.dart';
 
 import '../../presentation/ui/screens/view screens/create product review screen/view/create_product_review_screen.dart';
@@ -58,6 +59,11 @@ List<GetPage<dynamic>>? appPages() => [
       GetPage(
           name: RouteName.createReviewScreen,
           page: () =>   CreateReviewScreen(),
+          transition: Transition.fade,
+          transitionDuration: const Duration(microseconds: 500)),
+      GetPage(
+          name: RouteName.createInvoiceScreen,
+          page: () =>   CreateInvoiceScreen(),
           transition: Transition.fade,
           transitionDuration: const Duration(microseconds: 500)),
     ];

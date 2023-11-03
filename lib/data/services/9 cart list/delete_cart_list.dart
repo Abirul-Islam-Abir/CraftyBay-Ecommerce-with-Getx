@@ -6,7 +6,7 @@ import '../url_services.dart';
 
 Future postDeleteCartList(id) async {
   try {
-    final url = Uri.parse('$APIServices.{deleteCartListUrl}/$id');
+    final url = Uri.parse('${APIServices.deleteCartListUrl}/$id');
     final http.Response response =
         await http.get(url, headers: headerWithTokens);
     final responseBody = jsonDecode(response.body);

@@ -20,6 +20,7 @@ class HomeScreen extends StatelessWidget {
   final categoryController = Get.put(CategoriesScreenController());
   final bottomNavController = Get.put(BottomNavController());
   final sliderImageController = Get.put(SliderImageController());
+  final cartScreenController = Get.put(CartScreenController());
   final readProfileScreenController = Get.put(ReadProfileScreenController());
 
   @override
@@ -32,6 +33,7 @@ class HomeScreen extends StatelessWidget {
           remarkProductScreenController.initializeMethod();
           categoryController.initializeMethod();
           sliderImageController.initializeMethod();
+          cartScreenController.initializeMethod();
         },
         child: ListView(
           shrinkWrap: true,

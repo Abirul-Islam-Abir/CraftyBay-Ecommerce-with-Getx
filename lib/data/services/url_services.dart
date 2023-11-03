@@ -29,5 +29,6 @@ static  const String listProductByReviewUrl = '$_baseUrl/ListReviewByProduct';
       '$_baseUrl/ListProductByRemark/special';
  static const String listProductByRemarkNewUrl = '$_baseUrl/ListProductByRemark/new';
  static const String productDetailsByIdUrl = '$_baseUrl/ProductDetailsById';
+ static const String createInvoiceUrl = '$_baseUrl/InvoiceCreate';
 
   APIServices._();}

@@ -24,11 +24,10 @@ class OtpVerifyScreenController extends GetxController {
       storageInstance.write(StorageKey.setTokenKey, response['data']);
 
       String? profileData = storageInstance.read(StorageKey.setCreateProfile);
-
+      await Utils.fetchUserData();print(UserData.userToken);
       if (profileData != null && profileData.isNotEmpty) {
         _isLoading = false;
         update();
-        await Utils.fetchUserData();
         Get.offAllNamed(RouteName.bottomNavigationBar);
       } else {
         _isLoading = false;

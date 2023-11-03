@@ -30,6 +30,7 @@ class RouteName {
   static const bottomNavigationBar = '/BottomNavigationBar';
   static const listProductByCategoryScreen = '/ListProductByCategoryScreen';
   static const createReviewScreen = '/CreateReviewScreen';
+  static const createInvoiceScreen = '/CreateInvoiceScreen';
   // Helper function to generate unique route names
   static String generateUniqueRouteName() {
     return '/${DateTime.now().millisecondsSinceEpoch}';
