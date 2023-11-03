@@ -44,23 +44,18 @@ class CartScreenController extends GetxController {
     _isLoading = false;
     update();
   }
-
   void isLoadingTrue() {
     _isLoading = true;
     update();
   }
-
   void isCartAddFalse() {
     _isCartAdd = false;
     update();
   }
-
   void isCartAddTrue() {
     _isCartAdd = true;
     update();
   }
-
-
   Future<void> deleteItems(id) async {
     isLoadingTrue();
     final response = await postDeleteCartList(id);
@@ -92,7 +87,6 @@ class CartScreenController extends GetxController {
       isCartAddFalse();
     }
   }
-
   void showDeleteDialog(id) {
     Get.defaultDialog(
       title: "Confirm Delete",
@@ -101,9 +95,7 @@ class CartScreenController extends GetxController {
       textCancel: "Cancel",
       buttonColor: AppColor.kRedColor,
       confirmTextColor: Colors.white,
-
       cancelTextColor: Colors.blue,
-
       onConfirm: () {
         deleteItems(id);
         Get.back();
@@ -120,7 +112,6 @@ class CartScreenController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-   // Timer.periodic(Duration(seconds: 1), (timer) {update() ;});
     initializeMethod();
   }
 }

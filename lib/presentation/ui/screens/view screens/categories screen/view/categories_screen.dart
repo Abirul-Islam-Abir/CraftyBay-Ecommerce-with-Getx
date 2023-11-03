@@ -39,8 +39,11 @@ class CategoriesScreen extends StatelessWidget {
 
                       return CategoriesProductCard(
                         onTap: () {
-                          Get.toNamed(RouteName.remarkProductDetails,
-                              arguments: products[index].id);
+                          Get.toNamed(RouteName.listProductByCategoryScreen,
+                              arguments: {
+                                'id': '${products[index].id}',
+                                'name': '${products[index].categoryName}'
+                              });
                         },
                         img: categoryImage,
                         categoryName: categoryName,

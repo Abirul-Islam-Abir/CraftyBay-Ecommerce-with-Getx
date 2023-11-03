@@ -30,8 +30,7 @@ class CartScreen extends StatelessWidget {
               Expanded(
                   child: ListView.builder(
                       shrinkWrap: true,
-                      itemBuilder: (context, index) {
-                        return CartCard(
+                      itemBuilder: (context, index) => CartCard(
                           onTap: (){
                             Get.toNamed(RouteName.remarkProductDetails,
                                 arguments:controller.cartList[index].productId);
@@ -47,15 +46,19 @@ class CartScreen extends StatelessWidget {
                               controller.cartList[index].product?.title ?? '',
                           price: controller.cartList[index].price.toString(),
                           colorText: controller.cartList[index].color ?? '',
-                          sizeText: controller.cartList[index].size ?? '');
-                      },
+                          sizeText: controller.cartList[index].size ?? ''),
                       itemCount: controller.cartList.length)),
               GetBuilder<CartScreenController>(
-                builder: (controller) => BottomDetailsCard(
+                builder: (controller) => createInvoiceController.createInvoiceList.isEmpty?BottomDetailsCard(
                   isProgress: false,
                   name: 'Check Out',
                   onPressed: () {Get.toNamed(RouteName.createInvoiceScreen);},
-                  price: '${createInvoiceController.createInvoiceList[0].total??'0' }',
+                  price: '00',
+                ): BottomDetailsCard(
+                  isProgress: false,
+                  name: 'Check Out',
+                  onPressed: () {Get.toNamed(RouteName.createInvoiceScreen);},
+                  price: '${createInvoiceController.createInvoiceList[0].total}',
                 ),
               )
             ],
