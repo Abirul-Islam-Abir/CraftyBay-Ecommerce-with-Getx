@@ -1,5 +1,5 @@
-import '../../../../../../data/utils/export.dart';
-import '../../../../../../data/utils/utils.dart';
+import '../../data/utils/export.dart';
+import '../../data/utils/utils.dart';
 
 class CompleteProfileScreenController extends GetxController {
   final TextEditingController firstNameController = TextEditingController();

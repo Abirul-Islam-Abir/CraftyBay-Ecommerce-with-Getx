@@ -1,4 +1,4 @@
-import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/read%20profile%20screen/controller/read_profile_controller.dart';
+import 'package:crafty_bay_ecommerce/presentation/state%20holder%20controller/read_profile_controller.dart';
 
 import '../../../../../../data/utils/export.dart';
 

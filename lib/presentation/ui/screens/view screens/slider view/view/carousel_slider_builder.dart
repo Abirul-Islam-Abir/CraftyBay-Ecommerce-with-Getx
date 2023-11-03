@@ -3,7 +3,7 @@ import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/carousel_slider_shimmer.dart';
 import '../../home screen/component/build_carousel_option.dart';
 import '../component/carousel_banner_card.dart';
-import '../controller/slider_controller.dart';
+import '../../../../../state holder controller/slider_controller.dart';
 
 class CarouselSliderBuilder extends GetView<HomeScreenController> {
   const CarouselSliderBuilder(this.products, {super.key});

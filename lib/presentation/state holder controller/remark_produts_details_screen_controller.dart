@@ -1,5 +1,5 @@
 import 'package:crafty_bay_ecommerce/data/utils/export.dart';
-import '../../../../../../data/services/3 products list/product_details_by_id.dart';
+import '../../data/services/3 products list/product_details_by_id.dart';
 
 class RemarkProductDetailsScreenController extends GetxController {
   final List<ProductDetailsModel> _productDetailsById = [];

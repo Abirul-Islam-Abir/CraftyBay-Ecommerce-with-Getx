@@ -1,6 +1,6 @@
-import '../../../../../../data/model/3 products list/list_product_by_category_model.dart';
-import '../../../../../../data/services/3 products list/list_product_by_category.dart';
-import '../../../../../../data/utils/export.dart';
+import '../../data/model/3 products list/list_product_by_category_model.dart';
+import '../../data/services/3 products list/list_product_by_category.dart';
+import '../../data/utils/export.dart';
 
 class ListProductByCategoriesController extends GetxController {
   final product = Get.arguments;

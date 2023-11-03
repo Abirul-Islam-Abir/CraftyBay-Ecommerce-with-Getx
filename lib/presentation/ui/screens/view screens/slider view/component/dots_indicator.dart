@@ -1,4 +1,4 @@
-import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/slider%20view/controller/slider_controller.dart';
+import 'package:crafty_bay_ecommerce/presentation/state%20holder%20controller/slider_controller.dart';
 
 import '../../../../../../data/utils/export.dart';
 

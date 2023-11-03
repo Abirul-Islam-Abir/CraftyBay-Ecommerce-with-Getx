@@ -1,4 +1,4 @@
- import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/review%20screen/controller/review_screen_controller.dart';
+ import 'package:crafty_bay_ecommerce/presentation/state%20holder%20controller/review_screen_controller.dart';
 
 import '../../../../../../data/utils/export.dart';
 import '../component/bottom_review_details_card.dart';

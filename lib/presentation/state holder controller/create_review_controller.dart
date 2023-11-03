@@ -1,10 +1,10 @@
 
 
 import 'package:crafty_bay_ecommerce/data/services/7%20review%20list/create_product_review.dart';
-import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/review%20screen/controller/review_screen_controller.dart';
+import 'package:crafty_bay_ecommerce/presentation/state%20holder%20controller/review_screen_controller.dart';
 
 
-import '../../../../../../data/utils/export.dart';
+import '../../data/utils/export.dart';
 
 class CreateReviewController extends GetxController {
   bool  _isLoading = false;

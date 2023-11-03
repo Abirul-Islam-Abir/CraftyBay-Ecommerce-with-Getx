@@ -2,7 +2,7 @@ import 'package:crafty_bay_ecommerce/data/utils/export.dart';
 
 import '../../../../widgets/custom_textfield.dart';
 import '../../../../widgets/global_button.dart';
-import '../controller/create_review_controller.dart';
+import '../../../../../state holder controller/create_review_controller.dart';
 
 class CreateReviewScreen extends StatelessWidget {
   CreateReviewScreen({super.key});

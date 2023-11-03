@@ -1,9 +1,9 @@
-import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/read%20profile%20screen/controller/read_profile_controller.dart';
+import 'package:crafty_bay_ecommerce/presentation/state%20holder%20controller/read_profile_controller.dart';
 
 import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/custom_textfield.dart';
 import '../../remark product screen/view/remark_product_screen.dart';
-import '../../slider view/controller/slider_controller.dart';
+import '../../../../../state holder controller/slider_controller.dart';
 import '../../categories screen/component/all_categories_list_builder.dart';
 import '../component/build_appbar.dart';
 import '../../slider view/view/carousel_slider_builder.dart';

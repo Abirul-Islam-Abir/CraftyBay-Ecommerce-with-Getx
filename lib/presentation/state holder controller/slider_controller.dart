@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 
-import '../../../../../../data/model/4 slider list/list_product_slider_model.dart';
-import '../../../../../../data/services/4 slider list/list_porduct_slider.dart';
-import '../../../../../../data/utils/store_data_value.dart';
+import '../../data/model/4 slider list/list_product_slider_model.dart';
+import '../../data/services/4 slider list/list_porduct_slider.dart';
+import '../../data/utils/store_data_value.dart';
 
 class SliderImageController extends GetxController {
   final List<ListProductSliderModel> _listProductSlider = [];

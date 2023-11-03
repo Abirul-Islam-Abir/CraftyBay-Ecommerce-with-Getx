@@ -1,5 +1,5 @@
-import '../../../../../../data/model/2 category list model/category_list_model.dart';
-import '../../../../../../data/utils/export.dart';
+import '../../data/model/2 category list model/category_list_model.dart';
+import '../../data/utils/export.dart';
 
 class CategoriesScreenController extends GetxController {
   final List<CategoryListModel> _categoryList = [];

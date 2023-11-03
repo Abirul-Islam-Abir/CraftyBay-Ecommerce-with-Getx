@@ -1,11 +1,11 @@
 import 'package:crafty_bay_ecommerce/presentation/network%20connectivity/controller/network_controller.dart';
-import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/create%20invoice%20screen/controller/create_invoice_controller.dart';
-import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/read%20profile%20screen/controller/read_profile_controller.dart';
+import 'package:crafty_bay_ecommerce/presentation/state%20holder%20controller/create_invoice_controller.dart';
+import 'package:crafty_bay_ecommerce/presentation/state%20holder%20controller/read_profile_controller.dart';
 
 import '../data/utils/export.dart';
-import '../presentation/ui/screens/view screens/create product review screen/controller/create_review_controller.dart';
-import '../presentation/ui/screens/view screens/review screen/controller/review_screen_controller.dart';
-import '../presentation/ui/screens/view screens/wish list/controllers/wish_list_controller.dart';
+import '../presentation/state holder controller/create_review_controller.dart';
+import '../presentation/state holder controller/review_screen_controller.dart';
+import '../presentation/state holder controller/wish_list_controller.dart';
 
 class StateHolderBinder extends Bindings {
   @override

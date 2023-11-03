@@ -1,7 +1,7 @@
  import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/normal_text.dart';
 import '../../home screen/component/products_card.dart';
-import '../controllers/wish_list_controller.dart';
+import '../../../../../state holder controller/wish_list_controller.dart';
 
 class WishListScreen extends StatelessWidget {
   WishListScreen({super.key});

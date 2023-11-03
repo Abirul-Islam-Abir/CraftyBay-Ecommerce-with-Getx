@@ -1,7 +1,7 @@
 import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/bottom_details_card.dart';
 import '../../../../widgets/normal_text.dart';
-import '../../create invoice screen/controller/create_invoice_controller.dart';
+import '../../../../../state holder controller/create_invoice_controller.dart';
 import '../../home screen/component/cart_card.dart';
 
 class CartScreen extends StatelessWidget {

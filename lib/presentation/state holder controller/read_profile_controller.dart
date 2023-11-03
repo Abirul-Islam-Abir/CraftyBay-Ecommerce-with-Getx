@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 
-import '../../../../../../data/model/6 user profile/read_profile.dart';
-import '../../../../../../data/services/6 user profile/read_profile.dart';
-import '../../../../../../data/utils/store_data_value.dart';
+import '../../data/model/6 user profile/read_profile.dart';
+import '../../data/services/6 user profile/read_profile.dart';
+import '../../data/utils/store_data_value.dart';
 
 class ReadProfileScreenController extends GetxController {
   bool _isLoading = true;

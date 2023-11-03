@@ -1,7 +1,7 @@
 import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/normal_text.dart';
 import '../component/categories_product_card.dart';
-import '../controller/list_product_by_category_controller.dart';
+import '../../../../../state holder controller/list_product_by_category_controller.dart';
 
 class ListProductByCategoriesScreen extends StatelessWidget {
   ListProductByCategoriesScreen({super.key});
