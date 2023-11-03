@@ -55,7 +55,7 @@ class CartScreen extends StatelessWidget {
                   isProgress: false,
                   name: 'Check Out',
                   onPressed: () {Get.toNamed(RouteName.createInvoiceScreen);},
-                  price: '${createInvoiceController.createInvoiceList[0].total }',
+                  price: '${createInvoiceController.createInvoiceList[0].total??'0' }',
                 ),
               )
             ],

@@ -8,19 +8,17 @@ final String paymentUrl;
 final String paymentName;
  late  final controller = WebViewController()
     ..setJavaScriptMode(JavaScriptMode.unrestricted)
-    ..setBackgroundColor(const Color(0x00000000))
+    ..setBackgroundColor(AppColor.kPrimaryColor)
     ..setNavigationDelegate(
       NavigationDelegate(
         onProgress: (int progress) {
-          print(progress);
         },
-        onPageStarted: (String url) {},
-        onPageFinished: (String url) {},
-        onWebResourceError: (WebResourceError error) {},
-        onNavigationRequest: (NavigationRequest request) {
-          if (request.url.startsWith('https://www.youtube.com/')) {
-            return NavigationDecision.prevent;
-          }
+        onPageStarted: (String url) {print('onPageStarted$url------------------------------------------------------');},
+        onPageFinished: (String url) {print('onPageFinished$url------------------------------------------------------');},
+        onWebResourceError: (WebResourceError error) {print('WebResourceError$error------------------------------------------------------');},
+        onNavigationRequest: (NavigationRequest request) {print('NavigationRequest$request------------------------------------------------------');
+          SnackToast.requestSuccess();
+          Get.offAllNamed(RouteName.bottomNavigationBar);
           return NavigationDecision.navigate;
         },
       ),
