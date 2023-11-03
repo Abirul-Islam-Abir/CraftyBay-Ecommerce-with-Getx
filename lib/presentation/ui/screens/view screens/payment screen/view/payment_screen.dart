@@ -3,15 +3,16 @@ import 'package:webview_flutter/webview_flutter.dart';
 import '../../../../../../data/utils/export.dart';
 
 class PaymentScreen extends StatelessWidget {
-  PaymentScreen({super.key});
-
-  final controller = WebViewController()
+  PaymentScreen({super.key, required this.paymentUrl, required this.paymentName});
+final String paymentUrl;
+final String paymentName;
+ late  final controller = WebViewController()
     ..setJavaScriptMode(JavaScriptMode.unrestricted)
     ..setBackgroundColor(const Color(0x00000000))
     ..setNavigationDelegate(
       NavigationDelegate(
         onProgress: (int progress) {
-          // Update loading bar.
+          print(progress);
         },
         onPageStarted: (String url) {},
         onPageFinished: (String url) {},
@@ -24,12 +25,12 @@ class PaymentScreen extends StatelessWidget {
         },
       ),
     )
-    ..loadRequest(Uri.parse('https://flutter.dev'));
+    ..loadRequest(Uri.parse(paymentUrl));
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Flutter Simple Example')),
+      appBar: AppBar(title:   Text('$paymentName Payment')),
       body: WebViewWidget(controller: controller),
     );
   }
