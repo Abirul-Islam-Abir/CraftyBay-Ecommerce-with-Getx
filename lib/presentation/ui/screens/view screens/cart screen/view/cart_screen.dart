@@ -48,7 +48,7 @@ class CartScreen extends StatelessWidget {
                             controller.showDeleteDialog(
                                 controller.cartList[index].productId);
                           },
-                          count: controller.countProduct.toString(),
+                          count: controller.cartList[index].qty.toString(),
                           title:
                               controller.cartList[index].product?.title ?? '',
                           price: controller.cartList[index].price.toString(),

@@ -25,6 +25,7 @@ class OtpVerifyScreenController extends GetxController {
 
       String? profileData = storageInstance.read(StorageKey.setCreateProfile);
       await Utils.fetchUserData();print(UserData.userToken);
+
       if (profileData != null && profileData.isNotEmpty) {
         _isLoading = false;
         update();
