@@ -10,14 +10,10 @@ import '../../../../../../data/utils/export.dart';
 class CartScreenController extends GetxController {
   final List<CartListModel> _cartList = [];
   bool _isLoading = true;
-  bool _isCheckout = false;
   bool _isCartAdd = false;
   bool get isLoading => _isLoading;
   List<CartListModel> get cartList => _cartList;
-  bool get isCheckout => _isCheckout;
   bool get isCartAdd => _isCartAdd;
-  int get countProduct => _countProduct;
-  int _countProduct = 1;
 
 //Cart List method
   Future<void> fetchAndParseCartList() async {

@@ -12,7 +12,6 @@ Future fetchCreateInvoiceRequest() async {
     if (response.statusCode == 200 && responseBody['msg'] == 'success') {
       final List<Map<String, dynamic>> data =
       List<Map<String, dynamic>>.from(responseBody['data']);
-         print(data);
       return data;
     } else {
       return  [];

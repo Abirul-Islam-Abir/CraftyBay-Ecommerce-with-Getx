@@ -1,5 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:crafty_bay_ecommerce/data/model/10%20invoice/create_invoice_model.dart';
 import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/create%20invoice%20screen/controller/create_invoice_controller.dart';
+import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/payment%20screen/view/payment_screen.dart';
 
 import '../../../../../../data/utils/export.dart';
 
@@ -10,10 +12,14 @@ final controller = Get.put(CreateInvoiceController());
 
   @override
   Widget build(BuildContext context) {
-    return   Scaffold(appBar: AppBar(title: Text('Invoice Screen')),body: ListView.builder(
+    return   Scaffold(appBar: AppBar(title: const Text('CheckOut Screen')),body: ListView.builder(
     shrinkWrap: true,
     itemBuilder: (context, index) {
       return ListTile(
+        onTap: (){
+          Get.to(()=>PaymentScreen(paymentUrl: '${controller.createInvoiceList[0].paymentMethod![index].redirectGatewayURL}',
+            paymentName:  '${controller.createInvoiceList[0].paymentMethod![index].name}',));
+        },
         leading: Container(
           height: 80,
           width: 80,

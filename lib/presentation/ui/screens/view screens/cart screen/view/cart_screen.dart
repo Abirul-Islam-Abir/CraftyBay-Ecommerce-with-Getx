@@ -52,7 +52,7 @@ class CartScreen extends StatelessWidget {
                       itemCount: controller.cartList.length)),
               GetBuilder<CartScreenController>(
                 builder: (controller) => BottomDetailsCard(
-                  isProgress: controller.isCheckout,
+                  isProgress: false,
                   name: 'Check Out',
                   onPressed: () {Get.toNamed(RouteName.createInvoiceScreen);},
                   price: '${createInvoiceController.createInvoiceList[0].total }',

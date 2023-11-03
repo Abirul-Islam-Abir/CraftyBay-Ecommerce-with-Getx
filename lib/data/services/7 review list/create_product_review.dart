@@ -11,7 +11,7 @@ Future postCreateProductByReviewRequest(body) async {
     final http.Response response = await http.post(url,body: jsonEncode(body),headers: headerWithTokens);
     final responseBody = jsonDecode(response.body);
     if (response.statusCode == 200 && responseBody['msg'] == 'success') {
-       print(responseBody);
+
       return responseBody;
     } else {
       return  responseBody;
