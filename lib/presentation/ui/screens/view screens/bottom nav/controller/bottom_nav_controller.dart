@@ -19,12 +19,11 @@ class BottomNavController extends GetxController {
     navIndex = 1;
     update();
   }
-Future getData()async{
+Future<void> getData()async{
  await Utils.fetchUserData();
 }
 @override
   void onInit() {
-  getData();
-    super.onInit();
+    super.onInit();getData();
   }
 }

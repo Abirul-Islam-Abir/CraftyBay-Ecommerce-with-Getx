@@ -38,12 +38,6 @@ class CartScreen extends StatelessWidget {
                           },
                           img: controller.cartList[index].product!.image
                               .toString(),
-                          removeBtn:(){
-                            controller.decrement(  index);
-                          },
-                          addBtn:(){
-                            controller.increment( index );
-                          },
                           deletePress: () {
                             controller.showDeleteDialog(
                                 controller.cartList[index].productId);

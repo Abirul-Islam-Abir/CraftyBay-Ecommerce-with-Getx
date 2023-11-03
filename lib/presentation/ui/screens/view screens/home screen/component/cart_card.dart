@@ -1,4 +1,5 @@
 import '../../../../../../data/utils/export.dart';
+import '../../../../widgets/common_text.dart';
 import '../../../../widgets/count_card.dart';
 
 class CartCard extends StatelessWidget {
@@ -10,13 +11,11 @@ class CartCard extends StatelessWidget {
     required this.price,
     required this.count,
     required this.deletePress,
-    required this.addBtn,
-    required this.removeBtn,
     required this.img, required this.onTap,
   });
 
   final String title, colorText, sizeText, price, count, img;
-  final Function() deletePress, addBtn, removeBtn;
+  final Function() deletePress ;
 final Function()  onTap;
   @override
   Widget build(BuildContext context) {
@@ -33,7 +32,7 @@ final Function()  onTap;
               child: Row(
                 children: [
                   Expanded(
-                    flex: 3,
+                    flex: 5,
                     child: Image.network(
                       img,
                       errorBuilder: (context, error, stackTrace) => Image.network(
@@ -44,7 +43,7 @@ final Function()  onTap;
                     ),
                   ),
                   Expanded(
-                      flex: 8,
+                      flex: 10,
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -66,7 +65,7 @@ final Function()  onTap;
                                     fontWeight: FontWeight.bold))
                           ])),
                   Expanded(
-                    flex: 4,
+                    flex: 5,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
@@ -79,8 +78,7 @@ final Function()  onTap;
                           ),
                         ),
                         const Spacer(),
-                        CountCard(
-                            addBtn: addBtn, removeBtn: removeBtn, count: count)
+                       CommonText('Qty: $count')
                       ],
                     ),
                   ),

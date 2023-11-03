@@ -22,10 +22,9 @@ class OtpVerifyScreenController extends GetxController {
         email: UserData.userEmail, otp: otpController.text);
     if (response['msg'] == 'success') {
       storageInstance.write(StorageKey.setTokenKey, response['data']);
-
+      await Utils.fetchUserData();
+      print(UserData.userToken);
       String? profileData = storageInstance.read(StorageKey.setCreateProfile);
-      await Utils.fetchUserData();print(UserData.userToken);
-
       if (profileData != null && profileData.isNotEmpty) {
         _isLoading = false;
         update();

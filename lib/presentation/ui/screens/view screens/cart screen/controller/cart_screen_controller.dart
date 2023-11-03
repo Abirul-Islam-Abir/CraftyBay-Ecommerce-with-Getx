@@ -19,7 +19,6 @@ class CartScreenController extends GetxController {
   int get countProduct => _countProduct;
   int _countProduct = 1;
 
-  int _totalPrice = 0;
 //Cart List method
   Future<void> fetchAndParseCartList() async {
     List<Map<String, dynamic>> response = await fetchCartListRequest();
@@ -65,25 +64,6 @@ class CartScreenController extends GetxController {
     update();
   }
 
-  void increment(index) {
-    if (countProduct == 5) {
-      _countProduct == 5;
-      update();
-    } else {
-      _countProduct++;
-      update();
-    }
-  }
-
-  void decrement(index) {
-    if (countProduct == 1) {
-      _countProduct == 1;
-      update();
-    } else {
-      _countProduct--;
-      update();
-    }
-  }
 
   Future<void> deleteItems(id) async {
     isLoadingTrue();

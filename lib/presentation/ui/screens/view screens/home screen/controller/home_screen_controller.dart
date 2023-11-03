@@ -29,6 +29,7 @@ class HomeScreenController extends GetxController {
     try {
       await Future.wait([
         fetchAndParseListProductByBrand(),
+
       ]);
     } catch (e) {
       throw Exception('Error fetching data :$e');
