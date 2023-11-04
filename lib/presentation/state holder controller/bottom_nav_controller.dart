@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-import '../../../../../../data/utils/utils.dart';
+import '../../data/utils/utils.dart';
 
 
 class BottomNavController extends GetxController {

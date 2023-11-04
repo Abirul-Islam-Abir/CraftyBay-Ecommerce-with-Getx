@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'app_colors.dart';
 
 ThemeData mainTheme() => ThemeData(
+  brightness: Brightness.light,
     appBarTheme: globalAppBarTheme(),
     elevatedButtonTheme: globalElevatedButtonStyle(),
     inputDecorationTheme: globalInputDecorationTheme());
@@ -23,7 +24,7 @@ ElevatedButtonThemeData globalElevatedButtonStyle() => ElevatedButtonThemeData(
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))));
 
 AppBarTheme globalAppBarTheme() => const AppBarTheme(
-    backgroundColor: AppColor.kTransparentColor,
+    backgroundColor: AppColor.kPrimaryColor,
     systemOverlayStyle:
         SystemUiOverlayStyle(statusBarColor: AppColor.kPrimaryColor),
     iconTheme: IconThemeData(color: AppColor.kTextColor),

@@ -5,6 +5,7 @@ import 'package:crafty_bay_ecommerce/presentation/state%20holder%20controller/re
 import '../data/utils/export.dart';
 import '../presentation/state holder controller/create_review_controller.dart';
 import '../presentation/state holder controller/review_screen_controller.dart';
+import '../presentation/state holder controller/theme_controller.dart';
 import '../presentation/state holder controller/wish_list_controller.dart';
 
 class StateHolderBinder extends Bindings {
@@ -25,5 +26,6 @@ class StateHolderBinder extends Bindings {
     Get.lazyPut<ReviewScreenController>(() => ReviewScreenController());
     Get.lazyPut<CreateReviewController>(() => CreateReviewController());
     Get.lazyPut<CreateInvoiceController>(() => CreateInvoiceController());
+    Get.lazyPut<ThemeController>(() => ThemeController());
   }
 }

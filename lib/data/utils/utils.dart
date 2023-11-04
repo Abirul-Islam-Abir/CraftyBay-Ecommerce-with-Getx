@@ -1,14 +1,14 @@
 
-import 'package:crafty_bay_ecommerce/data/utils/storage_key.dart';
-import 'package:crafty_bay_ecommerce/data/utils/store_data_value.dart';
+import 'package:crafty_bay_ecommerce/data/utils/box_key.dart';
+import 'package:crafty_bay_ecommerce/data/utils/box_data_store.dart';
 
 class Utils{
  static Future<void> fetchUserData() async {
-    final tokenData = await storageInstance.read(StorageKey.setTokenKey);
-    final emailData = await storageInstance.read(StorageKey.setEmailKey);
+    final tokenData = await box.read(BoxKey.setTokenKey);
+    final emailData = await box.read(BoxKey.setEmailKey);
     if (tokenData != null && emailData != null) {
-      UserData.userToken = tokenData;
-      UserData.userEmail = emailData;
+      BoxDataStore.userToken = tokenData;
+      BoxDataStore.userEmail = emailData;
     }
   }
 }

@@ -26,7 +26,7 @@ class OtpVerifyScreen extends StatelessWidget {
               const HeadlineText(
                   text: 'Enter Your OTP Code', alignment: Alignment.center),
               LongLineSubtitleText(
-                  text: AppString.someDigitCodeSentTo, txt: UserData.userEmail),
+                  text: AppString.someDigitCodeSentTo, txt: BoxDataStore.userEmail),
               const SizedBox(height: kBigSize),
               Form(
                 key: controller.formKey,
@@ -114,7 +114,7 @@ class OtpVerifyScreen extends StatelessWidget {
                     txt: controller.isTimeOut.value ? '' : 'RESEND',
                     onTap: () {
                       controller.startCountdown();
-                      userLoginRequest(UserData.userEmail);
+                      userLoginRequest(BoxDataStore.userEmail);
                     },
                   )),
             ],

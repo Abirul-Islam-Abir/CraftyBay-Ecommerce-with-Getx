@@ -1,4 +1,4 @@
-class StorageKey {
+class BoxKey {
   static String setEmailKey = 'setEmail';
   static String setOtpKey = 'setOtp';
   static String setNameKey = 'setLastName';
@@ -13,5 +13,5 @@ class StorageKey {
   static String setIsRemember = 'remember';
   static String setFcmToken = 'fcmToken';
 
-  StorageKey._();
+  BoxKey._();
 }

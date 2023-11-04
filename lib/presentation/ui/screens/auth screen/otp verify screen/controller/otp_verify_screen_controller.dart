@@ -19,11 +19,11 @@ class OtpVerifyScreenController extends GetxController {
     _isLoading = true;
 
     final response = await verifyLoginRequest(
-        email: UserData.userEmail, otp: otpController.text);
+        email: BoxDataStore.userEmail, otp: otpController.text);
     if (response['msg'] == 'success') {
-      storageInstance.write(StorageKey.setTokenKey, response['data']);
+      box.write(BoxKey.setTokenKey, response['data']);
       await Utils.fetchUserData();
-      String? profileData = storageInstance.read(StorageKey.setCreateProfile);
+      String? profileData = box.read(BoxKey.setCreateProfile);
       if (profileData != null && profileData.isNotEmpty) {
         _isLoading = false;
         update();

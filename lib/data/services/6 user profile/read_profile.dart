@@ -10,10 +10,10 @@ Future<Map<String, dynamic>?> readProfileRequest() async {
     final http.Response response = await http.get(url, headers: headerWithTokens);
     final responseBody = jsonDecode(response.body);
     if (response.statusCode == 200 && responseBody['msg'] == 'success') {
-      print(responseBody);
-      return Map<String, dynamic>.from(responseBody['data']);
+    final  Map<String, dynamic> data =  Map<String, dynamic>.from(responseBody['data']);
+      return  data;
     } else {
-      throw Exception('Failed to fetch profile: ${responseBody['msg']}');
+       return  {};
     }
   } catch (e) {
     throw Exception('Error has occurred: $e');

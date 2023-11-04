@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 
 import '../../data/model/4 slider list/list_product_slider_model.dart';
 import '../../data/services/4 slider list/list_porduct_slider.dart';
-import '../../data/utils/store_data_value.dart';
+import '../../data/utils/box_data_store.dart';
 
 class SliderImageController extends GetxController {
   final List<ListProductSliderModel> _listProductSlider = [];
@@ -29,7 +29,7 @@ class SliderImageController extends GetxController {
     _isLoading = true;
     update();
     try {
-      if (UserData.userToken.isNotEmpty) {
+      if (BoxDataStore.userToken.isNotEmpty) {
         await Future.wait([
           fetchAndParseListProductSlider(),
         ]);

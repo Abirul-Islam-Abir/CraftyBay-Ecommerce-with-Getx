@@ -1,9 +1,9 @@
-import '../utils/store_data_value.dart';
+import '../utils/box_data_store.dart';
 
 //const String _baseUrl = 'https://craftybay.teamrabbil.com/api';
 
 Map<String, String> headerWithTokens = {
-  'token': UserData.userToken.toString(),
+  'token': BoxDataStore.userToken.toString(),
 };
 
 class APIServices {

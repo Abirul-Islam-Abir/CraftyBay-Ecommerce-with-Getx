@@ -23,6 +23,7 @@ class HomeScreen extends StatelessWidget {
   final cartScreenController = Get.put(CartScreenController());
   final readProfileScreenController = Get.put(ReadProfileScreenController());
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

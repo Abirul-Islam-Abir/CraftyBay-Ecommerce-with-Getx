@@ -1,5 +1,6 @@
 import '../../data/model/3 products list/list_product_by_brand_model.dart';
 import '../../data/utils/export.dart';
+import '../../data/utils/utils.dart';
 
 class HomeScreenController extends GetxController {
   final List<ListProductByBrandModel> _listProductByBrand = [];
@@ -29,6 +30,7 @@ class HomeScreenController extends GetxController {
     try {
       await Future.wait([
         fetchAndParseListProductByBrand(),
+         Utils.fetchUserData()
 
       ]);
     } catch (e) {
@@ -49,7 +51,7 @@ class HomeScreenController extends GetxController {
   }
 
   void isCheckLoggedIn() {
-    if (UserData.userToken.isEmpty) {
+    if (BoxDataStore.userToken.isEmpty) {
       Get.toNamed(RouteName.emailVerifyScreen);
     } else {
       Get.defaultDialog(
@@ -65,6 +67,6 @@ class HomeScreenController extends GetxController {
   void onInit() {
     super.onInit();
     initializeMethod();
-    print(UserData.userToken);
+    print(BoxDataStore.userToken);
   }
 }

@@ -13,8 +13,8 @@ class EmailVerifyScreenController extends GetxController {
       final response = await userLoginRequest(emailController.text.trim());
       if (response['msg'] == 'success') {
         _isLoading.value = false;
-        storageInstance.write(StorageKey.setEmailKey, emailController.text);
-        UserData.userEmail = emailController.text;
+        box.write(BoxKey.setEmailKey, emailController.text);
+        BoxDataStore.userEmail = emailController.text;
         Get.toNamed(RouteName.otpVerifyScreen);
       } else {
         SnackToast.loginFailed();
@@ -36,9 +36,9 @@ class EmailVerifyScreenController extends GetxController {
   }
 
   void getUserEmail() {
-    final emailData = storageInstance.read(StorageKey.setEmailKey);
+    final emailData = box.read(BoxKey.setEmailKey);
     if (emailData != null) {
-      UserData.userEmail = emailData;
+      BoxDataStore.userEmail = emailData;
       emailController.text = emailData;
     }
   }

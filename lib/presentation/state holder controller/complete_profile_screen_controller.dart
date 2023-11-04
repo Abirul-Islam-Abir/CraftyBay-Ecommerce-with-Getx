@@ -39,7 +39,7 @@ class CompleteProfileScreenController extends GetxController {
       });
       if (response['msg'] == 'success') {
         SnackToast.loginSuccess();
-        storageInstance.write(StorageKey.setCreateProfile, response['msg']);
+        box.write(BoxKey.setCreateProfile, response['msg']);
         await Utils.fetchUserData();
         Get.offAllNamed(RouteName.bottomNavigationBar);
       } else {
@@ -61,9 +61,9 @@ class CompleteProfileScreenController extends GetxController {
   }
 
   void setTokenData() {
-    final tokenData = storageInstance.read(StorageKey.setTokenKey);
+    final tokenData = box.read(BoxKey.setTokenKey);
     if (tokenData != null) {
-      UserData.userToken = tokenData;
+      BoxDataStore.userToken = tokenData;
     }
   }
 

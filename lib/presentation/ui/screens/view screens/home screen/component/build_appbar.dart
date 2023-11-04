@@ -1,6 +1,7 @@
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 
 import '../../../../../../data/utils/export.dart';
+import '../../../../../state holder controller/theme_controller.dart';
 import '../../read profile screen/view/read_profile_screen.dart';
 
 AppBar buildAppBar(context) => AppBar(
@@ -12,11 +13,15 @@ AppBar buildAppBar(context) => AppBar(
             },
             icon: const Icon(EvaIcons.personOutline)),
         IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.changeTheme(Get.isDarkMode?ThemeData.light(): ThemeData.dark());
+
+
+            },
             icon: const Icon(Icons.notifications_none_rounded)),
         IconButton(
             onPressed: () {
-              storageInstance.remove(StorageKey.setTokenKey);
+              box.remove(BoxKey.setTokenKey);
               Get.offAllNamed(RouteName.emailVerifyScreen);
             },
             icon: const Icon(Icons.logout_outlined)),

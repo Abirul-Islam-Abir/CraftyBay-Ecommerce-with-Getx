@@ -1,8 +1,8 @@
 import 'package:get_storage/get_storage.dart';
 
-final storageInstance = GetStorage();
+final box = GetStorage();
 
-class UserData {
+class BoxDataStore {
   static String userEmail = '';
   static String userPhoto = '';
   static String userPassword = '';
@@ -14,5 +14,5 @@ class UserData {
   static String setCreateProfile = '';
   static bool? isRemember = false;
 
-  UserData._();
+  BoxDataStore._();
 }
