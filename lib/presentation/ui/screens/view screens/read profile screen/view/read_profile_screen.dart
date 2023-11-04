@@ -16,10 +16,11 @@ class ProfileScreen extends StatelessWidget {
         child: ListView.builder(
           itemCount: controller.readProfile.length,
           itemBuilder: (context, index) {
-            final firstName = controller.readProfile[0].cusName ?? '';
-            final mobile = controller.readProfile[0].cusPhone ?? '';
-            final city = controller.readProfile[0].cusCity ?? '';
-            final shippingAddress = controller.readProfile[0].cusAdd ?? '';
+            final firstName = controller.readProfile[index].cusName ?? '';
+            final mobile = controller.readProfile[index].cusPhone ?? '';
+            final city = controller.readProfile[index].cusCity ?? '';
+            final shippingAddress = controller.readProfile[index].cusAdd ?? '';
+
             return Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [

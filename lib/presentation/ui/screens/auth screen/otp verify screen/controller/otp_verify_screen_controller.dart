@@ -60,7 +60,7 @@ class OtpVerifyScreenController extends GetxController {
   }
 
   void startCountdown() {
-    countdown.value = 30;
+    countdown.value = 60;
     isTimeOut.value = true;
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       if (countdown.value > 0) {

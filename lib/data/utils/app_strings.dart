@@ -15,7 +15,7 @@ class AppString {
   static const String password = 'Password';
   static const String login = 'Login';
   static const String skip = 'Skip';
-  static const String someDigitCodeSentTo = 'A 4 Digit code sent to ';
+  static const String someDigitCodeSentTo = 'A 6 Digit code sent to ';
   static const String name = 'Name';
   static const String pushNotification = 'Push Notification';
   static const String loginSuccess = 'Login Success';
