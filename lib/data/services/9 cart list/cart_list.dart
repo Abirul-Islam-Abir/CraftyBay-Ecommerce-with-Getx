@@ -9,14 +9,13 @@ Future fetchCartListRequest() async {
     final url = Uri.parse(APIServices.cartListUrl);
     final http.Response response =
         await http.get(url, headers: headerWithTokens);
-    final responseBody = jsonDecode(response.body);
+    final Map<String, dynamic> responseBody = jsonDecode(response.body);
     if (response.statusCode == 200 && responseBody['msg'] == 'success') {
       final List<Map<String, dynamic>> data =
       List<Map<String, dynamic>>.from(responseBody['data']);
-
       return data;
-    } else {
-      return  [];
+    }  else{
+      return [];
     }
   } catch (e) {
     throw Exception('Error has occurred: $e');

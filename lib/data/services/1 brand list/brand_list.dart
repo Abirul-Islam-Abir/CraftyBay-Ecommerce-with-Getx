@@ -8,18 +8,13 @@ Future fetchBrandProductRequest() async {
   try {
     final Uri uri = Uri.parse(APIServices.brandListUrl);
     final http.Response response = await http.get(uri);
-
-    if (response.statusCode == 200) {
-      final Map<String, dynamic> responseBody = jsonDecode(response.body);
-      if (responseBody['msg'] == 'success') {
-        final List<Map<String, dynamic>> data =
-            List<Map<String, dynamic>>.from(responseBody['data']);
-        return data;
-      } else {
-        throw Exception('Error has occurred: ${responseBody['msg']}');
-      }
-    } else {
-      throw Exception('Error has occurred: ${response.statusCode}');
+    final Map<String, dynamic> responseBody = jsonDecode(response.body);
+    if (response.statusCode == 200 && responseBody['msg'] == 'success') {
+      final List<Map<String, dynamic>> data =
+      List<Map<String, dynamic>>.from(responseBody['data']);
+      return data;
+    }  else{
+      return [];
     }
   } catch (e) {
     throw Exception('An error occurred: $e');

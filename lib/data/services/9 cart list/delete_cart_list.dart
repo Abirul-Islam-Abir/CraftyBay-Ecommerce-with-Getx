@@ -9,7 +9,7 @@ Future postDeleteCartList(id) async {
     final url = Uri.parse('${APIServices.deleteCartListUrl}/$id');
     final http.Response response =
         await http.get(url, headers: headerWithTokens);
-    final responseBody = jsonDecode(response.body);
+    final  responseBody = jsonDecode(response.body);
     if (response.statusCode == 200 && responseBody['msg'] == 'success') {
       return responseBody;
     } else {

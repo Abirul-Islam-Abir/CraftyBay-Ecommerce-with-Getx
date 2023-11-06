@@ -8,7 +8,7 @@ Future<Map<String, dynamic>?> readProfileRequest() async {
   try {
     final url = Uri.parse(APIServices.readProfileUrl);
     final http.Response response = await http.get(url, headers: headerWithTokens);
-    final responseBody = jsonDecode(response.body);
+    final  responseBody = jsonDecode(response.body);
     if (response.statusCode == 200 && responseBody['msg'] == 'success') {
     final  Map<String, dynamic> data =  Map<String, dynamic>.from(responseBody['data']);
       return  data;

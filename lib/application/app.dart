@@ -18,7 +18,7 @@ class CraftyBay extends StatelessWidget {
             builder: DevicePreview.appBuilder,
             title: AppInfo.appName,
             theme: mainTheme(),
-            themeMode: ThemeMode.system,
+            themeMode: ThemeMode.light,
             darkTheme: CustomTheme.darkTheme,
             initialBinding: StateHolderBinder(),
             initialRoute: RouteName.splashScreen,
