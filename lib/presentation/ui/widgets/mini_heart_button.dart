@@ -20,7 +20,7 @@ class MiniHeartButton extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(3),
             color: AppColor.kPrimaryColor.shade200),
-        child: Icon(icon, color: AppColor.kRedColor, size: kTextSize),
+        child: Icon(icon, color: AppColor.kGreyColor, size: kTextSize),
       ),
     );
   }

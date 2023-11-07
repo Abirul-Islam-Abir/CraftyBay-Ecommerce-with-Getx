@@ -91,7 +91,7 @@ class ProductCard extends StatelessWidget {
                             color: AppColor.kPrimaryColor.shade200),
                         child: Icon(EvaIcons.heart,
                             color: isFav
-                                ? AppColor.kRedColor
+                                ? AppColor.kGreyColor
                                 : AppColor.kGreyColor,
                             size: kTextSize))),
               ],
