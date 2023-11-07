@@ -11,7 +11,7 @@ final controller = Get.put(CreateInvoiceController());
 
   @override
   Widget build(BuildContext context) {
-    return   Scaffold(appBar: AppBar(title: const Text('CheckOut Screen')),body:controller.createInvoiceList.isEmpty?Text(''): ListView.builder(
+    return   Scaffold(appBar: AppBar(title: const Text('CheckOut Screen')),body:controller.createInvoiceList.isEmpty?const Text(''): ListView.builder(
     shrinkWrap: true,
     itemBuilder: (context, index) {
       return ListTile(

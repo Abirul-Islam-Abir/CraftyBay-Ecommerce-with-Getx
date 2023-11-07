@@ -24,7 +24,7 @@ class RemarkProductsDetailsScreen extends StatelessWidget {
           final data = detailsController.productDetailsById;
           return detailsController.isLoading
               ? const ProductsDetailsShimmer()
-              :data.isEmpty ? ProductsDetailsShimmer(): Column(
+              :data.isEmpty ? const ProductsDetailsShimmer(): Column(
                   children: [
                     Expanded(
                       child: ListView(

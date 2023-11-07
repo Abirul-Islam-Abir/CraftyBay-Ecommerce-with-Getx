@@ -2,7 +2,6 @@ import 'package:get/get.dart';
 
 import '../../data/model/6 user profile/read_profile_model.dart';
 import '../../data/services/6 user profile/read_profile.dart';
-import '../../data/utils/box_data_store.dart';
 
 class ReadProfileScreenController extends GetxController {
   bool _isLoading = true;

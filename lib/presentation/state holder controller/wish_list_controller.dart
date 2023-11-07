@@ -2,7 +2,6 @@ import 'package:get/get.dart';
 
 import '../../data/model/8 wish list/product_wish_list_model.dart';
 import '../../data/services/8 wish list/product_wish_list.dart';
-import '../../data/utils/box_data_store.dart';
 
 class WishListScreenController extends GetxController {
   final List<ProductWishListModel> _wishList = [];
