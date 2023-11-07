@@ -1,3 +1,6 @@
+import 'package:crafty_bay_ecommerce/data/services/8%20wish%20list/create_wish_list.dart';
+import 'package:crafty_bay_ecommerce/presentation/state%20holder%20controller/wish_list_controller.dart';
+
 import '../../../../../../data/utils/animation_effect.dart';
 import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/bottom_details_card.dart';
@@ -13,6 +16,7 @@ class RemarkProductsDetailsScreen extends StatelessWidget {
   RemarkProductsDetailsScreen({Key? key}) : super(key: key);
   final detailsController = Get.put(RemarkProductDetailsScreenController());
   final cartController = Get.put(CartScreenController());
+  final wishListController = Get.put(WishListScreenController());
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +48,7 @@ class RemarkProductsDetailsScreen extends StatelessWidget {
                               ratings:  '${int.parse('${data[0].product?.star ?? ""}')/100*5}',
                               save: '${data[0].product?.discount ?? " "}',
                               addOnTap: detailsController.increment,
-                              isFavPress: () {},
+                              isFavPress: () {wishListController.fetchAndParseCreateWishList(data[0].product?.id);},
                               removeOnTap: detailsController.decrement,
                             ),
                             const SizedBox(height: 10),

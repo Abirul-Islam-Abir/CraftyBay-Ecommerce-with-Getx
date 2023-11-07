@@ -43,7 +43,7 @@ class WishListScreen extends StatelessWidget {
                       Get.toNamed(RouteName.remarkProductDetails,
                           arguments: products[index].productId);
                     },
-                    isFavPress: () {},
+                    isFavPress: () {controller.fetchAndParseRemoveWishList(products[index].productId);},
                     discount: '$discount',
                     price: '$price',
                     name: categoryName,

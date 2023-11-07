@@ -10,11 +10,9 @@ Future createProfileRequest(body) async {
       headers: headerWithTokens,
       body: body,
     );
-    final Map<String, dynamic> responseBody = jsonDecode(response.body);
+    final   responseBody = jsonDecode(response.body);
     if (response.statusCode == 200 && responseBody['msg'] == 'success') {
-      final List<Map<String, dynamic>> data =
-      List<Map<String, dynamic>>.from(responseBody['data']);
-      return data;
+      return responseBody;
     }  else{
       return [];
     }
