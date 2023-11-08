@@ -163,8 +163,7 @@ https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/tree/main/assets/crafty
 - **motion_toast: ^2.7.8**
 - **empty_widget: ^0.0.5**
 
-[Visit the Figma design](https://github.com/Abirul-Islam-Abir/CraftyBay-Ecommerce/blob/main/assets/craftybay_ui/all.png)
-[Visit the Crafty Bay .apk ](https://terabox.com/s/1qv7BJNbCMsLNSNWK3Xg06A)
+[Visit the Figma design](https://terabox.com/s/1qv7BJNbCMsLNSNWK3Xg06A)
 
 # Stacks
 
