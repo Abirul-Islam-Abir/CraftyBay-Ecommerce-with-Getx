@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 import '../../data/model/3 products list/list_product_by_brand_model.dart';
 import '../../data/utils/export.dart';
 import '../../data/utils/utils.dart';
@@ -45,13 +47,13 @@ class HomeScreenController extends GetxController {
   }
 
   void isDarkModeChanger(value) {
-    if(value){
-      _isDarkMode =true;
+    if(value == true){
+      _isDarkMode =false;
       Get.changeTheme(ThemeData.light());
       update();
     }else{
-      _isDarkMode = false;
-      Get.changeTheme(  ThemeData.dark());
+      _isDarkMode = true;
+      Get.changeTheme(ThemeData.dark());
       update();
     }
 
@@ -75,6 +77,8 @@ class HomeScreenController extends GetxController {
   void onInit() {
     super.onInit();
     initializeMethod();
-    print(BoxDataStore.userToken);
+    if (kDebugMode) {
+      print(BoxDataStore.userToken);
+    }
   }
 }

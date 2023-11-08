@@ -40,12 +40,24 @@ class SnackToast {
       snackPosition: SnackPosition.BOTTOM, backgroundColor: Colors.green,
     );
   }
+  static wishListSuccess() {
+    Get.snackbar(
+      'Great!',
+      'The wish list item added successfully.',
 
+    );
+  }static wishListFailed() {
+    Get.snackbar(
+      'Ohh..Noo!',
+      'Unable to add wish list items. Please check your credentials.',
+       backgroundColor: Colors.red,
+    );
+  }
   static loginFailed() {
     Get.snackbar(
        'Ohh..Noo!',
        'Unable to log in. Please check your credentials.',
-      snackPosition: SnackPosition.BOTTOM,
+
       backgroundColor: Colors.red,
     );
   }
@@ -54,8 +66,6 @@ class SnackToast {
     Get.snackbar(
    'Great!',
         'You have successfully logged in.',
-      snackPosition: SnackPosition.BOTTOM,
-      backgroundColor: Colors.green,
 
     );
   }
@@ -64,7 +74,7 @@ class SnackToast {
     Get.snackbar(
       'Oh..Noo!',
      'Unable to verify OTP. Please check the code and try again.',
-      snackPosition: SnackPosition.BOTTOM,
+
       backgroundColor: Colors.red,
 
     );

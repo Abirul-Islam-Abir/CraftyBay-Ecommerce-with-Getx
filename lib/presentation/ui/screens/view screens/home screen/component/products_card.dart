@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:crafty_bay_ecommerce/data/theme/app_text_style.dart';
-import 'package:eva_icons_flutter/eva_icons_flutter.dart';
+ import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../data/theme/app_colors.dart';

@@ -13,10 +13,10 @@ final String paymentName;
       NavigationDelegate(
         onProgress: (int progress) {
         },
-        onPageStarted: (String url) {print('onPageStarted$url------------------------------------------------------');},
-        onPageFinished: (String url) {print('onPageFinished$url------------------------------------------------------');},
-        onWebResourceError: (WebResourceError error) {print('WebResourceError$error------------------------------------------------------');},
-        onNavigationRequest: (NavigationRequest request) {print('NavigationRequest$request------------------------------------------------------');
+        onPageStarted: (String url) {},
+        onPageFinished: (String url) {},
+        onWebResourceError: (WebResourceError error) {},
+        onNavigationRequest: (NavigationRequest request) {
           SnackToast.requestSuccess();
           Get.offAllNamed(RouteName.bottomNavigationBar);
           return NavigationDecision.navigate;

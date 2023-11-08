@@ -14,6 +14,9 @@ class EmailVerifyScreenController extends GetxController {
       if (response['msg'] == 'success') {
         _isLoading.value = false;
         box.write(BoxKey.setEmailKey, emailController.text);
+        if(BoxDataStore.userEmail != emailController.text.trim()){
+          box.remove(BoxKey.setCreateProfile);
+        }
         BoxDataStore.userEmail = emailController.text;
         Get.toNamed(RouteName.otpVerifyScreen);
       } else {

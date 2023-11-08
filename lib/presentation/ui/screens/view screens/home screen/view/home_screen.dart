@@ -1,4 +1,5 @@
 import 'package:crafty_bay_ecommerce/presentation/state%20holder%20controller/read_profile_controller.dart';
+import 'package:crafty_bay_ecommerce/presentation/state%20holder%20controller/wish_list_controller.dart';
 
 import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/custom_textfield.dart';
@@ -22,6 +23,7 @@ class HomeScreen extends StatelessWidget {
   final sliderImageController = Get.put(SliderImageController());
   final cartScreenController = Get.put(CartScreenController());
   final readProfileScreenController = Get.put(ReadProfileScreenController());
+  final wishListController = Get.put(WishListScreenController());
 
 
   @override
@@ -35,6 +37,7 @@ class HomeScreen extends StatelessWidget {
           categoryController.initializeMethod();
           sliderImageController.initializeMethod();
           cartScreenController.initializeMethod();
+          wishListController.initializeMethod();
         },
         child: ListView(
           shrinkWrap: true,

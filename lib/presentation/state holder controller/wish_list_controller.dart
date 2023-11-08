@@ -33,9 +33,9 @@ class WishListScreenController extends GetxController {
     final response = await postRemoveWishList(id);
     if (response['msg'] == 'success') {
       initializeMethod();
-      SnackToast.requestSuccess();
+      SnackToast.wishListSuccess();
     } else {
-      SnackToast.requestFailed();
+      SnackToast.wishListFailed();
     }
   }
 

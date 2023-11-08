@@ -1,6 +1,6 @@
 import '../utils/export.dart';
 
-ThemeData DarkThemeData() {
+ThemeData darkThemeData() {
   return ThemeData(
     brightness: Brightness
         .dark, //Setting the Brightness to Dark  so that this can be used as Dark ThemeData
