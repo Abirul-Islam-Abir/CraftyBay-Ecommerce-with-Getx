@@ -59,7 +59,7 @@ class ProductDetailsTitleCard extends StatelessWidget {
               OutlinedButton( onPressed: reviewTap,
                 child: const CommonText(
                   'Review',
-                  color: AppColor.kPrimaryColor,fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               const SizedBox(width: 10),

@@ -6,6 +6,7 @@ import '../../../../widgets/custom_textfield.dart';
 import '../../remark product screen/view/remark_product_screen.dart';
 import '../../../../../state holder controller/slider_controller.dart';
 import '../../categories screen/component/all_categories_list_builder.dart';
+import '../../search screen/view/search_screen.dart';
 import '../component/build_appbar.dart';
 import '../../slider view/view/carousel_slider_builder.dart';
 import '../../categories screen/component/categories_button.dart';
@@ -44,6 +45,9 @@ class HomeScreen extends StatelessWidget {
           children: [
             const SizedBox(height: kTextSize),
             CustomTextField(
+              onTap: (){
+                Get.to(()=>SearchScreen());
+              },
                 controller: homeScreenController.searchController,
                 prefixIcon: const Icon(Icons.search),
                 hintText: 'Search Products',

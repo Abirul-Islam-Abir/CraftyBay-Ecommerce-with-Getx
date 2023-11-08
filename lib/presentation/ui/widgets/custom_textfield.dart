@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-
-import '../../../data/theme/app_colors.dart';
-
 class CustomTextField extends StatelessWidget {
   const CustomTextField(
       {super.key,
@@ -19,8 +16,7 @@ class CustomTextField extends StatelessWidget {
       this.autofocus = false,
       this.readOnly = false,
       this.prefixIcon,
-      this.onChanged});
-
+      this.onChanged, this.onTap});
   final String hintText;
   final String label;
   final double padding;
@@ -36,12 +32,14 @@ class CustomTextField extends StatelessWidget {
   final bool readOnly;
   final Widget? prefixIcon;
   final Function(String)? onChanged;
+  final   void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18),
       child: TextFormField(
+        onTap: onTap,
         obscuringCharacter: '*',
         readOnly: readOnly,
         autofocus: autofocus,
@@ -58,8 +56,7 @@ class CustomTextField extends StatelessWidget {
           prefixIcon: prefixIcon,
           contentPadding: EdgeInsets.all(padding),
           hintText: hintText,
-          hintStyle: const TextStyle(color: AppColor.kTextColor, fontSize: 15),
-          labelStyle: const TextStyle(color: AppColor.kTextColor),
+          hintStyle: Theme.of(context).textTheme.displayMedium!.copyWith(fontSize: 15),
           label: Text(label),
         ),
       ),

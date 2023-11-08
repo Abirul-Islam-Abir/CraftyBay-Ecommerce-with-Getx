@@ -35,20 +35,18 @@ class HomeScreenController extends GetxController {
       await Future.wait([
         fetchAndParseListProductByBrand(),
          Utils.fetchUserData()
-
       ]);
     } catch (e) {
       throw Exception('Error fetching data :$e');
     } finally {
-
       _isLoading = false;
       update();
     }
   }
 
   void isDarkModeChanger(value) {
-    if(value == true){
-      _isDarkMode =false;
+    if(Get.isDarkMode){
+      _isDarkMode = false;
       Get.changeTheme(ThemeData.light());
       update();
     }else{
@@ -56,6 +54,7 @@ class HomeScreenController extends GetxController {
       Get.changeTheme(ThemeData.dark());
       update();
     }
+
 
 
   }

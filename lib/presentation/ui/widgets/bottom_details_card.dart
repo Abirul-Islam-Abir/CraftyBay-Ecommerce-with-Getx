@@ -30,8 +30,8 @@ class BottomDetailsCard extends StatelessWidget {
             children: [
               const NormalText('Price'),
               CommonText(
-                '\$$price',
-                color: AppColor.kPrimaryColor,
+                '\$$price'
+
               ),
             ],
           ),

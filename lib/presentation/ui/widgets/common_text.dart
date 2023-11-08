@@ -5,13 +5,11 @@ class CommonText extends StatelessWidget {
     this.text, {
     super.key,
     this.fontWeight,
-    this.color = AppColor.kTextColor,
     this.onTap,
   });
 
   final String? text;
   final FontWeight? fontWeight;
-  final Color? color;
   final Function()? onTap;
 
   @override
@@ -22,7 +20,7 @@ class CommonText extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: kTextSize, vertical: 5),
         child: Text(
           text!,
-          style: titleTooSmall(color: color, fontWeight: fontWeight),
+          style: titleTooSmall(  fontWeight: fontWeight),
           overflow: TextOverflow.fade,
           maxLines: 4,
         ),
