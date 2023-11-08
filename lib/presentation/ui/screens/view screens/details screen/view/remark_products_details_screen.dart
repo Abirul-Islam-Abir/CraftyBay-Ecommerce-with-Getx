@@ -1,4 +1,3 @@
-import 'package:crafty_bay_ecommerce/data/services/8%20wish%20list/create_wish_list.dart';
 import 'package:crafty_bay_ecommerce/presentation/state%20holder%20controller/wish_list_controller.dart';
 
 import '../../../../../../data/utils/animation_effect.dart';

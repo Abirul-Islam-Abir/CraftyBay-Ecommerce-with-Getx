@@ -1,4 +1,5 @@
 import 'package:crafty_bay_ecommerce/data/services/8%20wish%20list/create_wish_list.dart';
+import 'package:crafty_bay_ecommerce/data/services/8%20wish%20list/remove_wish_list.dart';
 import 'package:get/get.dart';
 
 import '../../data/model/8 wish list/product_wish_list_model.dart';
@@ -29,7 +30,7 @@ class WishListScreenController extends GetxController {
     }
   }
   Future<void> fetchAndParseRemoveWishList(id) async {
-    final response = await postCreateWishList(id);
+    final response = await postRemoveWishList(id);
     if (response['msg'] == 'success') {
       initializeMethod();
       SnackToast.requestSuccess();

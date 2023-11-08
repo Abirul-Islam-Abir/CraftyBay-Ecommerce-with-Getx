@@ -14,10 +14,9 @@ class NormalText extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: kTooSmallSize),
       child: Text(
         text,
-        style: TextStyle(
-            fontSize: kTextSize,
+        style:  Theme.of(context).textTheme.displayMedium!.copyWith( fontSize: kTextSize,
             fontWeight: FontWeight.bold,
-            color: AppColor.kBlackColor.withOpacity(0.5)),
+            )
       ),
     );
   }

@@ -1,3 +1,4 @@
+import 'package:crafty_bay_ecommerce/presentation/state%20holder%20controller/wish_list_controller.dart';
 import 'package:crafty_bay_ecommerce/presentation/ui/screens/view%20screens/home%20screen/component/products_card.dart';
 
 import '../../../../../../data/model/3 products list/list_product_by_remark_model.dart';
@@ -5,9 +6,10 @@ import '../../../../../../data/utils/export.dart';
 import '../../../../widgets/product_card_shimmer.dart';
 
 class ListProductByRemarkBuilder extends GetView<HomeScreenController> {
-  const ListProductByRemarkBuilder(this.products, {super.key});
+    ListProductByRemarkBuilder(this.products, {super.key});
 
   final List<ListProductByRemarkModel> products;
+  final wishListController = Get.put(WishListScreenController());
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,7 @@ class ListProductByRemarkBuilder extends GetView<HomeScreenController> {
         final product = products.length;
         final length = product >= 5 ? 5 : product;
         return SizedBox(
-          height: 200,
+          height: 210,
           width: Get.width,
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -30,7 +32,7 @@ class ListProductByRemarkBuilder extends GetView<HomeScreenController> {
                           Get.toNamed(RouteName.remarkProductDetails,
                               arguments: products[index].id);
                         },
-                        isFavPress: () {},
+                        isFavPress: () {wishListController.fetchAndParseCreateWishList(products[index].id);},
                         discount: '${products[index].discount}',
                         price: '${products[index].price}',
                         name: '${products[index].title}',

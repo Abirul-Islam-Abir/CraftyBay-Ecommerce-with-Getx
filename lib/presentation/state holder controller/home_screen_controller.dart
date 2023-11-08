@@ -6,8 +6,10 @@ class HomeScreenController extends GetxController {
   final List<ListProductByBrandModel> _listProductByBrand = [];
 
   bool _isLoading = true;
+  bool _isDarkMode = false;
 
   bool get isLoading => _isLoading;
+  bool get isDarkMode => _isDarkMode;
 
   List<ListProductByBrandModel> get listProductByBrand => _listProductByBrand;
 
@@ -42,12 +44,18 @@ class HomeScreenController extends GetxController {
     }
   }
 
-  void isDarkModeChanger() {
-    if (Get.isDarkMode) {
+  void isDarkModeChanger(value) {
+    if(value){
+      _isDarkMode =true;
       Get.changeTheme(ThemeData.light());
-    } else {
-      Get.changeTheme(ThemeData.dark());
+      update();
+    }else{
+      _isDarkMode = false;
+      Get.changeTheme(  ThemeData.dark());
+      update();
     }
+
+
   }
 
   void isCheckLoggedIn() {

@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:crafty_bay_ecommerce/data/theme/app_text_style.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 
@@ -58,9 +59,8 @@ class ProductCard extends StatelessWidget {
             ),
             const SizedBox(height: kTooSmallSize),
             Text('$name\nDiscount: $discount%'.toUpperCase(),
-                style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: AppColor.kTextColor,
+                style:  Theme.of(context).textTheme.bodySmall?.copyWith(  fontWeight: FontWeight.bold,
+
                     fontSize: kSmallSize)),
             const SizedBox(height: kTooSmallSize),
             Row(

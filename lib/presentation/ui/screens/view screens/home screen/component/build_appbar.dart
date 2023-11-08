@@ -13,19 +13,10 @@ AppBar buildAppBar(context) => AppBar(
             icon: const Icon(EvaIcons.personOutline)),
         IconButton(
             onPressed: () {
-              Get.changeTheme(Get.isDarkMode?ThemeData.light(): ThemeData.dark());
-
-
-            },
-            icon: const Icon(Icons.notifications_none_rounded)),
-        IconButton(
-            onPressed: () {
               box.remove(BoxKey.setTokenKey);
               Get.offAllNamed(RouteName.emailVerifyScreen);
             },
             icon: const Icon(Icons.logout_outlined)),
-        GetBuilder<HomeScreenController>(builder: (logic) {
-          return Switch(value: true, onChanged: (v) {});
-        })
+        GetBuilder<HomeScreenController>(builder: (controller) => Switch(value:controller.isDarkMode , onChanged: controller.isDarkModeChanger))
       ],
     );
