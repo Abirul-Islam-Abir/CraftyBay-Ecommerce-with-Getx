@@ -43,6 +43,7 @@ class HomeScreenController extends GetxController {
       update();
     }
   }
+  //
 
   void isDarkModeChanger(value) {
     if(Get.isDarkMode){
