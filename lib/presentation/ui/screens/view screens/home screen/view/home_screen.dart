@@ -25,7 +25,14 @@ class HomeScreen extends StatelessWidget {
   final cartScreenController = Get.put(CartScreenController());
   final readProfileScreenController = Get.put(ReadProfileScreenController());
   final wishListController = Get.put(WishListScreenController());
-
+void refreshAll(){
+  homeScreenController.initializeMethod();
+  remarkProductScreenController.initializeMethod();
+  categoryController.initializeMethod();
+  sliderImageController.initializeMethod();
+  cartScreenController.initializeMethod();
+  wishListController.initializeMethod();
+}
 
   @override
   Widget build(BuildContext context) {
@@ -33,12 +40,7 @@ class HomeScreen extends StatelessWidget {
       appBar: buildAppBar(context),
       body: RefreshIndicator(
         onRefresh: () async {
-          homeScreenController.initializeMethod();
-          remarkProductScreenController.initializeMethod();
-          categoryController.initializeMethod();
-          sliderImageController.initializeMethod();
-          cartScreenController.initializeMethod();
-          wishListController.initializeMethod();
+          refreshAll();
         },
         child: ListView(
           shrinkWrap: true,
