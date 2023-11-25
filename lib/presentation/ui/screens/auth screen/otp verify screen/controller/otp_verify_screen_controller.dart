@@ -14,17 +14,16 @@ class OtpVerifyScreenController extends GetxController {
   var countdown = 60.obs;
   late Timer _timer;
   RxBool isTimeOut = true.obs;
- 
+
   Future fetchAndParseUserLogin() async {
     _isLoading = true;
-
     final response = await verifyLoginRequest(
         email: BoxDataStore.userEmail, otp: otpController.text);
     if (response['msg'] == 'success') {
       box.write(BoxKey.setTokenKey, response['data']);
       await Utils.fetchUserData();
-      String? profileData = box.read(BoxKey.setCreateProfile);
-      if (profileData != null && profileData.isNotEmpty) {
+      final responseData = await readProfileRequest();
+      if (responseData != null && responseData.isNotEmpty) {
         _isLoading = false;
         update();
         Get.offAllNamed(RouteName.bottomNavigationBar);
