@@ -3,6 +3,23 @@ class AppString {
   static const String flutterDeveloperName = 'Flutter Developer Abir';
   static const String enterYourEmail = 'Enter Your Email';
   static const String email = 'Email';
+  static const String home =  'Home';
+  static const String review = 'Review';
+  static const String cart =   'Cart';
+  static const String allCategory =  'All Categories';
+  static const String wish =   'Wish';
+  static const String newT =   'New';
+  static const String popular =  'Popular';
+  static const String special =  'Special';
+  static const String search =  'Search';
+  static const String searchProduct =   'Search Products';
+  static const String addToCart =   'Add to cart';
+  static const String productDetails =   'Product Details';
+  static const String emptyList =  'Empty List';
+  static const String seeAll =    'See All';
+  static const String checkOut =    'Check Out';
+  static const String category =  'Category';
+  static const String complete = 'Complete';
   static const String createReview = 'Create Review';
   static const String pleaseEnterYourEmailAddress =
       'Please Enter Your Email Address';

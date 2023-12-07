@@ -52,24 +52,24 @@ void refreshAll(){
               },
                 controller: homeScreenController.searchController,
                 prefixIcon: const Icon(Icons.search),
-                hintText: 'Search Products',
+                hintText: AppString.searchProduct,
                 onChanged: (query) {},
-                label: 'Search'),
+                label: AppString.search),
             CarouselSliderBuilder(sliderImageController.listProductSlider),
             DotsIndicatorWidget(sliderImageController.listProductSlider),
             CategoriesButton(
                 onTap: bottomNavController.goToCategoryScreen,
-                categoryName: 'All Categories'),
+                categoryName: AppString.allCategory),
             AllCategoriesListBuilder(categoryController.categoryList),
             CategoriesButton(
                 onTap: () {
                   Get.to(() => RemarkProductScreen(
                         products: remarkProductScreenController
                             .listProductByRemarkPopular,
-                        productName: 'Popular',
+                        productName: AppString.popular,
                       ));
                 },
-                categoryName: 'Popular'),
+                categoryName:  AppString.popular),
             ListProductByRemarkBuilder(
                 remarkProductScreenController.listProductByRemarkPopular),
             CategoriesButton(
@@ -77,10 +77,10 @@ void refreshAll(){
                   Get.to(() => RemarkProductScreen(
                         products: remarkProductScreenController
                             .listProductByRemarkSpecial,
-                        productName: 'Special',
+                        productName:  AppString.special,
                       ));
                 },
-                categoryName: 'Special'),
+                categoryName: AppString.special),
             ListProductByRemarkBuilder(
                 remarkProductScreenController.listProductByRemarkSpecial),
             CategoriesButton(
@@ -88,9 +88,9 @@ void refreshAll(){
                   Get.to(() => RemarkProductScreen(
                       products:
                           remarkProductScreenController.listProductByRemarkNew,
-                      productName: 'New'));
+                      productName: AppString.newT));
                 },
-                categoryName: 'New'),
+                categoryName: AppString.newT),
             ListProductByRemarkBuilder(
                 remarkProductScreenController.listProductByRemarkNew),
           ],

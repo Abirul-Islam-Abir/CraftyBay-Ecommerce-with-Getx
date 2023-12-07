@@ -21,7 +21,7 @@ class RemarkProductsDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: AppBar(title: const Text('Product Details')),
+      appBar: AppBar(title:   Text(AppString.productDetails)),
       body: GetBuilder<RemarkProductDetailsScreenController>(
         builder: (detailsController) {
           final data = detailsController.productDetailsById;
@@ -56,7 +56,7 @@ class RemarkProductsDetailsScreen extends StatelessWidget {
                             const Padding(
                               padding: EdgeInsets.symmetric(
                                   horizontal: kTooSmallSize),
-                              child: NormalText('Description'),
+                              child: NormalText(AppString.description),
                             ),
                             CommonText(data[0].des ?? " "),
                             const SizedBox(height: 10),
@@ -71,7 +71,7 @@ class RemarkProductsDetailsScreen extends StatelessWidget {
                       final sizeName = detailsController.size[sizeIndex];
                       return BottomDetailsCard(
                         isProgress: cartController.isCartAdd,
-                        name: 'Add to cart',
+                        name: AppString.addToCart,
                         onPressed: () {
                           cartController.fetchAndParseCreateCartList(
                               productDetailsById: data,

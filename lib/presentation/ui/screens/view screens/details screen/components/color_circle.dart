@@ -10,7 +10,7 @@ class ColorCircle extends StatelessWidget {
   }) : super(key: key);
 
   final Color color;
-  final GestureCancelCallback? onTap;
+  final Function()? onTap;
   final int index;
   final int selectedIndex;
 

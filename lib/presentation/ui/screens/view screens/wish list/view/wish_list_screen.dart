@@ -10,10 +10,10 @@ class WishListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-        onWillPop: () async {
+    return PopScope(canPop: true,
+        onPopInvoked: (d)   {
           Get.find<BottomNavController>().goToHome();
-          return true;
+
         },
         child: Scaffold(
           appBar: AppBar(

@@ -91,7 +91,7 @@ class CompleteProfileScreen extends StatelessWidget {
             Obx(() => GlobalButton(
                 isLoading: controller.isLoading,
                 onPress: controller.validateSubmit,
-                text: 'Complete')),
+                text: AppString.complete)),
           ],
         ),
       ),

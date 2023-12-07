@@ -31,7 +31,7 @@ class CategoriesButton extends StatelessWidget {
                     InkWell(
                       onTap: onTap,
                       child: Text(
-                        'See All',
+                       AppString.seeAll,
                         style: titleTooSmall(color: AppColor.kPrimaryColor),
                       ),
                     ),

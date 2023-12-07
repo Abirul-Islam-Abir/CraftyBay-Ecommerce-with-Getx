@@ -18,11 +18,11 @@ class BottomNavBar extends StatelessWidget {
         bottomNavigationBar: BottomBarBubble(
           selectedIndex: controller.navIndex,
           items: [
-            BottomBarItem(iconData: Icons.home, label: 'Home'),
-            BottomBarItem(iconData: Icons.window_sharp, label: 'Category'),
+            BottomBarItem(iconData: Icons.home, label:AppString.home),
+            BottomBarItem(iconData: Icons.window_sharp, label: AppString.category ),
             BottomBarItem(
-                iconData: Icons.shopping_cart_checkout_rounded, label: 'Cart'),
-            BottomBarItem(iconData: Icons.shopping_bag_outlined, label: 'Wish'),
+                iconData: Icons.shopping_cart_checkout_rounded, label:AppString.cart),
+            BottomBarItem(iconData: Icons.shopping_bag_outlined, label: AppString.wish),
           ],
           onSelect: (index) {
             controller.navSelectedIndex(index);

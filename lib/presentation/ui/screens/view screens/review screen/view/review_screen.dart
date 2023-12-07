@@ -12,7 +12,7 @@ class ReviewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Review')),
+      appBar: AppBar(title:   Text(AppString.review)),
       body:  GetBuilder<ReviewScreenController>(
         builder: (controller) => controller.isLoading
             ? const Center(child: CircularProgressIndicator())

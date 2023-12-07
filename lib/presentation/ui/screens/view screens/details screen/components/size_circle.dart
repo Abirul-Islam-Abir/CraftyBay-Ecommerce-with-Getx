@@ -8,7 +8,7 @@ class SizeCircle extends StatelessWidget {
     required this.selectedIndex,
     required this.text,
   }) : super(key: key);
-  final GestureCancelCallback? onTap;
+  final Function()? onTap;
   final int index;
   final int selectedIndex;
   final String text;
